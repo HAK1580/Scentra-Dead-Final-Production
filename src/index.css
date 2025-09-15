@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+
+
+
+@layer utilities{
+   .font-loop{
+    font-family:'Playfair Display', serif;
+   }
+   .font-nav{
+    font-family: 'Times New Roman', Times, serif;
+   }
+   .font-inter{
+         font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif;
+   }
+   .font-tree {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   } 
+   .show{
+      display: block;
+   }
+   .hide{
+      display: none;
+   }
+   .cross-forward{
+      transform: translateX(0.35rem);
+      transition: transform 0.2s linear;
+   }
+   .headlinetxt{
+     animation: headlinebanner 11s linear infinite;
+     -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+.animate-ham{
+  animation:animate-ham 0.3s linear ;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    
+
+  }
+
+   }
+
+
+     /* Animations below  */
+
+   @keyframes headlinebanner {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes animate-ham {
+  from{
+    transform: translateX(-50%);
+  }
+  to{
+    transform: translateX(0%);
+
+  }
+  
+}
+
+
+
+
+@layer base{
+    body{
+        background-color:rgb(15, 11, 7);
+        color: white;
+        overflow-x: hidden;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+}
