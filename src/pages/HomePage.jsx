@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
-import Navbar from '../Components/Navbar'
+import Navbar from '../components/Navbar'
 import { useState } from 'react'
-import Headline from '../Components/Headline'
-import Hamburger from '../Components/Hamburger'
-import SliderHero from '../Components/SliderHero'
-import Search from '../Components/Search'
-import ProductCollections from '../Components/ProductCollections'
+import Headline from '../components/Headline'
+import Hamburger from '../components/Hamburger'
+import SliderHero from '../components/SliderHero'
+import Search from '../components/Search'
+import ProductCollections from '../components/ProductCollections'
 
 
 

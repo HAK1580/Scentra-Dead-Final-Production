@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import Search from "./Search";
-import Hamburger from "./Hamburger";
+import Search from "./Search.jsx";
+import Hamburger from "./Hamburger.jsx";
 import '../App.jsx'
-import HomePage from "../Pages/HomePage.jsx";
-import SliderHero from "./SliderHero";
+import HomePage from '../pages/HomePage.jsx'
+import SliderHero from "./SliderHero.jsx";
 
 
 const Navbar = ({hero,setHero,menuOpen,setMenuOpen,search,setSearch}) => {
