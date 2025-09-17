@@ -56,7 +56,7 @@
   
  .headlinetxt2{
   display: inline-flex;
-  animation: headline2 5s linear infinite;
+  animation: headline2 3s linear infinite;
   scroll-behavior: smooth;
   
 
