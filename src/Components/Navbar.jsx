@@ -2,8 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import Search from "./Search.jsx";
 import Hamburger from "./Hamburger.jsx";
 import '../App.jsx'
-import HomePage from "../pages/HomePage/"
-import SliderHero from "./SliderHero.jsx";
 
 
 const Navbar = ({hero,setHero,menuOpen,setMenuOpen,search,setSearch}) => {
