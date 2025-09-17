@@ -50,7 +50,7 @@ const Navbar = ({hero,setHero,menuOpen,setMenuOpen,search,setSearch}) => {
           sm:top-[-30%] sm:left-[4%] sm:max-w-[190px]
           md:left-[clamp(-2.5rem,-12%,1rem)] md:max-w-[160px] md:top-[clamp(-1rem,-4%,1rem)]
           lg:max-w-[300px] lg:top-[clamp(-2rem,-28%,2rem)] lg:left-[clamp(-4rem,-10%,-1rem)]
-          max-[600px]:left-[1%] max-[300px]:w-[100px] z-100
+          max-[600px]:left-[1%] max-[300px]:w-[100px] z-50
           "
           width={300}
           src="/IMGS/logo/logo-fotor-bg-remover-2025080510633.webp"

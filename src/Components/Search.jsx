@@ -23,7 +23,7 @@ if(e.key==="Enter"){
   }
   return (
     <>
- <div className="search-box-div block relative max-w-full min-h-[110vh] bg-[rgba(255,255,255,0.238)] m-0   top-[clamp(-2rem,-2rem,-1rem)]">
+ <div className="search-box-div block relative max-w-full min-h-[110vh] z-100    bg-[rgba(255,255,255,0.238)] m-0   top-[clamp(-2rem,-2rem,-1rem)]">
   <div className="search-box absolute w-[94%] left-2
    flex justify-between md:justify-center  gap-[2vw]  top-[clamp(2rem,5.5%,6rem)]">
 
