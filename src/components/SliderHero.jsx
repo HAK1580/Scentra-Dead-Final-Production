@@ -43,7 +43,7 @@
       
      
            <div className="btn absolute z-50 
-           top-[clamp(17rem,40vh,26rem)]  left-[clamp(0.5rem,4%,2rem)]
+           top-[clamp(17rem,40vh,26rem)]  left-[clamp(0.5rem,3.5%,2rem)]
            md:top-[clamp(21rem,40vw,28rem)] md:left-[clamp(3rem,5%,4rem)]
            lg:top-[clamp(27.5rem,42vw,30.5rem)] 
            xl:top-[clamp(30rem,65vw,35.7rem)]  xl:left-[clamp(3.5rem,6%,7.5rem)]
