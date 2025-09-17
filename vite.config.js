@@ -8,6 +8,5 @@ export default defineConfig({
     tailwindcss(),
 
   ],
- base: "/your-repo-name/"
 
 })
