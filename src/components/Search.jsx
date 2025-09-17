@@ -29,7 +29,7 @@ if(e.key==="Enter"){
 
     
  <input onKeyDown={handleKeyDown} name='search' className="search-heree  bg-white text-black
-   text-[clamp(1rem,1.6vw,3rem)] border border-black font-[200] md:w-[60%] outline-none tracking-wider py-[clamp(0.3rem,0.3vw,0.8rem)] px-3  font-inter  w-[100%] " type="text" placeholder='Search'/>
+   text-[clamp(1rem,1.6vw,3rem)]    border border-black font-[200] md:w-[60%] outline-none tracking-wider py-[clamp(0.3rem,0.3vw,0.8rem)] px-3  font-inter  w-[100%] " type="text" placeholder='Search'/>
  
  
 
