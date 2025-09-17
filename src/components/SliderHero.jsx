@@ -53,7 +53,7 @@
            
               ">
             
-             <button  className="bg-[#000000d0] font-tree  px-[clamp(1.5rem,3.5vw,5rem)]  text-[clamp(1.15rem,2.7vw,3rem)] py-[clamp(0.4rem,0.3vw,2rem)] border-1 border-[#d4af3767] rounded-[8px] text-white cursor-pointer font-[100] z-100 tracking-widest 
+             <button  className="bg-[#000000d0] font-tree  px-[clamp(1.1rem,3.5vw,5rem)]  text-[clamp(1.15rem,2.7vw,3rem)] py-[clamp(0.4rem,0.3vw,2rem)] border-1 border-[#d4af3767] rounded-[8px] text-white cursor-pointer font-[100] z-100 tracking-widest 
               
                btn-transform
              hover:bg-[#d4af37a7] hover:text-black ">
