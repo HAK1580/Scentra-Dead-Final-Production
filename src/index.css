@@ -22,6 +22,10 @@
    .hide{
       display: none;
    }
+   
+   .hero-img{
+    transition: opacity 1s ease-in-out;
+   }
    .cross-forward{
       transform: translateX(0.35rem);
       transition: transform 0.2s linear;
@@ -31,6 +35,9 @@
      -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+.opacity-transform{
+  animation: opacity-transform 1.5s ease-in-out ;
 }
 .animate-ham{
   animation:animate-ham 0.3s linear ;
@@ -64,9 +71,6 @@
   }
   
 }
-
-
-
 
 @layer base{
     body{

@@ -1,51 +1,109 @@
-import React from 'react'
-import { useState,useEffect } from 'react'
-import MiddleHeadline from './MiddleHeadline'
+ import React from 'react'
+ import { useState, useEffect } from 'react'
+ import MiddleHeadline from './MiddleHeadline'
 
-const SliderHero = ({hero,setHero}) => {
-  
- const imgs=[
-    "/IMGS/Banners/1.jpg",
-    "/IMGS/Banners/2.jpg",
-    "/IMGS/Banners/4.jpg",
-  ]
- 
-  const[current,setCurrent]=useState(0)
-  function nextImg(){
-    setCurrent((prev)=>prev===imgs.length-1?0:prev+1)
-  }
+ const SliderHero = ({ hero, setHero }) => {
 
-  useEffect(() => {
-  if (hero) return; // stop timer if hidden
+   const imgs=[
+     "/IMGS/Banners/1.jpg",   
+    // "/IMGS/Banners/2.jpg",
+    //  "/IMGS/Banners/4.jpg"
+   ]
 
-  const timer = setTimeout(nextImg,6000);
-  return () => clearTimeout(timer);
-}, [current, imgs.length, hero]);
+   const [current, setCurrent] = useState(0);
 
-  
-  return (
-    <div >
-    <div className={`hero ${hero?'hidden':""} ` }>
-    <div className="slider ">
-        {imgs.map((image,i)=>  <img key={i} src={image} alt="" className={`${i===current?"active":""}`}/> )}
+   function nextImg() {
+     setCurrent((prev)=>prev===imgs.length-1?0:prev+1)
+     
+   }
+   useEffect(()=>{
+    const timer=setTimeout(nextImg,3000)
+
+    return ()=>{
+     clearTimeout(timer);
+    }
+     
+
+
+   },[current])
+
+
+
+   return (
+     <div >
+       <div className={`${hero ? 'hidden' : ""} `}>
+         <div className="hero relative   flex   mx-auto my-2 ">
+
+ {imgs.map((image,i)=> <img key={i}  className={`absolute z-10 hero-img ${i===current?"opacity-100":"opacity-0" } 
+ object-cover max-w-full min-h-[53vh] object-[9%] md:min-h-[43.5vh]
+ `}src={image} alt="img" /> )}
+
+          
+
       
-    <div className="herobtns">
-      <button className='herobtn'  >Buy Scents</button>
+     
+           <div className="btn absolute z-50 
+           top-[clamp(17rem,40vh,26rem)]  left-[clamp(1rem,4%,2rem)]
+           md:top-[clamp(21rem,40vw,28rem)] md:left-[clamp(3rem,5%,4rem)]
+           lg:top-[clamp(27.5rem,42vw,30.5rem)] 
+           xl:top-[clamp(30rem,65vw,35.7rem)]  xl:left-[clamp(3.5rem,6%,7.5rem)]
+           2xl:top-[clamp(32rem,60vw,44rem)] 
+           
+           
+           
+              ">
+            
+             <button  className="bg-[#000000d0] font-tree  px-[clamp(1.5rem,3.5vw,5rem)]  text-[clamp(1rem,2.7vw,3rem)] py-[clamp(0.4rem,0.3vw,2rem)] border-1 border-[#d4af3767] rounded-[8px] text-[#ffffffcb] cursor-pointer font-[100] z-50 tracking-wider hover:bg-[#d4af37a7] hover:text-black ">
+              Buy Now
+             </button>
+           </div>
 
-    </div>
-    </div>
+         </div>
 
-    </div>
 
-<div className={`middleheadline ${hero?'hidden':""}`} >
-    <MiddleHeadline hero={hero} />
 
-</div>
-    
+       </div>
 
-    
-    </div>
+
+
+
+
+      {/* <div className={`middleheadline ${hero ? 'hidden' : ""}`} >
+
+  
+
+      </div> */}
+      </div>
+
   )
 }
-
 export default SliderHero
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
