@@ -70,12 +70,11 @@
 
 
 
-
-      {/* <div className={`middleheadline ${hero ? 'hidden' : ""}`} >
-
+{/* 
+       <div className={`middleheadline my-[100vh] ${hero ? 'hidden' : ""}`} >
+      
+       </div> */}
   
-
-      </div> */}
       </div>
 
   )

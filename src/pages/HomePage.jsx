@@ -5,6 +5,7 @@ import Headline from '../components/Headline'
 import Hamburger from '../components/Hamburger'
 import SliderHero from '../components/SliderHero'
 import Search from '../components/Search'
+import MiddleHeadline from '../components/MiddleHeadline';
 import ProductCollections from '../components/ProductCollections'
 
 
@@ -23,12 +24,19 @@ const HomePage = () => {
 
      <Headline />  
      <Navbar menuOpen={menuOpen} search={search} setSearch={setSearch} setMenuOpen={setMenuOpen} hero={hero} setHero={setHero} />
-   
+      
      <div className={`hero ${search?"hide":"show"}`}>
-     <SliderHero hero={hero} setHero={setHero}  />
-
+    
+     <SliderHero hero={hero} setHero={setHero}  /> 
+     <MiddleHeadline hero={hero}  />
+    
+     {/* <ProductCollections hero={hero} setHero={setHero}   /> */}
+    
+    
      </div>
-     {/* <ProductCollections hero={hero}    /> */}
+
+
+
     
     
            

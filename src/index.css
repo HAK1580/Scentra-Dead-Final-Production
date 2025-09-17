@@ -53,11 +53,28 @@
     
 
   }
+  
+ .headlinetxt2{
+  display: inline-flex;
+  animation: headline2 5s linear infinite;
+  scroll-behavior: smooth;
+  
 
-   }
-
+ } 
+  
+}
 
      /* Animations below  */
+     @keyframes headline2 {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+
+}
 
    @keyframes headlinebanner {
   0% {
