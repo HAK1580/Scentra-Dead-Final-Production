@@ -74,7 +74,7 @@ const Navbar = ({hero,setHero,menuOpen,setMenuOpen,search,setSearch}) => {
             <a className=" relative after:content-[''] after:absolute after:left-0 after:bottom-[-8px] after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-400 hover:after:w-full "
               href="#ourcollection">ALL COLLECTIONS</a>
           </li>
-          <li className="scentra-middle text-[clamp(2.6rem,5.1vw,7rem)] text-[#e8d5a9] font-[100] tracking-wide font-loop ">SCENTRA</li>
+          <li className="scentra-middle text-[clamp(2.85rem,5.1vw,7rem)] text-[#e8d5a9] font-[100] tracking-wide font-loop ">SCENTRA</li>
           <li className="nav-right max-[768px]:hidden    ">
             <a className=" relative after:content-[''] after:absolute after:left-0 after:bottom-[-8px] after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-400 hover:after:w-full "
               href="#home">ABOUT US</a>
