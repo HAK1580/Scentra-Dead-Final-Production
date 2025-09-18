@@ -39,7 +39,7 @@ const ProductCollections = ({hero}) => {
                     <button className="product-btn z-100
                      font new-arrival  cursor-pointer loop  tracking-wide bg-[rgba(0,0,0,0.815)]  border-1 border-[rgba(212,175,55,0.655)] hover:bg-[#d4af37df] hover:text-black ">PERFUMES FOR MEN </button>
                 </div>
-                <img    onMouseLeave={()=>setMenhover(false)}  onMouseEnter={()=>setMenhover(!menhover)}   src={`${menhover?'IMGS/Products/21.png':'IMGS/Products/10.png'}`} alt=""/>
+                <img    onMouseLeave={()=>setMenhover(false)}  onMouseEnter={()=>setMenhover(!menhover)}   src={`${menhover?'IMGS/Products/21.png':'IMGS/Products/10.png'}`} alt="not found"/>
 
 
 
@@ -60,7 +60,7 @@ const ProductCollections = ({hero}) => {
                 ">
                     <button className="product-btn   font  cursor-pointer loop  tracking-wide bg-[rgba(0,0,0,0.815)]  border-1 border-[rgba(212,175,55,0.655)] hover:bg-[#d4af37df] hover:text-black   ">PERFUMES FOR WOMEN </button>
                 </div>
-                <img  onMouseLeave={()=>setWomenhover(false)}   onMouseEnter={()=>setWomenhover(!womenhover)} className="front-img" src={`${womenhover?'IMGS/Products/11.png':'IMGS/Products/4.png'}`} alt=""/>
+                <img  onMouseLeave={()=>setWomenhover(false)}   onMouseEnter={()=>setWomenhover(!womenhover)} className="front-img" src={`${womenhover?'IMGS/Products/11.png':'IMGS/Products/4.png'}`} alt="not found"/>
 
             </div>
 
@@ -78,7 +78,7 @@ const ProductCollections = ({hero}) => {
                  ">
                     <button className="product-btn  font  cursor-pointer loop  tracking-wide bg-[rgba(0,0,0,0.815)]  border-1 border-[rgba(212,175,55,0.655)] hover:bg-[#d4af37df] hover:text-black     ">PERFUMES FOR DUO </button>
                 </div>            
-             <img onMouseLeave={()=>setDuohover(false)}   onMouseEnter={()=>setDuohover(!duohover)} className="front-img" src={`${duohover?'IMGS/Products/5.png':'IMGS/Products/1.png'}`} alt=""/>
+             <img onMouseLeave={()=>setDuohover(false)}   onMouseEnter={()=>setDuohover(!duohover)} className="front-img" src={`${duohover?'IMGS/Products/5.png':'IMGS/Products/1.png'}`} alt="not found"/>
 
 
             </div>

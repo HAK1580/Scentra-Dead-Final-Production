@@ -52,7 +52,7 @@ const Navbar = ({hero,setHero,menuOpen,setMenuOpen,search,setSearch}) => {
           "
           width={300}
           src="/IMGS/logo/logo-fotor-bg-remover-2025080510633.webp"
-          alt=""
+          alt="not found "
         />
 
 
@@ -96,7 +96,7 @@ const Navbar = ({hero,setHero,menuOpen,setMenuOpen,search,setSearch}) => {
           `}
           width={32}
           src="/IMGS/icons/search.svg"
-          alt=""
+          alt="not found"
         />
 
          </nav>

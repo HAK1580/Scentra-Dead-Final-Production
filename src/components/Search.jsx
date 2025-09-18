@@ -38,8 +38,8 @@ if(e.key==="Enter"){
  
  <div className="search-icons flex cursor-pointer  md:gap-2 gap-[0.1rem]">
 
- <img onClick={handleClick} className=' w-[26px] sm:w-[28px]  lg:w-[35px]   ' src="/IMGS/icons/search.svg" alt="" />
- <img className='cross-img sm:w-[32px]  w-[30px]  lg:w-[40px]       '   onClick={handleCross}  src="/IMGS/icons/cross.svg" alt="" />
+ <img onClick={handleClick} className=' w-[26px] sm:w-[28px]  lg:w-[35px]   ' src="/IMGS/icons/search.svg" alt="not found" />
+ <img className='cross-img sm:w-[32px]  w-[30px]  lg:w-[40px]       '   onClick={handleCross}  src="/IMGS/icons/cross.svg" alt="not found" />
  </div>
 
 
