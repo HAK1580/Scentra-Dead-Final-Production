@@ -15,8 +15,9 @@ const ProductCollections = ({hero}) => {
     <div className="product-collection overflow-hidden max-w-full ">
 
         <h1 className='flex justify-center text-[#e8d5a9] loop items-center
-         md:text-[clamp(3vw,4vw,6vw)]
+         md:text-[clamp(3vw,3.75vw,6vw)]
          text-[clamp(1.34rem,6.5vw,7vw)]
+         tracking-wide
         
          
        '>
