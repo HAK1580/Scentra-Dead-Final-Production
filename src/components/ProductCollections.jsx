@@ -21,13 +21,13 @@ const ProductCollections = ({hero}) => {
        '>
         OUR PRODUCT COLLECTIONS</h1>
        
-        <div className="  m-auto max-w-[88%]  flex-col  justify-center items-center gap-[7vw]  flex  product-collection-box
+        <div className="  m-auto max-w-[80%]  flex-col  justify-center items-center gap-[7vw]  flex  product-collection-box
         md:flex-row 
         ">
             <div className="product-collection-item md:left-0 md:max-w-full   flex-col ">
                 <div  className="product-btn-div flex    z-50 relative 
-                top-[clamp(12rem,14.5rem,15rem)] 
-                left-[clamp(5rem,6%,7rem)]
+                top-[clamp(12rem,12.5rem,15rem)] 
+                left-[clamp(4rem,6%,7rem)]
                 md:top-[clamp(10rem,11rem,12rem)]
                 md:left-[clamp(1.5rem,18%,12rem)]
                 lg:top-[clamp(12rem,13.5rem,14rem)]
@@ -46,8 +46,8 @@ const ProductCollections = ({hero}) => {
 
             <div className="product-collection-item">
                 <div   className="product-btn-div flex  z-50 relative 
-         top-[clamp(12rem,14.5rem,15rem)]
-         left-[clamp(4.2rem,6%,7rem)]
+         top-[clamp(12rem,12.5rem,15rem)]
+         left-[clamp(4rem,6%,7rem)]
          md:top-[clamp(10rem,11rem,12rem)]
          md:left-[clamp(1.5rem,16%,8rem)]
          lg:top-[clamp(12rem,13.5rem,14rem)]
@@ -66,8 +66,8 @@ const ProductCollections = ({hero}) => {
             <div className="product-collection-item">
                 <div className="product-btn-div flex  z-50 relative
             
-            top-[clamp(12rem,14.5rem,15rem)] 
-            left-[clamp(4.8rem,6%,7rem)]
+            top-[clamp(12rem,12.5rem,15rem)] 
+            left-[clamp(4.2rem,6%,7rem)]
             md:top-[clamp(10rem,11rem,12rem)]
             md:left-[clamp(1.5rem,18%,12rem)]
             lg:top-[clamp(12rem,13.5rem,14rem)]
