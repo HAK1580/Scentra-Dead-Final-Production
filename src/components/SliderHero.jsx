@@ -35,7 +35,7 @@
          <div className="hero relative   flex   mx-auto my-2 ">
 
  {imgs.map((image,i)=> <img key={i}  className={`absolute z-10 hero-img ${i===current?"opacity-100":"opacity-0" } 
- object-cover max-w-full min-h-[53vh] object-[9%] md:min-h-[43.5vh]
+ object-cover max-w-full min-h-[55vh] object-[9%] md:min-h-[43.5vh]
  `}src={image} alt="img" /> )}
 
           
