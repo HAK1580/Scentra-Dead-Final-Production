@@ -21,7 +21,7 @@ const ProductCollections = ({hero}) => {
        '>
         OUR PRODUCT COLLECTIONS</h1>
        
-        <div className="  m-auto w-[88%]  flex-col  justify-center items-center gap-[7vw]  flex  product-collection-box
+        <div className="  m-auto max-w-[88%]  flex-col  justify-center items-center gap-[7vw]  flex  product-collection-box
         md:flex-row 
         ">
             <div className="product-collection-item md:left-0 md:max-w-full   flex-col ">
