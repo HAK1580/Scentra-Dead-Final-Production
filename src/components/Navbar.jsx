@@ -57,7 +57,7 @@ const Navbar = ({hero,setHero,menuOpen,setMenuOpen,search,setSearch}) => {
 
 
           <img onClick={handleClick}
-            className={`${menuOpen?'cross-forward':'hamburger'} w-[34px] z-50 absolute bottom-[clamp(1.1rem,1%,2rem)] left-2
+            className={` cursor-pointer ${menuOpen?'cross-forward':'hamburger'} w-[34px] z-50 absolute bottom-[clamp(1.1rem,1%,2rem)] left-2
       md:hidden max-[300px]:w-[26px]
       `}
             src={`${menuOpen?"/IMGS/icons/cross.svg":"/IMGS/icons/hamburger.svg"}`}  />
