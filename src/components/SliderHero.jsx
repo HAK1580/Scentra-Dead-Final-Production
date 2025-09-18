@@ -32,7 +32,7 @@
    return (
      <div >
        <div className={`${hero ? 'hidden' : ""} `}>
-         <div className="hero relative   flex   mx-auto my-2 ">
+         <div className="hero relative  max-w-full   flex   mx-auto my-2 ">
 
  {imgs.map((image,i)=> <img key={i}  className={`absolute z-10 hero-img ${i===current?"opacity-100":"opacity-0" } 
  object-cover max-w-full min-h-[57vh] object-[9%] md:min-h-[43.5vh]
