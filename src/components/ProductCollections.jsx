@@ -10,9 +10,9 @@ const ProductCollections = ({hero}) => {
 
 
   return (
-    <div className={`hero my-[-45vh]  md:my-[-75vh]   ${hero?'hidden':""} ` }  >
+    <div className={`hero overflow-x-hidden my-[-45vh]  md:my-[-75vh] max-w-full   ${hero?'hidden':""} ` }  >
 
-    <div className="product-collection ">
+    <div className="product-collection overflow-x-hidden max-w-full ">
 
         <h1 className='flex justify-center text-[#e8d5a9] loop items-center
          md:text-[clamp(3vw,4vw,6vw)]
@@ -82,6 +82,9 @@ const ProductCollections = ({hero}) => {
 
             </div>
         </div>
+    </div>
+    <div className="space h-20">
+
     </div>
     
     
