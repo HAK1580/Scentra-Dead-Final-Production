@@ -47,7 +47,7 @@
            md:top-[clamp(21rem,40vw,28rem)] md:left-[clamp(3rem,5%,4rem)]
            lg:top-[clamp(27.5rem,42vw,30.5rem)] 
            xl:top-[clamp(30rem,65vw,35.7rem)]  xl:left-[clamp(3.5rem,6%,7.5rem)]
-           2xl:top-[clamp(32rem,42vw,48rem)] 
+           2xl:top-[clamp(32rem,40.5vw,48rem)] 
            
            
            
