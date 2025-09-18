@@ -46,7 +46,7 @@ const ProductCollections = ({hero}) => {
 
             <div className="product-collection-item">
                 <div   className="product-btn-div flex  z-50 relative 
-         top-[clamp(12rem,13`rem,14rem)]
+         top-[clamp(12rem,14.5rem,15rem)]
          left-[clamp(4.5rem,6%,7rem)]
          md:top-[clamp(10rem,11rem,12rem)]
          md:left-[clamp(1.5rem,16%,8rem)]
