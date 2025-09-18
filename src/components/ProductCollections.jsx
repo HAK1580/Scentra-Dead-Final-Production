@@ -10,16 +10,21 @@ const ProductCollections = ({hero}) => {
 
 
   return (
-    <div className={`hero my-[-100vh]   ${hero?'hidden':""} ` }  >
+    <div className={`hero my-[-45vh]  md:my-[-75vh]   ${hero?'hidden':""} ` }  >
 
     <div className="product-collection ">
 
-        <h1 className='flex justify-center text-[#e8d5a9] loop items-center text-[clamp(1.6rem,4vw,6vw)]'>OUR PRODUCT COLLECTIONS</h1>
+        <h1 className='flex justify-center text-[#e8d5a9] loop items-center
+         md:text-[clamp(3vw,4vw,6vw)]
+         text-[clamp(1.34rem,5vw,6vw)]
+         
+       '>
+        OUR PRODUCT COLLECTIONS</h1>
        
-        <div className="  flex-col  justify-center items-center gap-[7vw]  flex  product-collection-box
+        <div className="  m-auto w-[88%]  flex-col  justify-center items-center gap-[7vw]  flex  product-collection-box
         md:flex-row 
         ">
-            <div className="product-collection-item md:left-0   flex-col ">
+            <div className="product-collection-item md:left-0 md:max-w-full   flex-col ">
                 <div  className="product-btn-div flex    z-50 relative 
                 top-[clamp(12rem,14.5rem,15rem)] 
                 left-[clamp(4.5rem,6%,7rem)]
@@ -30,10 +35,10 @@ const ProductCollections = ({hero}) => {
                 
                 
                 ">
-                    <button className="product-btn 
+                    <button className="product-btn z-100
                      font new-arrival  cursor-pointer loop  tracking-wide bg-[rgba(0,0,0,0.815)]  border-1 border-[rgba(212,175,55,0.655)] hover:bg-[#d4af37df] hover:text-black ">PERFUMES FOR MEN </button>
                 </div>
-                <img onMouseLeave={()=>setMenhover(false)}  onMouseEnter={()=>setMenhover(!menhover)}  className="front-img" src={`${menhover?'IMGS/Products/21.png':'IMGS/Products/10.png'}`} alt=""/>
+                <img   onMouseLeave={()=>setMenhover(false)}  onMouseEnter={()=>setMenhover(!menhover)}   src={`${menhover?'IMGS/Products/21.png':'IMGS/Products/10.png'}`} alt=""/>
 
 
 
@@ -41,7 +46,7 @@ const ProductCollections = ({hero}) => {
 
             <div className="product-collection-item">
                 <div   className="product-btn-div flex  z-50 relative 
-         top-[clamp(12rem,14.5rem,15rem)]
+         top-[clamp(12rem,13`rem,14rem)]
          left-[clamp(4.5rem,6%,7rem)]
          md:top-[clamp(10rem,11rem,12rem)]
          md:left-[clamp(1.5rem,16%,8rem)]
