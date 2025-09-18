@@ -10,9 +10,9 @@ const ProductCollections = ({hero}) => {
 
 
   return (
-    <div className={`hero overflow-x-hidden my-[-45vh]  md:my-[-75vh] max-w-full   ${hero?'hidden':""} ` }  >
+    <div className={`hero overflow-hidden my-[-45vh]  md:my-[-75vh] max-w-full   ${hero?'hidden':""} ` }  >
 
-    <div className="product-collection overflow-x-hidden max-w-full ">
+    <div className="product-collection overflow-hidden max-w-full ">
 
         <h1 className='flex justify-center text-[#e8d5a9] loop items-center
          md:text-[clamp(3vw,4vw,6vw)]
@@ -27,7 +27,7 @@ const ProductCollections = ({hero}) => {
             <div className="product-collection-item md:left-0 md:max-w-full   flex-col ">
                 <div  className="product-btn-div flex    z-50 relative 
                 top-[clamp(12rem,12.5rem,15rem)] 
-                left-[clamp(4rem,6%,7rem)]
+                left-[clamp(4.9rem,6%,7rem)]
                 md:top-[clamp(10rem,11rem,12rem)]
                 md:left-[clamp(1.5rem,18%,12rem)]
                 lg:top-[clamp(12rem,13.5rem,14rem)]
@@ -38,7 +38,7 @@ const ProductCollections = ({hero}) => {
                     <button className="product-btn z-100
                      font new-arrival  cursor-pointer loop  tracking-wide bg-[rgba(0,0,0,0.815)]  border-1 border-[rgba(212,175,55,0.655)] hover:bg-[#d4af37df] hover:text-black ">PERFUMES FOR MEN </button>
                 </div>
-                <img   onMouseLeave={()=>setMenhover(false)}  onMouseEnter={()=>setMenhover(!menhover)}   src={`${menhover?'IMGS/Products/21.png':'IMGS/Products/10.png'}`} alt=""/>
+                <img    onMouseLeave={()=>setMenhover(false)}  onMouseEnter={()=>setMenhover(!menhover)}   src={`${menhover?'IMGS/Products/21.png':'IMGS/Products/10.png'}`} alt=""/>
 
 
 
@@ -47,7 +47,7 @@ const ProductCollections = ({hero}) => {
             <div className="product-collection-item">
                 <div   className="product-btn-div flex  z-50 relative 
          top-[clamp(12rem,12.5rem,15rem)]
-         left-[clamp(3.6rem,6%,7rem)]
+         left-[clamp(4.9rem,6%,7rem)]
          md:top-[clamp(10rem,11rem,12rem)]
          md:left-[clamp(1.5rem,16%,8rem)]
          lg:top-[clamp(12rem,13.5rem,14rem)]
@@ -59,7 +59,7 @@ const ProductCollections = ({hero}) => {
                 ">
                     <button className="product-btn   font  cursor-pointer loop  tracking-wide bg-[rgba(0,0,0,0.815)]  border-1 border-[rgba(212,175,55,0.655)] hover:bg-[#d4af37df] hover:text-black   ">PERFUMES FOR WOMEN </button>
                 </div>
-                <img onMouseLeave={()=>setWomenhover(false)}   onMouseEnter={()=>setWomenhover(!womenhover)} className="front-img" src={`${womenhover?'IMGS/Products/11.png':'IMGS/Products/4.png'}`} alt=""/>
+                <img  onMouseLeave={()=>setWomenhover(false)}   onMouseEnter={()=>setWomenhover(!womenhover)} className="front-img" src={`${womenhover?'IMGS/Products/11.png':'IMGS/Products/4.png'}`} alt=""/>
 
             </div>
 
@@ -67,7 +67,7 @@ const ProductCollections = ({hero}) => {
                 <div className="product-btn-div flex  z-50 relative
             
             top-[clamp(12rem,12.5rem,15rem)] 
-            left-[clamp(4.2rem,6%,7rem)]
+            left-[clamp(4.9rem,6%,7rem)]
             md:top-[clamp(10rem,11rem,12rem)]
             md:left-[clamp(1.5rem,18%,12rem)]
             lg:top-[clamp(12rem,13.5rem,14rem)]
@@ -83,7 +83,7 @@ const ProductCollections = ({hero}) => {
             </div>
         </div>
     </div>
-    <div className="space h-20">
+    <div className="space h-[20vh]">
 
     </div>
     

@@ -67,7 +67,7 @@
 
 }
 .product-collection img{
-  max-width: 100%;
+  max-width: 110%;
   object-fit:cover;
   min-height:38vh;
   cursor:pointer;
@@ -86,7 +86,7 @@
   z-index:100;
   letter-spacing:0.5s;
 
-  font-size:clamp(0.95rem,1.25vw,3rem);
+  font-size:clamp(0.78rem,1.3vw,3rem);
 }
 
 
