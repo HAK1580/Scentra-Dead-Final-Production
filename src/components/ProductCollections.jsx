@@ -16,7 +16,7 @@ const ProductCollections = ({hero}) => {
 
         <h1 className='flex justify-center text-[#e8d5a9] loop items-center
          md:text-[clamp(3vw,4vw,6vw)]
-         text-[clamp(1.34rem,5vw,6vw)]
+         text-[clamp(1.34rem,6.5vw,7vw)]
          
        '>
         OUR PRODUCT COLLECTIONS</h1>
@@ -27,10 +27,10 @@ const ProductCollections = ({hero}) => {
             <div className="product-collection-item md:left-0 md:max-w-full   flex-col ">
                 <div  className="product-btn-div flex    z-50 relative 
                 top-[clamp(12rem,14.5rem,15rem)] 
-                left-[clamp(4.5rem,6%,7rem)]
+                left-[clamp(5rem,6%,7rem)]
                 md:top-[clamp(10rem,11rem,12rem)]
                 md:left-[clamp(1.5rem,18%,12rem)]
-                lg:top-[clamp(12rem,13rem,13rem)]
+                lg:top-[clamp(12rem,13.5rem,14rem)]
                 lg:left-[clamp(1.5rem,18%,8rem)]
                 
                 
@@ -47,10 +47,10 @@ const ProductCollections = ({hero}) => {
             <div className="product-collection-item">
                 <div   className="product-btn-div flex  z-50 relative 
          top-[clamp(12rem,14.5rem,15rem)]
-         left-[clamp(4.5rem,6%,7rem)]
+         left-[clamp(4.2rem,6%,7rem)]
          md:top-[clamp(10rem,11rem,12rem)]
          md:left-[clamp(1.5rem,16%,8rem)]
-         lg:top-[clamp(12rem,13rem,13rem)]
+         lg:top-[clamp(12rem,13.5rem,14rem)]
          lg:left-[clamp(1.5rem,18%,8rem)]
          2xl:left-[clamp(1.5rem,14%,8rem)]
          
@@ -67,10 +67,10 @@ const ProductCollections = ({hero}) => {
                 <div className="product-btn-div flex  z-50 relative
             
             top-[clamp(12rem,14.5rem,15rem)] 
-            left-[clamp(4.5rem,6%,7rem)]
+            left-[clamp(4.8rem,6%,7rem)]
             md:top-[clamp(10rem,11rem,12rem)]
             md:left-[clamp(1.5rem,18%,12rem)]
-            lg:top-[clamp(12rem,13rem,13rem)]
+            lg:top-[clamp(12rem,13.5rem,14rem)]
             lg:left-[clamp(1.5rem,18%,8rem)]
             
             

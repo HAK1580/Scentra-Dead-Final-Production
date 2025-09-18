@@ -81,11 +81,12 @@
 }
 .product-btn{
   font-weight:500;
-  padding: 0.90vh 1.1vw;
+  padding: 0.95vh 1.07vw;
   border-radius:6px;
   z-index:100;
+  letter-spacing:0.5s;
 
-  font-size:clamp(0.8rem,1.25vw,3rem);
+  font-size:clamp(0.95rem,1.25vw,3rem);
 }
 
 
