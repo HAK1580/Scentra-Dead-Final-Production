@@ -83,7 +83,7 @@ const ProductCollections = ({hero}) => {
             </div>
         </div>
     </div>
-    <div className="space h-[20vh]">
+    <div className="space h-[30vh]">
 
     </div>
     
