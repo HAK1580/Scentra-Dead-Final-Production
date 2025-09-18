@@ -47,14 +47,14 @@
            md:top-[clamp(21rem,40vw,28rem)] md:left-[clamp(3rem,5%,4rem)]
            lg:top-[clamp(27.5rem,42vw,30.5rem)] 
            xl:top-[clamp(30rem,65vw,35.7rem)]  xl:left-[clamp(3.5rem,6%,7.5rem)]
-           2xl:top-[clamp(32rem,60vw,44rem)] 
+           2xl:top-[clamp(32rem,42vw,48rem)] 
            
            
            
               ">
             
-             <button  className="bg-[#000000d0] font-tree  px-[clamp(1.2rem,3.5vw,5rem)]  text-[clamp(1.15rem,2.7vw,3rem)] py-[clamp(0.4rem,0.3vw,2rem)] border-1 border-[#d4af3767] rounded-[8px] text-white cursor-pointer font-[100] z-100 tracking-widest 
-              
+             <button  className="bg-[#000000d0] font-tree  px-[clamp(1.2rem,3.5vw,3.1rem)]  text-[clamp(1.15rem,2.5vw,3rem)] py-[clamp(0.4rem,0.3vw,1.5rem)] border-1 border-[#d4af3767] rounded-[8px] text-white cursor-pointer font-[100] z-100 tracking-widest 
+              lg:rounded-[13px]
                btn-transform
              hover:bg-[#d4af37a7] hover:text-black ">
               Buy Now
@@ -68,12 +68,6 @@
        </div>
 
 
-
-
-{/* 
-       <div className={`middleheadline my-[100vh] ${hero ? 'hidden' : ""}`} >
-      
-       </div> */}
   
       </div>
 
