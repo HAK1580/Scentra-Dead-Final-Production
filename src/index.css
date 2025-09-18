@@ -63,8 +63,10 @@
   display: inline-flex;
   animation: headline2 3s linear infinite;
   scroll-behavior: smooth;
-} 
-
+}
+.popins{
+ font-family: "Poppins", sans-serif;
+}
 }
 .product-collection img{
   max-width: 110%;
