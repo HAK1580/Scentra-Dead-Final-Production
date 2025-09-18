@@ -17,6 +17,7 @@ const ProductCollections = ({hero}) => {
         <h1 className='flex justify-center text-[#e8d5a9] loop items-center
          md:text-[clamp(3vw,4vw,6vw)]
          text-[clamp(1.34rem,6.5vw,7vw)]
+        
          
        '>
         OUR PRODUCT COLLECTIONS</h1>
