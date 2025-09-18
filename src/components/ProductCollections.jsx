@@ -21,10 +21,10 @@ const ProductCollections = ({hero}) => {
        '>
         OUR PRODUCT COLLECTIONS</h1>
        
-        <div className="  m-auto max-w-[80%]  flex-col  justify-center items-center gap-[7vw]  flex  product-collection-box
-        md:flex-row 
+        <div className="mx-auto max-w-[80%]  flex-col  justify-center items-center gap-[7vw]  flex  product-collection-box
+        md:flex-row  overflow-hidden
         ">
-            <div className="product-collection-item md:left-0 md:max-w-full   flex-col ">
+            <div className="product-collection-item md:left-0 md:max-w-full    flex-col ">
                 <div  className="product-btn-div flex    z-50 relative 
                 top-[clamp(12rem,12.5rem,15rem)] 
                 left-[clamp(4.9rem,6%,7rem)]
