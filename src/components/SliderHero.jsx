@@ -6,7 +6,7 @@
 
    const imgs=[
      "/IMGS/Banners/1.jpg",   
-    "/IMGS/Banners/5.jpg",
+    "/IMGS/Banners/4.jpg",
      "/IMGS/Banners/6.jpg"
    ]
 
