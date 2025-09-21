@@ -14,10 +14,14 @@
          font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif;
          font-weight:500;
    }
-   .font-tree {
+   .tree {
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      font-weight:300;
-   } 
+      
+    } 
+    .font-tree{
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-weight: 300;
+   }
    .show{
       display: block;
    }
