@@ -55,9 +55,9 @@
             
              <button  className="bg-[#000000d0] popins lg:tracking-wide  px-[clamp(1.2rem,3.5vw,3.1rem)]  text-[clamp(1.15rem,2.5vw,3rem)] py-[clamp(0.4rem,0.3vw,1.5rem)] border-1 border-[#d4af3767] rounded-[8px] text-white cursor-pointer font-[200] z-100 tracking-widest 
               lg:rounded-[13px]
-              lg:font-light
+              lg:font-light hover:sm:font-light hover:font-[500]
                btn-transform
-             hover:bg-[#d4af37a7] hover:text-black ">
+             hover:bg-[#d4af37a7] hover:text-[rgb(33,33,33)]">
               Buy Now
              </button>
            </div>
