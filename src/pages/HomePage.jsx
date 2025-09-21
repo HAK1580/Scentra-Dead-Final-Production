@@ -30,10 +30,10 @@ const HomePage = () => {
      <SliderHero hero={hero} setHero={setHero}  /> 
      <MiddleHeadline hero={hero}  />
      <ProductCollections hero={hero} setHero={setHero}   />
-    
+      
     
      </div>
-
+  
 
 
     
