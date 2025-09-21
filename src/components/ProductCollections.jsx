@@ -49,7 +49,7 @@ const ProductCollections = ({hero}) => {
             <div className="product-collection-item overflow-hidden ">
                 <div   className="product-btn-div flex  z-50 relative 
          top-[clamp(12rem,12.5rem,15rem)]
-         left-[clamp(4.1rem,6%,7rem)]
+         left-[clamp(3.9rem,6%,7rem)]
          md:top-[clamp(10rem,11rem,12rem)]
          md:left-[clamp(1.5rem,16%,8rem)]
          lg:top-[clamp(12rem,13.5rem,14rem)]
