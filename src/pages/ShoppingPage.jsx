@@ -12,8 +12,8 @@ const ShoppingPage = () => {
     price:3500
   },
     {
-    id:"1",
-    image:"IMGS/Products/1.png",
+    id:"2",
+    image:"IMGS/Products/18.png",
     title:"Rosmerta",
     price:3500
   },
