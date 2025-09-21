@@ -9,7 +9,7 @@ const Hamburger = () => {
        <div className="nav"> 
             <ul className='flex font-loop tracking-widest  flex-col gap-[2.3rem] text-[clamp(1.10rem,3vw,2.5rem)]  py-[1.5rem] px-[0.9rem] '>
                 <li> <a href="/">Home</a></li>
-                <li> <a href="/">All Collections</a> </li>
+                <li> <a href="/shopping">All Collections</a> </li>
                 <li> <a href="/">ABOUT US</a> </li>
                 <li> <a href="/">CONTACTS US</a> </li>
             </ul>

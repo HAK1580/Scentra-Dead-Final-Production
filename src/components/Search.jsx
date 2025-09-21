@@ -1,7 +1,13 @@
 import React from 'react'
 import { useState } from 'react'
+import { useDispatch, useSelector } from "react-redux";
+import { toggleMenu, toggleSearch, toggleHero } from "../redux/ui_states/uiSlice.js"; // create this slice
 
-const Search = ({search,setSearch,hero,setHero}) => {
+
+const Search = () => {
+  const dispatch = useDispatch();
+  const search = useSelector((state) => state.ui.searchOpen);
+  const hero = useSelector((state) => state.ui.heroOpen);
   
   function handleKeyDown(e){
 if(e.key==="Enter"){
@@ -17,8 +23,9 @@ if(e.key==="Enter"){
 
   function handleCross(){
     
-    setHero(!hero);
-    setSearch(!search)
+     dispatch(toggleHero())
+     dispatch(toggleSearch());
+    
 
   }
   return (

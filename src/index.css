@@ -4,6 +4,7 @@
 
 
 @layer utilities{
+
    .loop{
     font-family:'Playfair Display', serif;
    }
@@ -13,6 +14,9 @@
    .font-inter{
          font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif;
          font-weight:500;
+   }
+   .popins{
+     font-family: 'Poppins', sans-serif;
    }
    .tree {
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -127,6 +131,7 @@
     transform: translateX(0%);
 
   }
+  
   
 }
 
