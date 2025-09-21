@@ -53,7 +53,7 @@
            
               ">
             
-             <button  className="bg-[#000000d0] popins lg:tracking-wide  px-[clamp(1.2rem,3.5vw,3.1rem)]  text-[clamp(1.15rem,2.5vw,3rem)] py-[clamp(0.4rem,0.3vw,1.5rem)] border-1 border-[#d4af3767] rounded-[8px] text-white cursor-pointer font-[500] z-100 tracking-widest 
+             <button  className="bg-[#000000d0] popins lg:tracking-wide  px-[clamp(1.2rem,3.5vw,3.1rem)]  text-[clamp(1.15rem,2.5vw,3rem)] py-[clamp(0.4rem,0.3vw,1.5rem)] border-1 border-[#d4af3767] rounded-[8px] text-white cursor-pointer font-[200] z-100 tracking-widest 
               lg:rounded-[13px]
               lg:font-light
                btn-transform
