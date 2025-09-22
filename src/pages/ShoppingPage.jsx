@@ -4,68 +4,90 @@ import Headline from "../components/Headline"
 
 const ShoppingPage = () => {
 
-  const product_info=[
-    {
-    id:"1",
-    image:"IMGS/Products/1.png",
-    title:"Rosmerta",
-    price:3500
+const product_info = [
+  {
+    id: "1",
+    image: "IMGS/Products/1.png",
+    title: "Rosmerta White Musk",
+    price: "8,499",
+    oldprice: "6,900",
+    desc: "Inspired by White Musk"
   },
-    {
-    id:"2",
-    image:"IMGS/Products/18.png",
-    title:"Rosmerta",
-    price:3500
+  {
+    id: "2",
+    image: "IMGS/Products/18.png",
+    title: "Amber Dusk",
+    price: "3,400",
+    oldprice: "4,900",
+    desc: "Inspired by Amber Oud"
   },
-    {
-    id:"3",
-    image:"IMGS/Products/3.png",
-    title:"Rosmerta",
-    price:3500
+  {
+    id: "3",
+    image: "IMGS/Products/3.png",
+    title: "Velvet Rose",
+    price: "2,500",
+    oldprice: "7,900",
+    desc: "Inspired by Velvet Rose"
   },
-    {
-    id:"4",
-    image:"IMGS/Products/4.png",
-    title:"Rosmerta",
-    price:3500
+  {
+    id: "4",
+    image: "IMGS/Products/4.png",
+    title: "Citrus Aura",
+    price: "1,100",
+    oldprice: "1,900",
+    desc: "Inspired by Fresh Citrus"
   },
-    {
-    id:"5",
-    image:"IMGS/Products/5.png",
-    title:"Rosmerta",
-    price:3500
+  {
+    id: "5",
+    image: "IMGS/Products/5.png",
+    title: "Noir Vanilla",
+    price: "3,200",
+    oldprice: "5,900",
+    desc: "Inspired by Black Vanilla"
   },
-    {
-    id:"6",
-    image:"IMGS/Products/6.png",
-    title:"Rosmerta",
-    price:3500
+  {
+    id: "6",
+    image: "IMGS/Products/6.png",
+    title: "Sandal Essence",
+    price: "3,500",
+    oldprice: "6,900",
+    desc: "Inspired by Sandalwood Essence"
   },
-    {
-    id:"7",
-    image:"IMGS/Products/7.png",
-    title:"Rosmerta",
-    price:3500
+  {
+    id: "7",
+    image: "IMGS/Products/7.png",
+    title: "Ocean Mist",
+    price: "1,200",
+    oldprice: "1,999",
+    desc: "Inspired by Ocean Breeze"
   },
-    {
-    id:"8",
-    image:"IMGS/Products/8.png",
-    title:"Rosmerta",
-    price:3500
+  {
+    id: "8",
+    image: "IMGS/Products/8.png",
+    title: "Jasmine Whisper",
+    price: "1,500",
+    oldprice: "2,999",
+    desc: "Inspired by Jasmine Bloom"
   },
-    {
-    id:"9",
-    image:"IMGS/Products/9.png",
-    title:"Rosmerta",
-    price:3500
+  {
+    id: "9",
+    image: "IMGS/Products/9.png",
+    title: "Leather Woods",
+    price: "2,500",
+    oldprice: "3,999",
+    desc: "Inspired by Woody Leather"
   },
-    {
-    id:"10",
-    image:"IMGS/Products/10.png",
-    title:"Rosmerta",
-    price:3500
-  },
+  {
+    id: "10",
+    image: "IMGS/Products/10.png",
+    title: "Royal Oud",
+    price: "5,500",
+    oldprice: "9,999",
+    desc: "Inspired by Royal Oud"
+  }
 ]
+
+
 
 
   return (    
@@ -81,28 +103,29 @@ const ShoppingPage = () => {
         <h1 className='text-center loop  text-[5.7vw]  tracking-wide  my-8  text-[#e8d5a9] sm:text-[3.5vw] '> VIEW All COLLECTIONS   </h1>
 
            
-     <div className="shop grid grid-cols-2  md:grid-cols-4  max-w-[92%] md:max-w-[94%] mx-auto   gap-[3vw] border-1">
+     <div className="shop grid grid-cols-2 md:grid-cols-3   lg:grid-cols-4  max-w-[92%] md:max-w-[94%] mx-auto gap-[4vw]    sm:gap-[1.8vw] ">
         {product_info.map((product)=>
 
-        <div key={product.id} className="product-info h-fit flex-col   rounded-[3px] border-1   max-w-[100%] border-gray-200">
-        <div className="product-image flex justify-center items-center cursor-pointer">
-
-          <img className='w-[70%] object-contain h-[40vh]' src={product.image} alt="" />
+        <div key={product.id} className="product-info h-fit flex-col     rounded-[8px] border-1   xl:max-w-full   max-w-[96%] border-gray-200">
+        <div className="product-image m-4 object-contain relative flex justify-center items-center cursor-pointer">
+          <img className='border border-[#ffffffaf] rounded-[8px] max-w-full object-contain h-full' src={product.image} alt="" />
+          <img className='absolute rounded-[3px] top-[0.1rem] right-[0.05rem] ' width={70} src="/IMGS/icons/sale.svg " alt="" />
         </div>
-        <div  className="product-price justify-around    flex sm:gap-[1vw] max-w-full  ">
-          <h2  className=' mx-1  md:mx-3 text-[3.3vw]    md:text-[1.8vw]'>id: {product.id}   </h2>  
-          <h2   className=' text-[3.3vw] md:text-[1.8vw]'>Price: Rs {product.price} </h2>  
+        <div  className="product-title flex justify-start loop  mx-auto  w-[90%]  ">
+          <h2   className='    mt-5 text-[3.3vw] md:text-[1.8vw]'> {product.title} </h2>  
 
         </div>
-          <div className="title py-1 my-2   ">
-            <h2 className=' text-center overflow-hidden  h-[30px]    text-[1vw]'>{product.title}   </h2>
+          <div className="para line-clamp-3 flex justify-start my-1  mx-auto w-[90%] ">
+            <h3> {product.desc}   </h3>
           </div>
-          <div className="para line-clamp-3    flex justify-center items-center">
-            <h2>    </h2>
+          <div className="price py-1 my-2   ">
+            <h2 className=' text-center nav-inter flex justify-start mx-auto gap-3 w-[95%]  overflow-hidden  h-[30px] text-[3vw] md:text-[2.3vw]    lg:text-[1.5vw]'> 
+              
+         <span className='old-price text-[2.5vw] md:text-[1.96vw] lg:text-[1.3vw] line-through text-[#ff0000e0] ' > Rs {product.oldprice}  </span>             Rs  {product.price}   </h2>
           </div>
 
         <div   className="add-to-cart-btn ">
-         <button    key={product.id}   className='w-full  cursor-pointer py-1 hover:bg-[rgb(186,149,63)] hover:text-black  border-1 rouned-[6  px] text-[4vw]  md:text-[1.65vw]' >Add to Cart</button>
+         <button    key={product.id}   className='w-full  rounded-[2px]  cursor-pointer py-1 hover:bg-[rgb(186,149,63)] hover:text-black  border-1 rouned-[6px] sm:text-[2.5vw]  lg:text-[1.65vw]' >Add to Cart</button>
         </div>
           
         </div>
