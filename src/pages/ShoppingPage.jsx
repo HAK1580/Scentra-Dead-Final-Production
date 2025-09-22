@@ -215,11 +215,11 @@ const search = useSelector((state) => state.ui.searchOpen);
           <img className='border     border-[#ffffffaf] rounded-[8px] max-w-full object-contain  sm:h-full' src={product.image} alt="" />
           <img className='absolute w-[50px] sm:w-[68px] sm:max-w-full  rounded-[3px] top-[0.05rem] right-[0.05rem] ' width={70} src="/IMGS/icons/sale.svg " alt="" />
         </div>
-        <div  className="product-title mb-3.5 sm:mb-2  h-[5vh] sm:h-fit   flex justify-start loop  mx-auto  w-[90%]  ">
+        <div  className="product-title mb-3.5 sm:mb-2  h-[7vh] sm:h-fit   flex justify-start loop  mx-auto  w-[90%]  ">
           <h2   className='mb-1 mt-5 text-[4.25vw] md:text-[1.9vw]'> {product.title} </h2>  
 
         </div>
-          <div className="para py-1.5 text-[2.9vw]  sm:text-[3vw] md:text-[1.2vw]  sm:py-1  sm:h-full h-[4vh] line-clamp-4 flex justify-start my-2  mx-auto w-[90%] ">
+          <div className="para py-1.5 text-[2.9vw]  sm:text-[3vw] md:text-[1.2vw]  sm:py-1  sm:h-full h-[5.5vh] line-clamp-4 flex justify-start my-2  mx-auto w-[90%] ">
             <h3 className='italic font-extralight' > {product.desc}   </h3>
           </div>
           <div className="price py-0 sm:p-1 my-1 sm:my-2   ">
