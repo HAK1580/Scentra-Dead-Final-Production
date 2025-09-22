@@ -4,6 +4,7 @@ const initialState = {
   menuOpen: false,
   searchOpen: false,
   heroOpen: false,
+  cartOpen:false,
 };
 
 export const uiSlice = createSlice({
@@ -18,8 +19,13 @@ export const uiSlice = createSlice({
       state.searchOpen = false;
       state.heroOpen = false;
     },
+    toggleCart:(state)=>{ state.cartOpen=!state.cartOpen },
+    setCart:(state,action)=>{
+      state.cartOpen=action.payload
+    }
+
   },
 });
 
-export const { toggleMenu, toggleSearch, toggleHero, closeAll } = uiSlice.actions;
+export const {setCart ,toggleMenu,toggleSearch,toggleCart,toggleHero,closeAll } = uiSlice.actions;
 export default uiSlice.reducer;

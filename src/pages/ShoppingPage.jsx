@@ -1,7 +1,9 @@
 import React from 'react'
 import Navbar from "../components/Navbar"
 import Headline from "../components/Headline"
-import {useSelector } from 'react-redux'
+import {useSelector,useDispatch } from 'react-redux'
+import { addItem } from '../redux/cart/cartSlice'
+import { toggleCart,setCart } from '../redux/ui_states/uiSlice'
 // import { toggleSearch,toggleMenu } from '../redux/ui_states/uiSlice'
 
 const ShoppingPage = () => {
@@ -11,184 +13,185 @@ const product_info = [
     id: "1",
     image: "IMGS/Products/1.png",
     title: "Rosmerta White",
-    price: "8,499",
-    oldprice: "6,900",
+    price: 8499,
+    oldprice: 6900,
     desc: "Inspired by White Musk"
   },
   {
     id: "2",
     image: "IMGS/Products/18.png",
     title: "Amber Dusk",
-    price: "3,400",
-    oldprice: "4,900",
+    price: 3400,
+    oldprice: 4900,
     desc: "Inspired by Amber Oud"
   },
   {
     id: "3",
     image: "IMGS/Products/3.png",
     title: "Velvet Rose",
-    price: "2,500",
-    oldprice: "7,900",
+    price: 2500,
+    oldprice: 7900,
     desc: "Inspired by Velvet Rose"
   },
   {
     id: "4",
     image: "IMGS/Products/4.png",
     title: "Citrus Aura",
-    price: "1,100",
-    oldprice: "1,900",
+    price: 1100,
+    oldprice: 1900,
     desc: "Inspired by Fresh Citrus"
   },
   {
     id: "5",
     image: "IMGS/Products/5.png",
     title: "Noir Vanilla",
-    price: "3,200",
-    oldprice: "5,900",
+    price: 3200,
+    oldprice: 5900,
     desc: "Inspired by Black Vanilla"
   },
   {
     id: "6",
     image: "IMGS/Products/6.png",
     title: "Sandal Essence",
-    price: "3,500",
-    oldprice: "6,900",
+    price: 3500,
+    oldprice: 6900,
     desc: "Inspired by Sandalwood Essence"
   },
   {
     id: "7",
     image: "IMGS/Products/7.png",
     title: "Ocean Mist",
-    price: "1,200",
-    oldprice: "1,999",
+    price: 1200,
+    oldprice: 1999,
     desc: "Inspired by Ocean Breeze"
   },
   {
     id: "8",
     image: "IMGS/Products/8.png",
     title: "Jasmine Whisper",
-    price: "1,500",
-    oldprice: "2,999",
+    price: 1500,
+    oldprice: 2999,
     desc: "Inspired by Jasmine Bloom"
   },
   {
     id: "9",
     image: "IMGS/Products/9.png",
     title: "Leather Woods",
-    price: "2,500",
-    oldprice: "3,999",
+    price: 2500,
+    oldprice: 3999,
     desc: "Inspired by Woody Leather"
   },
   {
     id: "10",
     image: "IMGS/Products/10.png",
     title: "Royal Oud",
-    price: "5,500",
-    oldprice: "9,999",
+    price: 5500,
+    oldprice: 9999,
     desc: "Inspired by Royal Oud"
   },
   {
     id: "11",
     image: "IMGS/Products/11.png",
     title: "Golden Amber",
-    price: "4,200",
-    oldprice: "7,500",
+    price: 4200,
+    oldprice: 7500,
     desc: "Inspired by Amber Gold"
   },
   {
     id: "12",
     image: "IMGS/Products/12.png",
     title: "Mystic Bloom",
-    price: "2,800",
-    oldprice: "4,500",
+    price: 2800,
+    oldprice: 4500,
     desc: "Inspired by Floral Essence"
   },
   {
     id: "13",
     image: "IMGS/Products/13.png",
     title: "Cedar Noir",
-    price: "3,600",
-    oldprice: "6,200",
+    price: 3600,
+    oldprice: 6200,
     desc: "Inspired by Dark Cedarwood"
   },
   {
     id: "14",
     image: "IMGS/Products/14.png",
     title: "Pure Blossom",
-    price: "1,900",
-    oldprice: "3,200",
+    price: 1900,
+    oldprice: 3200,
     desc: "Inspired by Spring Blossoms"
   },
   {
     id: "15",
     image: "IMGS/Products/15.png",
     title: "Royal Saffron",
-    price: "6,300",
-    oldprice: "10,500",
+    price: 6300,
+    oldprice: 10500,
     desc: "Inspired by Exotic Saffron"
   },
   {
     id: "16",
     image: "IMGS/Products/16.png",
     title: "Velour Oud",
-    price: "4,800",
-    oldprice: "8,200",
+    price: 4800,
+    oldprice: 8200,
     desc: "Inspired by Deep Oud"
   },
   {
     id: "17",
     image: "IMGS/Products/17.png",
     title: "Luxe Patchouli",
-    price: "3,900",
-    oldprice: "6,700",
+    price: 3900,
+    oldprice: 6700,
     desc: "Inspired by Patchouli Woods"
   },
   {
     id: "18",
     image: "IMGS/Products/18.png",
     title: "Black Shore",
-    price: "9,900",
-    oldprice: "6,700",
+    price: 9900,
+    oldprice: 6700,
     desc: "Inspired by Asrchouli Woods"
   },
   {
     id: "19",
     image: "IMGS/Products/19.png",
     title: "Crimson Rose",
-    price: "2,200",
-    oldprice: "3,800",
+    price: 2200,
+    oldprice: 3800,
     desc: "Inspired by Fresh Red Roses"
   },
   {
     id: "20",
     image: "IMGS/Products/20.png",
     title: "Silver Mist",
-    price: "2,700",
-    oldprice: "4,400",
+    price: 2700,
+    oldprice: 4400,
     desc: "Inspired by Morning Dew"
   },
   {
     id: "21",
     image: "IMGS/Products/21.png",
     title: "Midnight Luxe",
-    price: "5,200",
-    oldprice: "9,000",
+    price: 5200,
+    oldprice: 9000,
     desc: "Inspired by Night Oud"
   },
   {
     id: "22",
     image: "IMGS/Products/22.png",
     title: "Lotus Dream",
-    price: "2,900",
-    oldprice: "4,600",
+    price: 2900,
+    oldprice: 4600,
     desc: "Inspired by Lotus Blossom"
   }
-]
+];
 
 
+const dispatch=useDispatch();
 const menuOpen=useSelector((state)=>state.ui.menuOpen);
 const search = useSelector((state) => state.ui.searchOpen);
-
+//  const cart=useSelector((state)=>state.ui.cartOpen)
 
 
 
@@ -228,8 +231,8 @@ const search = useSelector((state) => state.ui.searchOpen);
          <span className='old-price text-[3.2vw] md:text-[1.96vw] lg:text-[1.3vw] line-through text-[#ff0000e0] ' > Rs {product.oldprice}  </span>             Rs  {product.price}   </h2>
           </div>
 
-        <div   className="add-to-cart-btn ">
-         <button    key={product.id}   className='w-full add-to-cart-hover rounded-[7px]  sm:rounded-[2px]  cursor-pointer py-1.5 sm:py-2  hover:bg-[rgb(186,149,63)] hover:text-black  border-1 rouned-[6px] sm:text-[2.5vw]  lg:text-[1.65vw]' >Add to Cart</button>
+        <div key={product.id}  className="add-to-cart-btn ">
+         <button onClick={()=>dispatch(addItem(product)) && dispatch(setCart(true)) } key={product.id}   className='w-full add-to-cart rounded-[7px]  sm:rounded-[2px]  cursor-pointer py-1.5 sm:py-[0.4rem]  hover:bg-[rgb(186,149,63)] hover:text-black    border-1 rouned-[6px] sm:text-[2.5vw]  lg:text-[1.65vw]' >Add to Cart</button>
         </div>
           
         </div>
