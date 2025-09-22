@@ -22,9 +22,18 @@
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
       
     } 
+    .add-to-cart-hover:hover{
+     background-color: #d4af37a7;
+     color: black;
+     font-weight:400;
+     transition: all 0.3s ease-in-out;
+    }
     .font-tree{
      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    font-weight: 300;
+   }
+   .italic{
+    font-family: cursive;
    }
    .show{
       display: block;

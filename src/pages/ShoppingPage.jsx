@@ -207,29 +207,29 @@ const search = useSelector((state) => state.ui.searchOpen);
         <h1 className='text-center loop  text-[5.7vw]  tracking-wide  my-8  text-[#e8d5a9] sm:text-[3.5vw] '> VIEW All COLLECTIONS   </h1>
 
            
-     <div className="shop grid grid-cols-2 md:grid-cols-3   lg:grid-cols-4  max-w-[92%] md:max-w-[94%] mx-auto gap-[4vw]    sm:gap-[1.8vw] ">
+     <div className="shop grid grid-cols-2 md:grid-cols-3   lg:grid-cols-4 max-w-[92%]   md:max-w-[94%] mx-auto gap-[2.5vw]    sm:gap-[1.8vw] ">
         {product_info.map((product)=>
 
-        <div key={product.id} className="product-info h-fit flex-col     rounded-[8px] border-1   xl:max-w-full   max-w-[96%] border-gray-200">
-        <div className="product-image m-4 object-contain relative flex justify-center items-center cursor-pointer">
-          <img className='border border-[#ffffffaf] rounded-[8px] max-w-full object-contain h-full' src={product.image} alt="" />
-          <img className='absolute rounded-[3px] top-[0.1rem] right-[0.05rem] ' width={70} src="/IMGS/icons/sale.svg " alt="" />
+        <div key={product.id} className="product-info h-fit flex-col     rounded-[8px] border-1   max-w-full   border-gray-200">
+        <div className="product-image m-0   sm:m-4 object-contain relative flex justify-center  items-center cursor-pointer">
+          <img className='border     border-[#ffffffaf] rounded-[8px] max-w-full object-contain  sm:h-full' src={product.image} alt="" />
+          <img className='absolute max-w-full  rounded-[3px] top-[0.1rem] right-[0.05rem] ' width={70} src="/IMGS/icons/sale.svg " alt="" />
         </div>
-        <div  className="product-title   flex justify-start loop  mx-auto  w-[90%]  ">
-          <h2   className='  mt-5 text-[3.3vw] md:text-[1.8vw]'> {product.title} </h2>  
+        <div  className="product-title h-[5vh] sm:h-fit   flex justify-start loop  mx-auto  w-[90%]  ">
+          <h2   className=' mt-5 text-[4.25vw] md:text-[1.9vw]'> {product.title} </h2>  
 
         </div>
-          <div className="para py-1.5 sm:py-1  sm:h-full h-[7vh] line-clamp-4 flex justify-start my-1  mx-auto w-[90%] ">
-            <h3> {product.desc}   </h3>
+          <div className="para py-1.5 text-[3.2vw] sm:text-[1.2vw]  sm:py-1  sm:h-full h-[5vh] line-clamp-4 flex justify-start my-0.5  mx-auto w-[90%] ">
+            <h3 className='italic font-extralight' > {product.desc}   </h3>
           </div>
-          <div className="price py-1 my-2   ">
-            <h2 className=' text-center nav-inter flex justify-start mx-auto gap-3 w-[95%]  overflow-hidden  h-[30px] text-[3vw] md:text-[2.3vw]    lg:text-[1.5vw]'> 
+          <div className="price py-0 sm:p-1 my-1 sm:my-2   ">
+            <h2 className=' text-center nav-inter flex justify-start mx-auto gap-3 w-[95%]  overflow-hidden   sm:h-[30px] text-[4vw] md:text-[2.3vw]    lg:text-[1.5vw]'> 
               
-         <span className='old-price text-[2.5vw] md:text-[1.96vw] lg:text-[1.3vw] line-through text-[#ff0000e0] ' > Rs {product.oldprice}  </span>             Rs  {product.price}   </h2>
+         <span className='old-price text-[3.2vw] md:text-[1.96vw] lg:text-[1.3vw] line-through text-[#ff0000e0] ' > Rs {product.oldprice}  </span>             Rs  {product.price}   </h2>
           </div>
 
         <div   className="add-to-cart-btn ">
-         <button    key={product.id}   className='w-full  rounded-[2px]  cursor-pointer py-1 hover:bg-[rgb(186,149,63)] hover:text-black  border-1 rouned-[6px] sm:text-[2.5vw]  lg:text-[1.65vw]' >Add to Cart</button>
+         <button    key={product.id}   className='w-full add-to-cart-hover rounded-[4px]  sm:rounded-[2px]  cursor-pointer py-1 hover:bg-[rgb(186,149,63)] hover:text-black  border-1 rouned-[6px] sm:text-[2.5vw]  lg:text-[1.65vw]' >Add to Cart</button>
         </div>
           
         </div>
