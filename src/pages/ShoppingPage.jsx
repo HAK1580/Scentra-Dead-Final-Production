@@ -219,7 +219,7 @@ const search = useSelector((state) => state.ui.searchOpen);
           <h2   className='mb-1 mt-5 text-[4.25vw] md:text-[1.9vw]'> {product.title} </h2>  
 
         </div>
-          <div className="para py-1.5 text-[2.9vw]  sm:text-[3vw] md:text-[1.2vw]  sm:py-1  sm:h-full h-[5.5vh] line-clamp-4 flex justify-start my-2  mx-auto w-[90%] ">
+          <div className="para py-1 text-[2.9vw]  sm:text-[3vw] md:text-[1.2vw]  sm:py-1  sm:h-full h-[4vh] line-clamp-4 flex justify-start my-1.5  mx-auto w-[90%] ">
             <h3 className='italic font-extralight' > {product.desc}   </h3>
           </div>
           <div className="price py-0 sm:p-1 my-1 sm:my-2   ">
@@ -229,7 +229,7 @@ const search = useSelector((state) => state.ui.searchOpen);
           </div>
 
         <div   className="add-to-cart-btn ">
-         <button    key={product.id}   className='w-full add-to-cart-hover rounded-[8px]  sm:rounded-[2px]  cursor-pointer py-1.5 sm:py-2  hover:bg-[rgb(186,149,63)] hover:text-black  border-1 rouned-[6px] sm:text-[2.5vw]  lg:text-[1.65vw]' >Add to Cart</button>
+         <button    key={product.id}   className='w-full add-to-cart-hover rounded-[7px]  sm:rounded-[2px]  cursor-pointer py-1.5 sm:py-2  hover:bg-[rgb(186,149,63)] hover:text-black  border-1 rouned-[6px] sm:text-[2.5vw]  lg:text-[1.65vw]' >Add to Cart</button>
         </div>
           
         </div>
