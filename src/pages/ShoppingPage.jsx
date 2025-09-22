@@ -84,6 +84,102 @@ const product_info = [
     price: "5,500",
     oldprice: "9,999",
     desc: "Inspired by Royal Oud"
+  },
+  {
+    id: "11",
+    image: "IMGS/Products/11.png",
+    title: "Golden Amber",
+    price: "4,200",
+    oldprice: "7,500",
+    desc: "Inspired by Amber Gold"
+  },
+  {
+    id: "12",
+    image: "IMGS/Products/12.png",
+    title: "Mystic Bloom",
+    price: "2,800",
+    oldprice: "4,500",
+    desc: "Inspired by Floral Essence"
+  },
+  {
+    id: "13",
+    image: "IMGS/Products/13.png",
+    title: "Cedar Noir",
+    price: "3,600",
+    oldprice: "6,200",
+    desc: "Inspired by Dark Cedarwood"
+  },
+  {
+    id: "14",
+    image: "IMGS/Products/14.png",
+    title: "Pure Blossom",
+    price: "1,900",
+    oldprice: "3,200",
+    desc: "Inspired by Spring Blossoms"
+  },
+  {
+    id: "15",
+    image: "IMGS/Products/15.png",
+    title: "Royal Saffron",
+    price: "6,300",
+    oldprice: "10,500",
+    desc: "Inspired by Exotic Saffron"
+  },
+  {
+    id: "16",
+    image: "IMGS/Products/16.png",
+    title: "Velour Oud",
+    price: "4,800",
+    oldprice: "8,200",
+    desc: "Inspired by Deep Oud"
+  },
+  {
+    id: "17",
+    image: "IMGS/Products/17.png",
+    title: "Luxe Patchouli",
+    price: "3,900",
+    oldprice: "6,700",
+    desc: "Inspired by Patchouli Woods"
+  },
+  {
+    id: "17",
+    image: "IMGS/Products/18.png",
+    title: "Black Shore",
+    price: "9,900",
+    oldprice: "6,700",
+    desc: "Inspired by Asrchouli Woods"
+  },
+  {
+    id: "19",
+    image: "IMGS/Products/19.png",
+    title: "Crimson Rose",
+    price: "2,200",
+    oldprice: "3,800",
+    desc: "Inspired by Fresh Red Roses"
+  },
+  {
+    id: "20",
+    image: "IMGS/Products/20.png",
+    title: "Silver Mist",
+    price: "2,700",
+    oldprice: "4,400",
+    desc: "Inspired by Morning Dew"
+  },
+  {
+    id: "21",
+    image: "IMGS/Products/21.png",
+    title: "Midnight Luxe",
+    price: "5,200",
+    oldprice: "9,000",
+    desc: "Inspired by Night Oud"
+  },
+  {
+    id: "22",
+    image: "IMGS/Products/22.png",
+    title: "Lotus Dream",
+    price: "2,900",
+    oldprice: "4,600",
+    desc: "Inspired by Lotus Blossom"
   }
 ]
 
@@ -111,11 +207,11 @@ const product_info = [
           <img className='border border-[#ffffffaf] rounded-[8px] max-w-full object-contain h-full' src={product.image} alt="" />
           <img className='absolute rounded-[3px] top-[0.1rem] right-[0.05rem] ' width={70} src="/IMGS/icons/sale.svg " alt="" />
         </div>
-        <div  className="product-title flex justify-start loop  mx-auto  w-[90%]  ">
-          <h2   className='    mt-5 text-[3.3vw] md:text-[1.8vw]'> {product.title} </h2>  
+        <div  className="product-title   flex justify-start loop  mx-auto  w-[90%]  ">
+          <h2   className='  mt-5 text-[3.3vw] md:text-[1.8vw]'> {product.title} </h2>  
 
         </div>
-          <div className="para line-clamp-3 flex justify-start my-1  mx-auto w-[90%] ">
+          <div className="para py-1.5 sm:py-1  sm:h-full h-[7vh] line-clamp-4 flex justify-start my-1  mx-auto w-[90%] ">
             <h3> {product.desc}   </h3>
           </div>
           <div className="price py-1 my-2   ">
