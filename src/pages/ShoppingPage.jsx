@@ -1,6 +1,8 @@
 import React from 'react'
 import Navbar from "../components/Navbar"
 import Headline from "../components/Headline"
+import {useSelector } from 'react-redux'
+// import { toggleSearch,toggleMenu } from '../redux/ui_states/uiSlice'
 
 const ShoppingPage = () => {
 
@@ -142,7 +144,7 @@ const product_info = [
     desc: "Inspired by Patchouli Woods"
   },
   {
-    id: "17",
+    id: "18",
     image: "IMGS/Products/18.png",
     title: "Black Shore",
     price: "9,900",
@@ -184,14 +186,20 @@ const product_info = [
 ]
 
 
+const menuOpen=useSelector((state)=>state.ui.menuOpen);
+const search = useSelector((state) => state.ui.searchOpen);
+
+
 
 
   return (    
-    <div>
+    <div >
         <Headline />
      <Navbar  />
+     <div className={`shopping-parent-div ${search?"hide":"show"}  ${menuOpen?'hide':'show'}  `}>
+
         
-        <div className="border-1 border-black shop-banner">
+        <div className={`border-1 border-black shop-banner`}>
         <img className='w-full my-6 h-[35vh]   object-cover  sm:h-[51vh]' src="IMGS/Banners/perfume-hd-banner.webp" alt="" />
 
         </div>
@@ -226,6 +234,8 @@ const product_info = [
           
         </div>
          )}
+
+     </div>
 
      </div>
     

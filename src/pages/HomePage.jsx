@@ -7,14 +7,18 @@ import SliderHero from '../components/SliderHero'
 import Search from '../components/Search'
 import MiddleHeadline from '../components/MiddleHeadline';
 import ProductCollections from '../components/ProductCollections'
+import { useSelector } from 'react-redux';
 
 
 
 const HomePage = () => {
+  const menuOpen=useSelector((state)=>state.ui.menuOpen);
+   const search = useSelector((state) => state.ui.searchOpen);
+  
 
-  const [menuOpen,setMenuOpen]=useState(false)
-  const[hero,setHero]=useState(false)
-  const [search, setSearch] = useState(false);
+  // const [menuOpen,setMenuOpen]=useState(false)
+  // const[hero,setHero]=useState(false)
+  // const [search, setSearch] = useState(false);
 
 
   
@@ -23,13 +27,13 @@ const HomePage = () => {
     <div className='max-w-full' >
 
      <Headline />  
-     <Navbar menuOpen={menuOpen} search={search} setSearch={setSearch} setMenuOpen={setMenuOpen} hero={hero} setHero={setHero} />
+     <Navbar  />
       
-     <div className={`hero ${search?"hide":"show"}`}>
+     <div className={`hero ${search?"hide":"show"}  ${menuOpen?"hide":"show"}`}>
     
-     <SliderHero hero={hero} setHero={setHero}  /> 
-     <MiddleHeadline hero={hero}  />
-     <ProductCollections hero={hero} setHero={setHero}   />
+     <SliderHero   /> 
+     <MiddleHeadline />
+     <ProductCollections    />
     
     
      </div>
