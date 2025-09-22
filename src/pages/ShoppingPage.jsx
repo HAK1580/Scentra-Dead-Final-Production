@@ -10,7 +10,7 @@ const product_info = [
   {
     id: "1",
     image: "IMGS/Products/1.png",
-    title: "Rosmerta White Musk",
+    title: "Rosmerta White",
     price: "8,499",
     oldprice: "6,900",
     desc: "Inspired by White Musk"
@@ -215,7 +215,7 @@ const search = useSelector((state) => state.ui.searchOpen);
           <img className='border     border-[#ffffffaf] rounded-[8px] max-w-full object-contain  sm:h-full' src={product.image} alt="" />
           <img className='absolute w-[50px] sm:w-[68px] sm:max-w-full  rounded-[3px] top-[0.05rem] right-[0.05rem] ' width={70} src="/IMGS/icons/sale.svg " alt="" />
         </div>
-        <div  className="product-title mb-3.5 sm:mb-2  h-[7vh] sm:h-fit   flex justify-start loop  mx-auto  w-[90%]  ">
+        <div  className="product-title mb-3.5 sm:mb-2  h-[5vh] sm:h-fit   flex justify-start loop  mx-auto  w-[90%]  ">
           <h2   className='mb-1 mt-5 text-[4.25vw] md:text-[1.9vw]'> {product.title} </h2>  
 
         </div>
@@ -223,7 +223,7 @@ const search = useSelector((state) => state.ui.searchOpen);
             <h3 className='italic font-extralight' > {product.desc}   </h3>
           </div>
           <div className="price py-0 sm:p-1 my-1 sm:my-2   ">
-            <h2 className=' text-center nav-inter flex justify-start mx-auto gap-3 w-[95%]  overflow-hidden   sm:h-[30px] text-[4vw] md:text-[2.3vw]    lg:text-[1.5vw]'> 
+            <h2 className=' text-center  nav-inter flex justify-start mx-auto gap-3 w-[95%]  overflow-hidden   sm:h-[30px] text-[4vw] md:text-[2.3vw]    lg:text-[1.5vw]'> 
               
          <span className='old-price text-[3.2vw] md:text-[1.96vw] lg:text-[1.3vw] line-through text-[#ff0000e0] ' > Rs {product.oldprice}  </span>             Rs  {product.price}   </h2>
           </div>
