@@ -36,7 +36,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={` relative ${search ? "hide" : ""}`}>
+      <nav className={`relative ${search ? "hide" : ""}`}>
         <img
           className="logo absolute top-[-56%] max-w-[125px] left-[-4%] sm:top-[-30%] sm:left-[4%] sm:max-w-[190px] md:left-[clamp(-2.5rem,-12%,1rem)] md:max-w-[160px] md:top-[clamp(-1rem,-4%,1rem)] lg:max-w-[300px] lg:top-[clamp(-2rem,-28%,2rem)] lg:left-[clamp(-4rem,-10%,-1rem)] max-[600px]:left-[1%] max-[300px]:w-[100px] z-50"
           width={300}
@@ -50,7 +50,7 @@ const Navbar = () => {
           src={`${menuOpen ? "/IMGS/icons/cross.svg" : "/IMGS/icons/hamburger.svg"}`} 
           alt="menu toggle" 
         />
-        <img className="absolute lg:right-[clamp(0.3rem,4%,8rem)] lg:bottom-[clamp(1rem,36%,3rem)] md:w-[28px] lg:w-[33px]  max-[768px]:bottom-[25%] max-[768px]:right-[9.5%] max-[768px]:w-[25px] md:right-[2%] md:bottom-[26%]  cursor-pointer max-[300px]:w-[23px] " src="/IMGS/icons/cart.svg" alt="" />
+        <img className="absolute lg:right-[clamp(0.3rem,4%,8rem)] lg:bottom-[clamp(1rem,36%,3rem)] md:w-[28px] lg:w-[33px]  max-[768px]:bottom-[25%] max-[768px]:right-[9.5%] max-[768px]:w-[25px] md:right-[2%] md:bottom-[26%]  cursor-pointer max-[300px]:w-[23px] sm:hidden " src="/IMGS/icons/cart.svg" alt="" />
 
         <ul className="flex gap-[3.9vw] md:gap-[3vw] relative justify-center items-center text-white max-[768px]:text-[5vw] text-[clamp(0.80rem,1.4vw,5rem)] tracking-[0.1em] no-underline font-nav">
           <li className="nav-left z-100 relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-400 hover:after:w-full  max-[768px]:hidden"><a href="/">HOME</a></li>
