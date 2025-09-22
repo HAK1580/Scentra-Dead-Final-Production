@@ -229,7 +229,7 @@ const search = useSelector((state) => state.ui.searchOpen);
           </div>
 
         <div   className="add-to-cart-btn ">
-         <button    key={product.id}   className='w-full add-to-cart-hover rounded-[4px]  sm:rounded-[2px]  cursor-pointer py-1.5 sm:py-2  hover:bg-[rgb(186,149,63)] hover:text-black  border-1 rouned-[6px] sm:text-[2.5vw]  lg:text-[1.65vw]' >Add to Cart</button>
+         <button    key={product.id}   className='w-full add-to-cart-hover rounded-[8px]  sm:rounded-[2px]  cursor-pointer py-1.5 sm:py-2  hover:bg-[rgb(186,149,63)] hover:text-black  border-1 rouned-[6px] sm:text-[2.5vw]  lg:text-[1.65vw]' >Add to Cart</button>
         </div>
           
         </div>
