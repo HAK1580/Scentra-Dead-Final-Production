@@ -210,7 +210,7 @@ const search = useSelector((state) => state.ui.searchOpen);
         <h1 className='text-center loop  text-[5.7vw]  tracking-wide  my-8  text-[#e8d5a9] sm:text-[3.5vw] '> VIEW All COLLECTIONS   </h1>
 
            
-     <div className="shop grid grid-cols-2 md:grid-cols-3   lg:grid-cols-4 max-w-[92%]   md:max-w-[94%] mx-auto gap-[2.5vw]    sm:gap-[1.8vw] ">
+     <div className="shop grid grid-cols-2 md:grid-cols-3    lg:grid-cols-4 max-w-[92%]   md:max-w-[94%] mx-auto gap-[2.5vw]    sm:gap-[1.8vw] ">
         {product_info.map((product)=>
 
         <div key={product.id} className="product-info h-fit flex-col     rounded-[8px] border-1   max-w-full   border-gray-200">

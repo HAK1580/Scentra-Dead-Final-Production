@@ -97,7 +97,7 @@ const Navbar = () => {
         <ul className="flex gap-[3.9vw] md:gap-[3vw] relative justify-center items-center text-white max-[768px]:text-[5vw] text-[clamp(0.80rem,1.4vw,5rem)] tracking-[0.1em] no-underline font-nav">
           <li className="nav-left z-100 relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-400 hover:after:w-full max-[768px]:hidden"><a href="/">HOME</a></li>
           <li className="nav-left z-100 relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-400 hover:after:w-full max-[768px]:hidden"><a href="/shopping">ALL COLLECTIONS</a></li>
-          <li className="scentra-middle text-[clamp(2.8rem,5.1vw,7rem)] text-[#e8d5a9] font-[100] tracking-wide font-loop">SCENTRA</li>
+          <li className="scentra-middle text-[clamp(2.8rem,5.1vw,7rem)] text-[#e8d5a9] font-[100] tracking-wide font-loop"> <a href="/">SCENTRA</a></li>
           <li className="nav-right z-100 relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-400 hover:after:w-full max-[768px]:hidden"><a href="/">ABOUT US</a></li>
           <li className="nav-right z-100 relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-400 hover:after:w-full max-[768px]:hidden"><a href="/">CONTACT US</a></li>
         </ul>
