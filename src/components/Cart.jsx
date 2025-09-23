@@ -64,10 +64,10 @@ const Cart = () => {
              </h2>   
            </div>
             <div className="subtototal-btns  flex flex-col gap-2 ">
-              <button onClick={()=>dispatch(clearCart())}   className='border-1  w-[90%] mx-auto  text-[3.5vw]   sm:text-[1.5vw] cart-btn  cursor-pointer  py-2  hover:bg-[rgb(186,149,63)] hover:text-black         
-              '> Clear Cart</button>
               <button onClick={()=>alert("we will make that soon as well ")} className='border-1 text-[3.5vw]    w-[90%] cart-btn  mx-auto sm:text-[1.5vw] cursor-pointer  py-2  hover:bg-[rgb(186,149,63)] hover:text-black         
               '>Check Out</button>
+              <button onClick={()=>dispatch(clearCart())}   className='border-1  w-[90%] mx-auto  text-[3.5vw]   sm:text-[1.5vw] cart-btn  cursor-pointer  py-2  hover:bg-[rgb(186,149,63)] hover:text-black         
+              '> Clear Cart</button>
             </div>
             
         </div>
