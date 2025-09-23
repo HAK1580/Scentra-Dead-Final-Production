@@ -58,7 +58,7 @@ const Cart = () => {
         <div className="total  bg-black w-[75%] md:w-[40%] sm:w-[45%] lg:w-[30%] bottom-[3vh] z-100 fixed p-5 sm:bottom-0 ">
         {<hr className='max-w-[99%] font-extralight  text-[rgba(232,213,169,0.25)]  mx-auto '/>}
            <div className="total-price   flex justify-between items-center">
-          <h1 className=' popins tracking-widest  pl-0.5 p-3 m-4  font-[100] text-[3.7vw] sm:text-[2.6vw]  md:text-[1.5vw]'>SUBTOTAL  </h1>
+          <h1 className=' popins tracking-widest   pl-0.5 p-3 m-4 text-white  font-[600] text-[3.7vw] sm:text-[2.6vw]  md:text-[1.5vw]'>SUBTOTAL  </h1>
            <h2 className=' sm:pr-12  md:pr-16 pr-1.5 text-[4vw] sm:text-[2.5vw]   md:text-[1.45vw]' > 
               Rs. {totalprice}
              </h2>   
