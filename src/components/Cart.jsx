@@ -39,7 +39,7 @@ const Cart = () => {
                     <button onClick={()=>dispatch(addItem(item))} className='  inc-dec cursor-pointer  border-1 border-[#ffffff3b] text-[1.2rem] hover:text-black hover:bg-white m-0 px-2   '  >
                       +</button>
                     <h3 className='text-[1.1rem]'>{item.quantity}</h3>
-                    <button onClick={()=>dispatch(removeItem(item.id))} className=' inc-dec  cursor-pointer border-1 border-[#ffffff3b]  text-[1.2rem] hover:text-black hover:bg-white m-0  px-2   '  >
+                    <button onClick={()=>dispatch(removeItem(item.id))} className=' inc-dec  cursor-pointer border-1 border-[#ffffff3b]  text-[1.2rem] hover:text-black hover:bg-white m-0  px-[0.6rem]   '  >
                       -</button>
                   </div>
                   <h2 className='tree' >Rs. {item.price} x {item.quantity}</h2>
