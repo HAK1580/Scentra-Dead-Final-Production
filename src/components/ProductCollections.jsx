@@ -7,7 +7,7 @@ const ProductCollections = ({ hero }) => {
 
   return (
     <div
-      className={`hero overflow-hidden my-[-56vh] lg:my-[-115vh] md:my-[-90vh] w-full max-w-[100vw] ${
+      className={`hero overflow-x-hidden my-[-56vh] lg:my-[-115vh] md:my-[-90vh] w-full max-w-[100vw] ${
         hero ? "hidden" : ""
       }`}
     >
@@ -23,11 +23,11 @@ const ProductCollections = ({ hero }) => {
 
         {/* container: column on mobile, row on md+ */}
         <div
-          className="mx-auto h-fit max-w-[75%] md:max-w-full flex flex-col md:flex-row 
-                     justify-center items-center gap-[7vw] product-collection-box overflow-hidden w-[90%] md:w-[95%]"
+          className="mx-auto h-fit max-w-[75%] md:max-w-full flex flex-col md:flex-row  
+                     justify-center items-center gap-[7vw] product-collection-box overflow-x-hidden w-[90%] md:w-[95%]"
         >
           {/* ---------- MEN ---------- */}
-          <div className="product-collection-item relative flex items-center justify-center w-full md:w-auto overflow-hidden">
+          <div className="product-collection-item relative flex items-center overflow-x-hidden justify-center w-full md:w-auto overflow-hidden">
             {/* Image */}
             <img
               onMouseEnter={() => setMenhover(true)}
