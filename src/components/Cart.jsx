@@ -16,7 +16,7 @@ const Cart = () => {
 
   return (
       <>
-      <div className=' bg-[rgb(15,11,7)] z-100 overflow-hidden  border-[rgba(255,255,255,0.05)] w-[30%] fixed h-[100vh] top-0  right-0 border-1'>
+      <div className=' bg-[rgb(15,11,7)] z-100 overflow-hidden  border-[rgba(255,255,255,0.05)]  lg:w-[30%] fixed h-[100vh] top-0  right-0 border-1'>
         <div className="cart-head  mx-auto max-w-[95%] flex justify-between">
         <h1 className='text-[3.4vw] my-4 p-3 font-light ' >CART</h1>
         <img onClick={()=>dispatch((toggleCart()))}  className=' cursor-pointer  pr-3.5' src="IMGS/icons/cross.svg" alt="" />

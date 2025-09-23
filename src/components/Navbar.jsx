@@ -16,8 +16,6 @@ const Navbar = () => {
   // for the cart state 
   const items=useSelector((state)=>state.cart.items)
 
-
-
   function handleClick() { 
     dispatch(toggleMenu());
     dispatch(toggleHero());
@@ -31,21 +29,17 @@ const Navbar = () => {
     dispatch(toggleCart());
   }
   
-
   useEffect(() => {
     if(cartOpen){
       document.body.style.overflow="hidden"
-      
-    
     }
     else{
       document.body.style.overflow=""
-      
     }
     
     function handleOutClick(e) {
       const clickedInsideMenu =
-        e.target.closest(".hamburger") || e.target.closest(".hamburger-menu") 
+        e.target.closest(".hamburger-btn") || e.target.closest(".hamburger-menu"); 
       const clickedInsideCart =
         e.target.closest(".cart-img") || e.target.closest(".cart-open-div")|| e.target.closest(".add-to-cart")|| e.target.closest(".inc-dec-btn");
       const clickedInsideSearch =
@@ -73,7 +67,6 @@ const Navbar = () => {
     return () => {
       document.removeEventListener("click", handleOutClick);
       document.body.style.overflow=""
-
     }
   }, [menuOpen, hero, cartOpen, search, dispatch]);
   
@@ -89,7 +82,7 @@ const Navbar = () => {
 
         <img 
           onClick={handleClick}
-          className={`cursor-pointer ${menuOpen ? 'cross-forward' : 'hamburger'} w-[30px] z-50 absolute bottom-[clamp(1.05rem,1%,2rem)] left-2 md:hidden max-[300px]:w-[26px]`}
+          className={`hamburger-btn cursor-pointer w-[30px] z-50 absolute bottom-[clamp(1.05rem,1%,2rem)] left-2 md:hidden max-[300px]:w-[26px] ${menuOpen ? "cross-forward" : "hamburger"}`}
           src={`${menuOpen ? "/IMGS/icons/cross.svg" : "/IMGS/icons/hamburger.svg"}`} 
           alt="menu toggle" 
         />
