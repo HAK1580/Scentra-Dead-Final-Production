@@ -196,7 +196,7 @@ const search = useSelector((state) => state.ui.searchOpen);
 
 
   return (    
-    <div >
+    <div className='overflow-x-hidden' >
         <Headline />
      <Navbar  />
      <div className={`shopping-parent-div ${search?"hide":"show"}  ${menuOpen?'hide':'show'}  `}>

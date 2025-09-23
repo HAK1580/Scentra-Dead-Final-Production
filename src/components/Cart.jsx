@@ -16,9 +16,11 @@ const Cart = () => {
 
   return (
       <>
-      <div className=' bg-[rgb(15,11,7)] z-100 overflow-hidden  border-[rgba(255,255,255,0.05)]  lg:w-[30%] fixed h-[100vh] top-0  right-0 border-1'>
+      <div className=' bg-[rgb(15,11,7)] z-100 overflow-hidden  border-[rgba(255,255,255,0.05)] 
+       lg:w-[30%] md:w-[40%] sm:w-[45%] w-[75%]
+        fixed h-[100vh] top-0  right-0 border-1'>
         <div className="cart-head  mx-auto max-w-[95%] flex justify-between">
-        <h1 className='text-[3.4vw] my-4 p-3 font-light ' >CART</h1>
+        <h1 className=' text-[6vw]  sm:text-[3.4vw] my-4 p-3 font-light ' >CART</h1>
         <img onClick={()=>dispatch((toggleCart()))}  className=' cursor-pointer  pr-3.5' src="IMGS/icons/cross.svg" alt="" />
         </div>
         {<hr className='max-w-[90%] text-[rgba(232,213,169,0.3)] mx-auto '/>}
@@ -29,15 +31,15 @@ const Cart = () => {
             <div className="cart-qty-img flex border-1 border-[#ffffff74] gap-5 items-center ">
               <img className='object-contain'  width={110} src={item.image} alt="" /> 
               <div className="cart-title-qty    flex flex-col gap-1 ">
-                <h1 className='text-[1.4vw]' >{item.title}</h1>
+                <h1 className=' text-[4.2vw] my-1   sm:text-[1.4vw]' >{item.title}</h1>
                 
                 <div className="cart-price-qty  gap-1.5 flex flex-col  ">
           
-                  <div className="inc-dec-btn  gap-2 p-0 max-w-[70%]   items-center flex">
-                    <button onClick={()=>dispatch(addItem(item))} className=' cursor-pointer  border-1 border-[#ffffff3b] text-[1.2rem] hover:text-black hover:bg-white m-0 px-2   '  >
+                  <div className="inc-dec-btn mb-1 gap-2 p-0 max-w-[70%]   items-center flex">
+                    <button onClick={()=>dispatch(addItem(item))} className='  inc-dec cursor-pointer  border-1 border-[#ffffff3b] text-[1.2rem] hover:text-black hover:bg-white m-0 px-2   '  >
                       +</button>
                     <h3 className='text-[1.1rem]'>{item.quantity}</h3>
-                    <button onClick={()=>dispatch(removeItem(item.id))} className=' cursor-pointer border-1 border-[#ffffff3b]  text-[1.2rem] hover:text-black hover:bg-white m-0  px-2   '  >
+                    <button onClick={()=>dispatch(removeItem(item.id))} className=' inc-dec  cursor-pointer border-1 border-[#ffffff3b]  text-[1.2rem] hover:text-black hover:bg-white m-0  px-2   '  >
                       -</button>
                   </div>
                   <h2 className='tree' >Rs. {item.price} x {item.quantity}</h2>
@@ -51,23 +53,25 @@ const Cart = () => {
             
           
         </div>
-        <div className="total  bg-black w-[30%] z-100 fixed p-5 bottom-0 ">
+        {/* subtotal  */}
+
+        <div className="total  bg-black w-[75%] md:w-[40%] sm:w-[45%] lg:w-[30%] bottom-[3vh] z-100 fixed p-5 sm:bottom-0 ">
         {<hr className='max-w-[99%] font-extralight  text-[rgba(232,213,169,0.25)]  mx-auto '/>}
-           <div className="total-price flex justify-between items-center">
-          <h1 className=' popins tracking-widest  pl-0.5 p-3 m-4  font-[100]  text-[1.5vw]'>SUBTOTAL  </h1>
-           <h2 className='pr-16 text-[1.45vw]' > 
+           <div className="total-price   flex justify-between items-center">
+          <h1 className=' popins tracking-widest  pl-0.5 p-3 m-4  font-[100] text-[3.7vw] sm:text-[2.6vw]  md:text-[1.5vw]'>SUBTOTAL  </h1>
+           <h2 className=' sm:pr-12  md:pr-16 pr-1.5 text-[4vw] sm:text-[2.5vw]   md:text-[1.45vw]' > 
               Rs. {totalprice}
              </h2>   
            </div>
-            <div className="subtototal-btns flex flex-col gap-2 ">
-              <button onClick={()=>dispatch(clearCart())}   className='border-1  w-[90%] mx-auto text-[1.5vw] cursor-pointer  py-2  hover:bg-[rgb(186,149,63)] hover:text-black         
+            <div className="subtototal-btns  flex flex-col gap-2 ">
+              <button onClick={()=>dispatch(clearCart())}   className='border-1  w-[90%] mx-auto  text-[3.5vw]   sm:text-[1.5vw] cart-btn  cursor-pointer  py-2  hover:bg-[rgb(186,149,63)] hover:text-black         
               '> Clear Cart</button>
-              <button onClick={()=>alert("we will make that soon as well ")} className='border-1  w-[90%] mx-auto text-[1.5vw] cursor-pointer  py-2  hover:bg-[rgb(186,149,63)] hover:text-black         
+              <button onClick={()=>alert("we will make that soon as well ")} className='border-1 text-[3.5vw]    w-[90%] cart-btn  mx-auto sm:text-[1.5vw] cursor-pointer  py-2  hover:bg-[rgb(186,149,63)] hover:text-black         
               '>Check Out</button>
             </div>
             
         </div>
-        {cart.length===0?<h1 className='absolute z-100 text-[1.5vw] w-full flex justify-center items-center   right-0  top-[18rem]'> Your Cart is empty</h1>:""}
+        {cart.length===0?<h1 className='absolute z-100 text-[4vw]  sm:text-[2.5vw] w-full flex justify-center items-center top-[15rem]   right-0  sm:top-[18rem]'> Your Cart is empty</h1>:""}
      
     </div>
 
