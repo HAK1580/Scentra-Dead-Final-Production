@@ -32,6 +32,8 @@ const HomePage = () => {
      <div className={`hero ${search?"hide":"show"}  ${menuOpen?"hide":"show"}`}>
     
      <SliderHero   /> 
+        {/* make here the best seller and for men and women categories and on clicking the view all navigate to the same page of shopping  */}
+     
      <MiddleHeadline />
      <ProductCollections    />
     
