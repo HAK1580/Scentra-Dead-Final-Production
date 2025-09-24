@@ -1,19 +1,22 @@
 import React from 'react'
 import { useSelector,useDispatch } from 'react-redux'
+import { addItem } from '../redux/cart/cartSlice';
+import { setCart } from '../redux/ui_states/uiSlice';
 
 const BestSeller = () => {
 
+  const dispatch=useDispatch();
   const product_info=useSelector((state)=>state.products.best_seller)
 
   return (
-    <div className=' overflow-hidden max-w-full relative z-10
+    <div className=' max-w-full relative z-10
        top-[35rem] md:top-[37rem] lg:top-[60rem] ' >
       <div className="best-seller-box">
        
   <div className="best-seller-title flex
-   justify-between items-center nav-inter mx-auto max-w-[94%]">
+   justify-between items-center nav-inter mx-auto max-w-[91%]">
       <h1 className='text-[7.5vw]
-      tracking-wide
+      tracking-[0.5px]
       text-[#e8d5a9e7] 
       ' >BEST SELLER</h1>
       <a href='/shopping' className=' tracking-widest
@@ -21,7 +24,7 @@ const BestSeller = () => {
       text-[3.2vw] pr-2' > View All  </a>  
       </div>
       <div className="best-seller-products 
-     max-w-[93%] mx-auto gap-5 
+     max-w-[90%] mx-auto gap-5 
        flex my-5 flex-nowrap  overflow-x-auto
       ">
      
@@ -41,7 +44,9 @@ const BestSeller = () => {
             <h3 className='italic font-extralight' > {product.desc}   </h3>
           </div>
           <div className="price py-0 sm:p-1 my-1 sm:my-2   ">
-            <h2 className=' text-center  nav-inter flex justify-start mx-auto gap-3 w-[95%]  overflow-hidden   sm:h-[30px] text-[4vw] md:text-[2.3vw]    lg:text-[1.5vw]'> 
+            <h2 className=' text-center  nav-inter flex justify-start mx-auto gap-3 w-[95%] 
+            
+            sm:h-[30px] text-[4vw] md:text-[2.3vw]    lg:text-[1.5vw]'> 
               
          <span className='old-price text-[3.2vw] md:text-[1.96vw] lg:text-[1.3vw] line-through text-[#ff0000e0] ' > Rs {product.oldprice}  </span>             Rs  {product.price}   </h2>
           </div>
@@ -54,8 +59,8 @@ const BestSeller = () => {
         </div>
         
          )}
-            <div className="view-all flex justify-center items-center max-w-[75%] px-28  ">
-                <a href='/shopping' className='border border-[#ffffff6f] tracking-wide   text-[4.5vw] py-1 px-8 ' >View&nbsp;all Products </a>
+            <div className="view-all overflow-clip flex justify-center items-center max-w-[75%] px-10  ">
+                <a href='/shopping' className='border border-[#ffffff6f] tracking-wide   text-[4.5vw] py-0.5 px-4 ' >View&nbsp;all Products </a>
             </div>
 
       </div>
