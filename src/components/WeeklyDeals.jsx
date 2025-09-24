@@ -125,7 +125,7 @@ const WeeklyDeals = () => {
                 tracking-wide text-[1rem] 
                 sm:text-[1.15rem]
                 sm:px-4
-                py-0.5 px-2 text-center">
+                py-0.5 px-3 text-center">
               View&nbsp;all Products
             </a>
           </div>
