@@ -3,13 +3,13 @@ import { useSelector, useDispatch } from 'react-redux'
 import { addItem } from '../redux/cart/cartSlice'
 import { setCart } from '../redux/ui_states/uiSlice'
 
-const BestSeller = () => {
+const NewArrival = () => {
   const dispatch = useDispatch()
-  const product_info = useSelector((state) => state.products.best_seller)
+  const product_info = useSelector((state) => state.products.new_arrival)
 
   return (
     <div className="w-full max-w-full relative z-10 
-      top-[35rem] md:top-[37rem] lg:top-[60rem] overflow-hidden">
+      top-[23rem] md:top-[27rem] lg:top-[50rem] overflow-hidden">
       
       <div className="best-seller-box w-full max-w-full">
         
@@ -20,7 +20,7 @@ const BestSeller = () => {
           <h1 className="text-[7.5vw] 
           sm:text-[6vw] md:text-[4vw] lg:text-[3.3vw]
           tracking-[0.5px] text-[#e8d5a9e7]">
-            BEST SELLER
+            NEW ARRIVAL
           </h1>
           <a 
             href="/shopping" 
@@ -116,7 +116,7 @@ const BestSeller = () => {
           <div className="view-all
            lg:hidden
           flex justify-center items-center 
-            shrink-0 max-w-[35%] sm:max-w-[20%]  lg:max-w-[22%] px-4 
+            shrink-0 max-w-[35%] sm:max-w-[20%]  lg:max-w-[22%] px-5
             sm:px-5
             ">
             <a 
@@ -138,4 +138,4 @@ const BestSeller = () => {
   )
 }
 
-export default BestSeller
+export default NewArrival

@@ -9,7 +9,8 @@ import MiddleHeadline from '../components/MiddleHeadline';
 import ProductCollections from '../components/ProductCollections'
 import { useSelector } from 'react-redux';
 import BestSeller from '../components/BestSeller';
-
+import NewArrival from '../components/NewArrival';
+import WeeklyDeals from '../components/WeeklyDeals';
 
 
 const HomePage = () => {
@@ -35,6 +36,9 @@ const HomePage = () => {
      <SliderHero   /> 
         {/* make here the best seller and for men and women categories and on clicking the view all navigate to the same page of shopping  */}
       <BestSeller />
+      <NewArrival />
+       <WeeklyDeals />
+
      
       
      {/* <MiddleHeadline /> */}

@@ -220,7 +220,117 @@ const initialState = {
     oldprice: 5900,
     desc: "Inspired by Black Vanilla"
   },
-] 
+] ,
+new_arrival:[
+  {
+    id: "14",
+    image: "IMGS/Products/14.png",
+    title: "Pure Blossom",
+    price: 1900,
+    oldprice: 3200,
+    desc: "Inspired by Spring Blossoms"
+  },
+  {
+    id: "11",
+    image: "IMGS/Products/11.png",
+    title: "Golden Amber",
+    price: 4200,
+    oldprice: 7500,
+    desc: "Inspired by Amber Gold"
+  },
+  {
+    id: "13",
+    image: "IMGS/Products/13.png",
+    title: "Cedar Noir",
+    price: 3600,
+    oldprice: 6200,
+    desc: "Inspired by Dark Cedarwood"
+  },
+  {
+    id: "12",
+    image: "IMGS/Products/12.png",
+    title: "Mystic Bloom",
+    price: 2800,
+    oldprice: 4500,
+    desc: "Inspired by Floral Essence"
+  },
+  {
+    id: "15",
+    image: "IMGS/Products/15.png",
+    title: "Royal Saffron",
+    price: 6300,
+    oldprice: 10500,
+    desc: "Inspired by Exotic Saffron"
+  },
+  {
+    id: "16",
+    image: "IMGS/Products/16.png",
+    title: "Velour Oud",
+    price: 4800,
+    oldprice: 8200,
+    desc: "Inspired by Deep Oud"
+  },
+  {
+    id: "17",
+    image: "IMGS/Products/17.png",
+    title: "Luxe Patchouli",
+    price: 3900,
+    oldprice: 6700,
+    desc: "Inspired by Patchouli Woods"
+  },
+  
+  
+],
+weekly_deals:[
+  {
+    id: "17",
+    image: "IMGS/Products/17.png",
+    title: "Luxe Patchouli",
+    price: 3900,
+    oldprice: 6700,
+    desc: "Inspired by Patchouli Woods"
+  },
+  {
+    id: "21",
+    image: "IMGS/Products/21.png",
+    title: "Midnight Luxe",
+    price: 5200,
+    oldprice: 9000,
+    desc: "Inspired by Night Oud"
+  },
+  {
+    id: "18",
+    image: "IMGS/Products/18.png",
+    title: "Black Shore",
+    price: 9900,
+    oldprice: 6700,
+    desc: "Inspired by Asrchouli Woods"
+  },
+  {
+    id: "20",
+    image: "IMGS/Products/20.png",
+    title: "Silver Mist",
+    price: 2700,
+    oldprice: 4400,
+    desc: "Inspired by Morning Dew"
+  },
+  {
+    id: "19",
+    image: "IMGS/Products/19.png",
+    title: "Crimson Rose",
+    price: 2200,
+    oldprice: 3800,
+    desc: "Inspired by Fresh Red Roses"
+  },
+  {
+    id: "22",
+    image: "IMGS/Products/22.png",
+    title: "Lotus Dream",
+    price: 2900,
+    oldprice: 4600,
+    desc: "Inspired by Lotus Blossom"
+  }
+]
 
 };
 

@@ -3,13 +3,13 @@ import { useSelector, useDispatch } from 'react-redux'
 import { addItem } from '../redux/cart/cartSlice'
 import { setCart } from '../redux/ui_states/uiSlice'
 
-const BestSeller = () => {
+const WeeklyDeals = () => {
   const dispatch = useDispatch()
-  const product_info = useSelector((state) => state.products.best_seller)
+  const product_info = useSelector((state) => state.products.weekly_deals)
 
   return (
     <div className="w-full max-w-full relative z-10 
-      top-[35rem] md:top-[37rem] lg:top-[60rem] overflow-hidden">
+      top-[12rem] md:top-[18rem] lg:top-[40rem] overflow-hidden">
       
       <div className="best-seller-box w-full max-w-full">
         
@@ -20,7 +20,7 @@ const BestSeller = () => {
           <h1 className="text-[7.5vw] 
           sm:text-[6vw] md:text-[4vw] lg:text-[3.3vw]
           tracking-[0.5px] text-[#e8d5a9e7]">
-            BEST SELLER
+            WEEKLY DEALS
           </h1>
           <a 
             href="/shopping" 
@@ -138,4 +138,4 @@ const BestSeller = () => {
   )
 }
 
-export default BestSeller
+export default WeeklyDeals
