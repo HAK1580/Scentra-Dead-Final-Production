@@ -8,6 +8,7 @@ import Search from '../components/Search'
 import MiddleHeadline from '../components/MiddleHeadline';
 import ProductCollections from '../components/ProductCollections'
 import { useSelector } from 'react-redux';
+import BestSeller from '../components/BestSeller';
 
 
 
@@ -24,7 +25,7 @@ const HomePage = () => {
   
 
   return (
-    <div className='max-w-full' >
+    <div className='max-w-full   ' >
 
      <Headline />  
      <Navbar  />
@@ -33,12 +34,15 @@ const HomePage = () => {
     
      <SliderHero   /> 
         {/* make here the best seller and for men and women categories and on clicking the view all navigate to the same page of shopping  */}
+      <BestSeller />
      
-     <MiddleHeadline />
-     <ProductCollections    />
+      
+     {/* <MiddleHeadline /> */}
+     {/* <ProductCollections    /> */}
     
     
      </div>
+     
 
 
 
