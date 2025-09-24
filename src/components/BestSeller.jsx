@@ -44,7 +44,7 @@ const BestSeller = () => {
               key={product.id} 
               className="product-info flex-col shrink-0 h-fit 
                 rounded-[8px] border border-gray-200 
-                 max-w-[70%]  sm:max-w-[45%] md:max-w-[30%] 
+                 max-w-[65%]  sm:max-w-[45%] md:max-w-[30%] 
                 lg:max-w-[24%] 
                 bg-[#00000020]">
               
