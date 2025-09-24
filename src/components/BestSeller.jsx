@@ -16,9 +16,9 @@ const BestSeller = () => {
       tracking-wide
       text-[#e8d5a9e7] 
       ' >BEST SELLER</h1>
-      <h2 className=' tracking-widest
+      <a href='/shopping' className=' tracking-widest
       text-[#ffffffd7]  uppercase
-      text-[3.2vw] pr-2' > View All  </h2>  
+      text-[3.2vw] pr-2' > View All  </a>  
       </div>
       <div className="best-seller-products 
      max-w-[93%] mx-auto gap-5 
