@@ -8,7 +8,7 @@ const BestSeller = () => {
   const product_info = useSelector((state) => state.products.best_seller)
 
   return (
-    <div className="w-full max-w-full relative z-10 
+    <div className="w-full max-w-full relative 
       top-[35rem] md:top-[37rem] lg:top-[60rem] overflow-hidden">
       
       <div className="best-seller-box w-full max-w-full">
@@ -116,7 +116,7 @@ const BestSeller = () => {
           <div className="view-all
            lg:hidden
           flex justify-center items-center 
-            shrink-0 max-w-[35%] sm:max-w-[20%]  lg:max-w-[22%] px-4 
+            shrink-0 max-w-[35%] sm:max-w-[20%]  lg:max-w-[22%] px-3 
             sm:px-5
             ">
             <a 
@@ -125,7 +125,7 @@ const BestSeller = () => {
                 tracking-wide text-[1rem] 
                 sm:text-[1.15rem]
                 sm:px-4
-                py-0.5 px-5 text-center">
+                py-0.5 px-2 text-center">
               View&nbsp;all Products
             </a>
           </div>
