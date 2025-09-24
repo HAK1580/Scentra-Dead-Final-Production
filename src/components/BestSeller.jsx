@@ -26,7 +26,7 @@ const BestSeller = () => {
             href="/shopping" 
             className="tracking-widest text-[#ffffffd7] uppercase 
               sm:text-[2vw] md:text-[1.5vw] lg:text-[1.1vw] hover:text-[#e8d5a9e7]
-              text-[3vw] pr-2">
+              text-[2.8vw] pr-2">
             View All
           </a>
         </div>
