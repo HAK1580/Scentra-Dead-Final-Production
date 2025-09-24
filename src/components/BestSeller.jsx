@@ -6,12 +6,12 @@ const BestSeller = () => {
   const product_info=useSelector((state)=>state.products.best_seller)
 
   return (
-    <div className='border-1 overflow-hidden max-w-full relative z-10
+    <div className=' overflow-hidden max-w-full relative z-10
        top-[35rem] md:top-[37rem] lg:top-[60rem] ' >
       <div className="best-seller-box">
        
   <div className="best-seller-title flex
-   justify-between items-center nav-inter mx-auto  max-w-[94%]">
+   justify-between items-center nav-inter mx-auto max-w-[94%]">
       <h1 className='text-[7.5vw]
       tracking-wide
       text-[#e8d5a9e7] 
