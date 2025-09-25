@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage/"
 import Shopping from "./pages/ShoppingPage"
 import { createBrowserRouter } from 'react-router-dom'
 import { RouterProvider } from 'react-router-dom'
+import CheckOut from './pages/CheckOut'
 
 function App() {
 
@@ -16,7 +17,11 @@ function App() {
     {
       path: "/shopping",
       element: <Shopping />
-    }
+    },
+    {
+      path: "/checkout",
+      element: <CheckOut />
+    },
   ])
 
 

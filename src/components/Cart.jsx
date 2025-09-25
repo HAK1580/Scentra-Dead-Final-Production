@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import {addItem,clearCart,removeItem} from '../redux/cart/cartSlice'
 import { toggleCart } from '../redux/ui_states/uiSlice'
+import { Link } from 'react-router-dom'
 const Cart = () => {
     const dispatch=useDispatch();
     const cart=useSelector((state)=>state.cart.items)
@@ -9,10 +10,14 @@ const Cart = () => {
 
      useEffect(()=>{
       console.log(cart)
-    
-
 
     },[cart])
+
+     function handleCheckoutClick(){
+         
+     }
+
+
 
   return (
       <>
@@ -64,8 +69,8 @@ const Cart = () => {
              </h2>   
            </div>
             <div className="subtototal-btns  flex flex-col gap-2 ">
-              <button onClick={()=>alert("we will make that soon as well ")} className='border-1 text-[3.5vw]    w-[90%] cart-btn  mx-auto sm:text-[1.5vw] cursor-pointer  py-2  hover:bg-[rgb(186,149,63)] hover:text-black         
-              '>Check Out</button>
+              <Link to='/checkout'  className='border-1 text-[3.5vw] text-center    w-[90%] cart-btn  mx-auto sm:text-[1.5vw] cursor-pointer  py-2  hover:bg-[rgb(186,149,63)] hover:text-black         
+              '>Check Out</Link>
               <button onClick={()=>dispatch(clearCart())}   className='border-1  w-[90%] mx-auto  text-[3.5vw]   sm:text-[1.5vw] cart-btn  cursor-pointer  py-2  hover:bg-[rgb(186,149,63)] hover:text-black         
               '> Clear Cart</button>
             </div>
