@@ -27,54 +27,54 @@ const CheckOut = () => {
             absolute top-1 left-2 md:left-40  max-[500px]:w-29
             
             ' src="IMGS/logo/logo-fotor-bg-remover-2025080510633.webp" alt="" />
-                <Link to="/" className='text-[15vw] sm:text-[8vw] lg:text-[5rem]
+                <Link to="/" className='text-[15vw] sm:text-[11vw] lg:text-[5rem]
             loop font-[100] cursor-pointer
             xl:text-[6rem] 
             text-[#dfc998]' >Scentra</Link>
             </div>
 
             <div className="checkout-form-div mt-[-1.5rem]   ">
-                <h1 className=' text-[8vw] ml-1  font-normal  mb-5 sm:text-[3.4vw] tracking-wider ] p-3  '> 
+                <h1 className='  mx-auto max-w-[96%] text-[7vw]   font-normal  mb-5 sm:text-[4.5vw] tracking-wide ] p-3  '>
                     Shipping Details  </h1>
 
                 <form className='font-inter tracking-normal flex flex-col gap-8 justify-center  max-w-[94%] mx-auto' onSubmit={handleSubmit(onSubmit)} >
 
                     <div className="contact">
-                        <h1 className='text-[5vw]  sm:text-[2.7vw] ml-1 tracking-wide mb-2 text-white ' >Contact</h1>
-                        <input {...register("phone", { required: "Enter phone number", pattern: { value: /^(?:\+92|0)?3[0-9]{9}$/, message: "Enter valid phone number" } })} className={`${errors.phone ? "outline-red-500 outline-3" : "outline-0 outline-black"} ml-1 mt-3  w-[94%] px-3 py-2 rounded-[4px]  bg-white text-black`} type="text" placeholder='Mobile phone number' />
+                        <h1 className='text-[5vw]    sm:text-[3.7vw] ml-1 tracking-wide mb-2 text-white ' >Contact</h1>
+                        <input {...register("phone", { required: "Enter phone number", pattern: { value: /^(?:\+92|0)?3[0-9]{9}$/, message: "Enter valid phone number" } })} className={`${errors.phone ? "outline-red-500 outline-3" : "outline-0 outline-black"} ml-1 mt-3 sm:py-3  w-[94%] px-3 py-2 rounded-[4px]  bg-white text-black`} type="text" placeholder='Mobile phone number' />
                         {errors.phone && <p className='text-[#ff0000cd]  mt-3  ml-1'>{errors.phone.message}</p>}
                     </div>
 
                     <div className="delivery">
-                        <h1 className='text-[5vw] sm:text-[2.7vw] ml-1  tracking-wide mb-2 ] '>Delivery</h1>
+                        <h1 className='text-[5vw]  sm:text-[3.7vw] ml-1  tracking-wide mb-2 ] '>Delivery</h1>
 
-                        <input {...register("first_name", { required: "Enter a first name", pattern: { value: /^[A-Za-z][A-Za-z\s'-]{1,29}$/, message: "Enter valid first name", } })} className={`${errors.first_name ? "outline-red-500 outline-3" : "outline-0 outline-black"} ml-1   w-[94%] py-2 px-3 rounded-[4px]  bg-white text-black`} type="text" placeholder='First name' />
+                        <input {...register("first_name", { required: "Enter a first name", pattern: { value: /^[A-Za-z][A-Za-z\s'-]{1,29}$/, message: "Enter valid first name", } })} className={`${errors.first_name ? "outline-red-500 outline-3" : "outline-0 outline-black"} ml-1   w-[94%] py-2 px-3 sm:py-3  rounded-[4px]  bg-white text-black`} type="text" placeholder='First name' />
                         {errors.first_name && <p className='text-[#ff0000cd] mt-3  ml-1'>{errors.first_name.message}</p>}
 
-                        <input {...register("last_name", { required: "Enter a last name", pattern: { value: /^[A-Za-z][A-Za-z\s'-]{1,29}$/, message: "Enter a valid last name", }, })} className={`${errors.last_name ? "outline-red-500 outline-3" : "outline-0 outline-black"} ml-1 mt-3  w-[94%] py-2 px-3 rounded-[4px]  bg-white text-black`} type="text" placeholder='Last name' />
+                        <input {...register("last_name", { required: "Enter a last name", pattern: { value: /^[A-Za-z][A-Za-z\s'-]{1,29}$/, message: "Enter a valid last name", }, })} className={`${errors.last_name ? "outline-red-500 outline-3" : "outline-0 outline-black"} ml-1 mt-3  w-[94%] py-2 px-3 sm:py-3  rounded-[4px]  bg-white text-black`} type="text" placeholder='Last name' />
                         {errors.last_name && <p className='text-[#ff0000cd] mt-4  ml-1'>{errors.last_name.message}</p>}
 
-                        <input {...register("address", { required: "Enter an address", pattern: { value: /^[A-Za-z0-9\s,'-]{5,100}$/, message: "Enter a valid address", }, })} className={`${errors.address ? "outline-red-500 outline-3" : "outline-0 outline-black"} ml-1 mt-3  w-[94%] py-2 px-3 rounded-[4px]  bg-white text-black`} type="text" placeholder='Address' />
+                        <input {...register("address", { required: "Enter an address", pattern: { value: /^[A-Za-z0-9\s,'-]{5,100}$/, message: "Enter a valid address", }, })} className={`${errors.address ? "outline-red-500 outline-3" : "outline-0 outline-black"} ml-1 mt-3  w-[94%] py-2 px-3 sm:py-3  rounded-[4px]  bg-white text-black`} type="text" placeholder='Address' />
                         {errors.address && <p className='text-[#ff0000cd] mt-4  ml-1'>{errors.address.message}</p>}
 
-                        <input {...register("apartment")} className={`"outline-0 outline-black" ml-1 mt-3  w-[94%] p-3 rounded-[4px]  bg-white text-black`} type="text" placeholder='Apartment, suit ,etc (optional) ' />
+                        <input {...register("apartment")} className={`"outline-0 outline-black" ml-1 mt-3  w-[94%] p-3 sm:py-3  rounded-[4px]  bg-white text-black`} type="text" placeholder='Apartment, suit ,etc (optional) ' />
 
-                        <input {...register("city", { required: "Enter a city", pattern: { value: /^[A-Za-z\s'-]{2,50}$/, message: "Enter a valid city", }, })} className={`${errors.city ? "outline-red-500 outline-3" : "outline-0 outline-black"} ml-1 mt-3  w-[94%] py-2 px-3 rounded-[4px]  bg-white text-black`} type="text" placeholder='City' />
+                        <input {...register("city", { required: "Enter a city", pattern: { value: /^[A-Za-z\s'-]{2,50}$/, message: "Enter a valid city", }, })} className={`${errors.city ? "outline-red-500 outline-3" : "outline-0 outline-black"} ml-1 mt-3  w-[94%] py-2 px-3 sm:py-3  rounded-[4px]  bg-white text-black`} type="text" placeholder='City' />
                         {errors.city && <p className='text-[#ff0000cd] mt-4  ml-1'>{errors.city.message}</p>}
 
-                        <input {...register("email", { required: "Enter an email address", pattern: { value: /^(?:[a-zA-Z0-9_'^&amp;+{}-]+(?:\.[a-zA-Z0-9_'^&amp;+{}-]+)*)@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$/, message: "Enter a valid email address", } })} className={`${errors.email ? "outline-red-500 outline-3" : "outline-0 outline-black"} ml-1 mt-3 py-2 w-[94%] px-3 rounded-[4px]  bg-white text-black`} type="text" placeholder='Email address' />
+                        <input {...register("email", { required: "Enter an email address", pattern: { value: /^(?:[a-zA-Z0-9_'^&amp;+{}-]+(?:\.[a-zA-Z0-9_'^&amp;+{}-]+)*)@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$/, message: "Enter a valid email address", } })} className={`${errors.email ? "outline-red-500 outline-3" : "outline-0 outline-black"} ml-1  sm:py-3 mt-3 py-2 w-[94%] px-3 rounded-[4px]  bg-white text-black`} type="text" placeholder='Email address' />
                         {errors.email && <p className='text-[#ff0000cd] mt-4  ml-1'>{errors.email.message}</p>}
 
 
                     </div>
                     <div className="payment">
-                        <h1 className='text-[5vw] sm:text-[2.7vw]  ml-2 tracking-wide mb-2   '>
+                        <h1 className='text-[5vw]  sm:text-[3.7vw]  ml-2 tracking-wide mb-2   '>
                             Payment </h1>
                         <label className="flex mt-4 ml-2 w-[94%]  text-black bg-gray-200 py-3.5 px-2  items-center gap-2">
                             <input
                                 type="radio"
                                 value="cash_on_delivery"
-                            
+
                                 {...register("paymentMethod", { required: true })}
                             />
                             Cash on Delivery
@@ -82,18 +82,51 @@ const CheckOut = () => {
                     </div>
 
                     <div className="billing-address">
-                        <h1 className='text-[5vw] sm:text-[2.7vw] ml-2 
+                        <h1 className='text-[5vw]  sm:text-[3.7vw] ml-2 
                          tracking-wide mb-2   '> Billing address  </h1>
-                      <label className='flex w-[94%]   border rounded-[6px] px-2 text-[1.07rem] text-black bg-gray-200 py-3.5  ml-2 mt-4 gap-2'  >
-                       <input {...register("address")}   type="radio" name='billing_address'  value={"same as shipping add"}   />
-                          Same as Shipping Address 
-                      </label>
-                      
-                      <label className='flex w-[94%]  border rounded-[6px] px-2 text-[1.07rem] text-black bg-gray-200 py-3.5  ml-2 mt-4 gap-2'  >
-                       <input  type="radio" name='billing_address' value={" different add "}    />
-                          Use  Different Billing  Address 
-                      </label>
+                        <label className='flex w-[94%]   border rounded-[6px] px-2  text-black bg-gray-200 py-3.5  ml-2 mt-4 gap-2'  >
+                            <input {...register("address")} type="radio" name='billing_address' value={"same as shipping add"} />
+                            Same as Shipping Address
+                        </label>
 
+                        <label className='flex w-[94%]  border rounded-[6px] px-2  text-black bg-gray-200 py-3.5  ml-2 mt-4 gap-2'  >
+                            <input type="radio" name='billing_address' value={" different add "} />
+                            Use  Different Billing  Address
+                        </label>
+
+
+                    </div>
+                    <div className="order-summary lg:hidden ">
+
+                        <div className="order-summary-title 
+                        relative 
+                        border items-center justify-between flex">
+                            <h1 className='text-[6vw]  sm:text-[3.7vw]  ml-2 tracking-wide mb-2   '>
+                                Order Summary
+                            </h1>
+                            <h3 className='pr-6' >Show</h3>
+                            <img className="absolute top-2.5 right-0" src="IMGS/icons/downarrow.svg" alt="" />
+                        </div>
+
+                        <div className="order-summary-total">
+
+                            <div className="total-price   flex justify-between items-center">
+                                <h1 className=' popins tracking-widest   pl-0.5 p-3 m-4 text-white  font-[600] text-[3.7vw] sm:text-[2.6vw]  md:text-[1.5vw]'>SUBTOTAL  </h1>
+                                <h2 className=' sm:pr-12  md:pr-16 pr-1.5 text-[4vw] sm:text-[2.5vw]   md:text-[1.45vw]' >
+                                    Rs. {totalprice}
+                                </h2>
+                            </div>
+
+                            <div className="total-price   flex justify-between items-center">
+                                <h1 className=' font-inter  tracking-widest   pl-0.5 ml-5  text-white  font-[600] text-[3vw] sm:text-[2vw]  md:text-[1.2vw]'>
+                                    Shipping &copy;
+                                </h1>
+                                <h2 className=' sm:pr-12  md:pr-16 pr-1.5 text-[3vw] sm:text-[2.4vw]   md:text-[1.35vw]' >
+                                    FREE
+                                </h2>
+                            </div>
+
+                        </div>
 
                     </div>
 
