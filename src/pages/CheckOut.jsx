@@ -30,11 +30,12 @@ const CheckOut = () => {
                 <Link to="/" className='text-[15vw] sm:text-[8vw] lg:text-[5rem]
             loop font-[100] cursor-pointer
             xl:text-[6rem] 
-            text-[#e8d5a9]' >Scentra</Link>
+            text-[#dfc998]' >Scentra</Link>
             </div>
 
             <div className="checkout-form-div mt-[-1.5rem]   ">
-                <h1 className=' text-[8vw] font-inter   mb-2 sm:text-[3.4vw] tracking-wider ] p-3  '> Checkout </h1>
+                <h1 className=' text-[8vw] ml-1  font-normal  mb-5 sm:text-[3.4vw] tracking-wider ] p-3  '> 
+                    Shipping Details  </h1>
 
                 <form className='font-inter tracking-normal flex flex-col gap-8 justify-center  max-w-[94%] mx-auto' onSubmit={handleSubmit(onSubmit)} >
 
