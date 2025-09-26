@@ -19,7 +19,7 @@ const OrderSummarytop = ({ orderSum, setOrderSum }) => {
 
                 <div onClick={toggleOrderSum} className="order-summary-title 
                         relative cursor-pointer  max-w-[97%]
-                        bg-[#ffffff1f]  py-3
+                        bg-[#ffffff1f]  py-2.5
                          
                         rounded-[5px] items-center justify-between flex">
                     <h1 className='text-[5vw]   sm:text-[3.7vw] mt-2  ml-2 tracking-wide mb-2   '>
