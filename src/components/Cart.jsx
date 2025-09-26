@@ -69,9 +69,9 @@ const Cart = () => {
              </h2>   
            </div>
             <div className="subtototal-btns  flex flex-col gap-2 ">
-              <Link to='/checkout'  className='border-1 text-[3.9vw] sm:text-white  text-center bg-[rgb(186,149,63)] text-black   w-[90%] cart-btn  mx-auto sm:text-[1.5vw] cursor-pointer font-semibold   py-2  sm:hover:bg-[rgb(186,149,63)] sm:hover:text-black         
+              <Link to='/checkout'  className='border-1 text-[4vw] sm:text-white  text-center bg-[rgb(186,149,63)] text-black   w-[90%] cart-btn  mx-auto sm:text-[1.5vw] cursor-pointer font-bold   py-2  sm:hover:bg-[rgb(186,149,63)] sm:hover:text-black         
               '>Check Out</Link>
-              <button onClick={()=>dispatch(clearCart())}   className='border-1 sm:text-white bg-[rgb(186,149,63)] text-black   w-[90%] mx-auto  text-[3.9vw]   sm:text-[1.5vw] cart-btn  font-semibold  cursor-pointer  py-2  sm:hover:bg-[rgb(186,149,63)] sm:hover:text-black         
+              <button onClick={()=>dispatch(clearCart())}   className='border-1 sm:text-white bg-[rgb(186,149,63)] text-black   w-[90%] mx-auto  text-[4vw]   sm:text-[1.5vw] cart-btn  font-bold  cursor-pointer  py-2  sm:hover:bg-[rgb(186,149,63)] sm:hover:text-black         
               '> Clear Cart</button>
             </div>
             
