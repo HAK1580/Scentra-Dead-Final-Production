@@ -40,12 +40,12 @@ const OrderSummarytop = ({ orderSum, setOrderSum }) => {
                            <div key={item.id} className="cart-qty-img flex justify-between my-2    border-1 border-[#ffffff74] gap-5 items-center ">
                                 <div className="cart-title-qty items-center    flex  gap-1 ">
                                 <img className='object-contain  cursor-pointer  ' width={95} src={item.image} alt="" />
-                                    <h1 className=' text-[4.2vw] pl-1.5 sm:text-[1.4vw]' >
+                                    <h1 className=' text-[4vw] pl-1.5 sm:text-[1.4vw]' >
                                  {item.title} &nbsp;x {item.quantity} 
 
                                     </h1>
                         </div>
-                        <div className="price pr-2">
+                        <div className="price text-[4vw] pr-2">
                       <h1> Rs.  {item.price}  </h1>
 
                         </div>

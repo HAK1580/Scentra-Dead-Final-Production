@@ -42,7 +42,7 @@ const OrderSummary = ({ orderSum, setOrderSum }) => {
 
                                     </h1>
                         </div>
-                        <div className="price pr-2">
+                        <div className="price text-[3.7vw] pr-2">
                       <h1> Rs.  {item.price}  </h1>
 
                         </div>
