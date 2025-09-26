@@ -21,7 +21,7 @@ const CheckOut = () => {
 
     return (
 
-        <div >
+        <div className='overflow-hidden' >
         <Headline />
             <div className="center-logo relative   w-[100%]  mx-auto  py-5  
         flex justify-center items-center 
