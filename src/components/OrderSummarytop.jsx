@@ -29,7 +29,7 @@ const OrderSummarytop = ({ orderSum, setOrderSum }) => {
                     </h1> 
                         <img  className={`${orderSum&&"transform rotate-180"} w-4  `}  src="IMGS/icons/downarrow.svg" alt="" />
                             </div>
-                    <h3 className='pr-5 text-[5vw]' > Rs. {totalprice}   </h3>
+                    <h3 className='pr-5 tracking-wide  text-[5vw]' > Rs. {totalprice}   </h3>
                     
                 </div>
 
