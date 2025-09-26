@@ -25,7 +25,6 @@ const OrderSummarytop = ({ orderSum, setOrderSum }) => {
                     <h1 className='text-[5vw]   sm:text-[3.7vw] mt-2  ml-2 tracking-wide mb-2   '>
                         Order Summary
                     </h1>
-                    <img className={`absolute top-6 left-36 ${orderSum &&"transform rotate-180"}  `} src="IMGS/icons/downarrow.svg" alt="" />
                     <h3 className='pr-5 text-[5.2vw]' > Rs. {totalprice}   </h3>
                     
                 </div>
@@ -39,7 +38,7 @@ const OrderSummarytop = ({ orderSum, setOrderSum }) => {
                     return (
                            <div key={item.id} className="cart-qty-img flex justify-between my-2    border-1 border-[#ffffff74] gap-5 items-center ">
                                 <div className="cart-title-qty items-center    flex  gap-1 ">
-                                <img className='object-contain  cursor-pointer  ' width={95} src={item.image} alt="" />
+                                <img className='object-contain   cursor-pointer  ' width={95} src={item.image} alt="" />
                                     <h1 className=' text-[4vw] pl-1.5 sm:text-[1.4vw]' >
                                  {item.title} &nbsp;x {item.quantity} 
 
