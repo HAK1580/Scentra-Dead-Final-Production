@@ -48,7 +48,7 @@ const CheckOut = () => {
 
                     <div className="contact">
                         <h1 className='text-[5vw]    sm:text-[3.7vw] ml-1 tracking-wide mb-2 text-white ' >Contact</h1>
-                        <input {...register("phone", { required: "Enter phone number", pattern: { value: /^(?:\+92|0)?3[0-9]{9}$/, message: "Enter valid phone number" } })} className={`${errors.phone ? "outline-red-500 outline-3" : "outline-0 outline-black"} ml-1 mt-3 sm:py-3  w-[94%] px-3 py-2 rounded-[4px]  bg-white text-black`} type="text" placeholder='Mobile phone number' />
+                        <input {...register("phone", { required: "Enter phone number", pattern: { value: /^(?:\+92|0)?3[0-9]{9}$/, message: "Enter valid phone number" } })} className={`${errors.phone ? "outline-red-500 outline-3" : " outline-0  outline-transparent"} ml-1 mt-3 sm:py-3  w-[94%] px-3 py-2 rounded-[4px]  bg-white text-black`} type="text" placeholder='Mobile phone number' />
                         {errors.phone && <p className='text-[#ff0000cd]  mt-3  ml-1'>{errors.phone.message}</p>}
                     </div>
 
@@ -110,9 +110,10 @@ const CheckOut = () => {
 
 
 
-                    <button className='border rounded-[4px] mb-8 btn-transform cursor-pointer 
-                    py-3
+                    <button className='border rounded-[4px] mb-8  cursor-pointer 
+                    py-3 font-medium
                      text-[5.5vw] sm:text-[4vw] md:text-[1.9rem]
+                    bg-[#d4af37a7] text-[black]
                      ' >Complete Order </button>
 
 
