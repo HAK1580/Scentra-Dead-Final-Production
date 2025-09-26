@@ -37,7 +37,7 @@ const CheckOut = () => {
             </div>
 
             <div className="checkout-form-div mt-[-1.5rem]   ">
-                <h1 className='  mx-auto max-w-[96%] text-[7vw]   font-normal  mb-5 sm:text-[4.5vw] tracking-wide ] p-3  '>
+                <h1 className='  font-inter  mx-auto max-w-[96%] text-[7vw]     mb-5 sm:text-[4.5vw] ] p-2  '>
                     Shipping Details  </h1>
 
                 <form className='font-inter tracking-normal flex flex-col gap-8 justify-center  max-w-[94%] mx-auto' onSubmit={handleSubmit(onSubmit)} >
@@ -74,7 +74,7 @@ const CheckOut = () => {
                     <div className="payment">
                         <h1 className='text-[5vw]  sm:text-[3.7vw]  ml-2 tracking-wide mb-2   '>
                             Payment </h1>
-                        <label className="flex mt-4 ml-2 w-[94%]  text-black bg-gray-200 py-3.5 px-2  items-center gap-2">
+                        <label className="flex mt-4 ml-2 w-[94%]  text-black bg-[#ffffffc7] py-3 px-2  items-center gap-2">
                             <input
                                 type="radio"
                                 value="cash_on_delivery"
@@ -88,12 +88,12 @@ const CheckOut = () => {
                     <div className="billing-address">
                         <h1 className='text-[5vw]  sm:text-[3.7vw] ml-2 
                          tracking-wide mb-2   '> Billing address  </h1>
-                        <label className='flex w-[94%]   border rounded-[6px] px-2  text-black bg-gray-200 py-3.5  ml-2 mt-4 gap-2'  >
+                        <label className='flex w-[94%]   border rounded-[6px] px-2  text-black bg-[#ffffffc7] py-3  ml-2 mt-4 gap-2'  >
                             <input {...register("address")} type="radio" name='billing_address' value={"same as shipping add"} />
                             Same as Shipping Address
                         </label>
 
-                        <label className='flex w-[94%]  border rounded-[6px] px-2  text-black bg-gray-200 py-3.5  ml-2 mt-4 gap-2'  >
+                        <label className='flex w-[94%]  border rounded-[6px] px-2  text-black bg-[#ffffffc7] py-3  ml-2 mt-4 gap-2'  >
                             <input type="radio" name='billing_address' value={" different add "} />
                             Use  Different Billing  Address
                         </label>
@@ -107,7 +107,8 @@ const CheckOut = () => {
 
 
 
-                    <button className='border rounded-[4px] mb-8 btn-transform cursor-pointer    py-3 text-[1.35rem]' >Complete Order </button>
+                    <button className='border rounded-[4px] mb-8 btn-transform cursor-pointer 
+                    py-3 text-[5.5vw]' >Complete Order </button>
 
 
                 </form>
