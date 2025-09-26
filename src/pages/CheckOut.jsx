@@ -4,6 +4,7 @@ import { clearCart } from '../redux/cart/cartSlice'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import Headline from '../components/Headline'
 import OrderSummary from '../components/OrderSummary'
 
 const CheckOut = () => {
@@ -21,6 +22,7 @@ const CheckOut = () => {
     return (
 
         <div >
+        <Headline />
             <div className="center-logo relative   w-[100%]  mx-auto  py-5  
         flex justify-center items-center 
          ">
@@ -37,8 +39,9 @@ const CheckOut = () => {
             </div>
 
             <div className="checkout-form-div mt-[-1.5rem]   ">
-                <h1 className='  font-inter  mx-auto max-w-[96%] text-[7vw]     mb-5 sm:text-[4.5vw] ] p-2  '>
+                <h1 className=' font-inter  mx-auto max-w-[96%] text-[7vw]     mb-5 sm:text-[4.5vw] ] p-2  '>
                     Shipping Details  </h1>
+       
 
                 <form className='font-inter tracking-normal flex flex-col gap-8 justify-center  max-w-[94%] mx-auto' onSubmit={handleSubmit(onSubmit)} >
 
