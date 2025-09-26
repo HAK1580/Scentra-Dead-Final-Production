@@ -168,7 +168,7 @@
 
 @layer base{
     body{
-        background-color:rgb(15, 11, 7);
+        background-color:rgb(15,11,7);
         color: white;
         overflow-x: hidden;
     }

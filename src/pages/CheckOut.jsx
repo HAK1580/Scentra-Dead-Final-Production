@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import Headline from '../components/Headline'
 import OrderSummary from '../components/OrderSummary'
+import OrderSummarytop from '../components/OrderSummarytop'
 
 const CheckOut = () => {
     const[orderSum,setOrderSum]=useState(false); 
@@ -23,7 +24,7 @@ const CheckOut = () => {
 
         <div className='overflow-hidden' >
         <Headline />
-            <div className="center-logo relative   w-[100%]  mx-auto  py-5  
+            <div className="center-logo relative  mt-[-2rem]   w-[100%]  mx-auto  py-5  
         flex justify-center items-center 
          ">
                 <img className='w-38 md:w-42 lg:w-55
@@ -39,14 +40,16 @@ const CheckOut = () => {
             </div>
 
             <div className="checkout-form-div mt-[-1.5rem]   ">
-                <h1 className=' font-inter  mx-auto max-w-[96%] text-[7vw]     mb-5 sm:text-[4.5vw] ] p-2  '>
-                    Shipping Details  </h1>
+              
        
 
                 <form className='font-inter tracking-normal flex flex-col gap-8 justify-center  max-w-[94%] mx-auto' onSubmit={handleSubmit(onSubmit)} >
 
-
-                    <div className="contact">
+               <OrderSummarytop
+               orderSum={orderSum}
+               setOrderSum={setOrderSum}
+               />
+                    <div className="contact ">
                         <h1 className='text-[5vw]    sm:text-[3.7vw] ml-1 tracking-wide mb-2 text-white ' >Contact</h1>
                         <input {...register("phone", { required: "Enter phone number", pattern: { value: /^(?:\+92|0)?3[0-9]{9}$/, message: "Enter valid phone number" } })} className={`${errors.phone ? "outline-red-500 outline-3" : " outline-0  outline-transparent"} ml-1 mt-3 sm:py-3  w-[94%] px-3 py-2 rounded-[4px]  bg-white text-black`} type="text" placeholder='Mobile phone number' />
                         {errors.phone && <p className='text-[#ff0000cd]  mt-3  ml-1'>{errors.phone.message}</p>}
@@ -64,7 +67,7 @@ const CheckOut = () => {
                         <input {...register("address", { required: "Enter an address", pattern: { value: /^[A-Za-z0-9\s,'-]{5,100}$/, message: "Enter a valid address", }, })} className={`${errors.address ? "outline-red-500 outline-3" : "outline-0 outline-black"} ml-1 mt-3  w-[94%] py-2 px-3 sm:py-3  rounded-[4px]  bg-white text-black`} type="text" placeholder='Address' />
                         {errors.address && <p className='text-[#ff0000cd] mt-4  ml-1'>{errors.address.message}</p>}
 
-                        <input {...register("apartment")} className={`"outline-0 outline-black" ml-1 mt-3  w-[94%] p-3 sm:py-3  rounded-[4px]  bg-white text-black`} type="text" placeholder='Apartment, suit ,etc (optional) ' />
+                        <input {...register("apartment")} className={`"outline-0 outline-black" ml-1 mt-3  w-[94%] p-2 sm:py-3  rounded-[4px]  bg-white text-black`} type="text" placeholder='Apartment, suit ,etc (optional) ' />
 
                         <input {...register("city", { required: "Enter a city", pattern: { value: /^[A-Za-z\s'-]{2,50}$/, message: "Enter a valid city", }, })} className={`${errors.city ? "outline-red-500 outline-3" : "outline-0 outline-black"} ml-1 mt-3  w-[94%] py-2 px-3 sm:py-3  rounded-[4px]  bg-white text-black`} type="text" placeholder='City' />
                         {errors.city && <p className='text-[#ff0000cd] mt-4  ml-1'>{errors.city.message}</p>}
@@ -77,7 +80,7 @@ const CheckOut = () => {
                     <div className="payment">
                         <h1 className='text-[5vw]  sm:text-[3.7vw]  ml-2 tracking-wide mb-2   '>
                             Payment </h1>
-                        <label className="flex mt-4 ml-2 w-[94%]  text-black bg-[#ffffffc7] py-3 px-2  items-center gap-2">
+                        <label className="flex mt-4 ml-2 w-[94%] rounded-[4px]   text-black bg-[#ffffffc7] py-2.5 px-2  items-center gap-2">
                             <input
                                 type="radio"
                                 value="cash_on_delivery"
@@ -91,12 +94,12 @@ const CheckOut = () => {
                     <div className="billing-address">
                         <h1 className='text-[5vw]  sm:text-[3.7vw] ml-2 
                          tracking-wide mb-2   '> Billing address  </h1>
-                        <label className='flex w-[94%]   border rounded-[6px] px-2  text-black bg-[#ffffffc7] py-3  ml-2 mt-4 gap-2'  >
+                        <label className='flex w-[94%]   border rounded-[6px] px-2  text-black bg-[#ffffffc7] py-2.5  ml-2 mt-4 gap-2'  >
                             <input {...register("address")} type="radio" name='billing_address' value={"same as shipping add"} />
                             Same as Shipping Address
                         </label>
 
-                        <label className='flex w-[94%]  border rounded-[6px] px-2  text-black bg-[#ffffffc7] py-3  ml-2 mt-4 gap-2'  >
+                        <label className='flex w-[94%]  border rounded-[6px] px-2  text-black bg-[#ffffffc7] py-2.5  ml-2 mt-4 gap-2'  >
                             <input type="radio" name='billing_address' value={" different add "} />
                             Use  Different Billing  Address
                         </label>
@@ -110,10 +113,11 @@ const CheckOut = () => {
 
 
 
-                    <button className='border rounded-[4px] mb-8  cursor-pointer 
-                    py-3 font-medium
+                    <button className='border rounded-[8px] mb-8  cursor-pointer 
+                    py-2.5 font-semibold
+                    
                      text-[5.5vw] sm:text-[4vw] md:text-[1.9rem]
-                    bg-[#d4af37a7] text-[black]
+                    bg-[#d4af37a7] text-[black] w-[90%] mx-auto
                      ' >Complete Order </button>
 
 
