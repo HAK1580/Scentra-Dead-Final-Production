@@ -111,7 +111,9 @@ const CheckOut = () => {
 
 
                     <button className='border rounded-[4px] mb-8 btn-transform cursor-pointer 
-                    py-3 text-[5.5vw]' >Complete Order </button>
+                    py-3
+                     text-[5.5vw] sm:text-[4vw] md:text-[1.9rem]
+                     ' >Complete Order </button>
 
 
                 </form>
