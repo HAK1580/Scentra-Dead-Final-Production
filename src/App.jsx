@@ -5,7 +5,7 @@ import HomePage from "./pages/HomePage/"
 import Shopping from "./pages/ShoppingPage"
 import { createBrowserRouter } from 'react-router-dom'
 import { RouterProvider } from 'react-router-dom'
-import CheckOut from './pages/CheckOut'
+import CheckOut from './pages/CheckoutPage'
 
 function App() {
 

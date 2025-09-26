@@ -18,9 +18,9 @@ const OrderSummary = ({ orderSum, setOrderSum }) => {
             <div className="order-summary-parent-div lg:hidden ">
 
                 <div onClick={toggleOrderSum} className="order-summary-title 
-                        relative cursor-pointer bg-[#ffffff1f] max-w-[97%]
+                        relative cursor-pointer bg-[#ffffff1f] max-w-[100%]
                         border-1 border-[#ffffff4a] rounded-[5px] items-center justify-between flex">
-                    <h1 className='text-[5vw]   sm:text-[3.7vw] mt-2  ml-2 tracking-wide mb-2   '>
+                    <h1 className='text-[5vw] md:text-[3vw] sm:text-[3.4vw] mt-2  ml-2 tracking-wide mb-2   '>
                         Order Summary
                     </h1>
                     <h3 className='pr-8' > {orderSum?<span>Hide</span>:<span>Show</span>}  </h3>

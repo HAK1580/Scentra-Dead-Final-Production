@@ -18,14 +18,17 @@ const OrderSummarytop = ({ orderSum, setOrderSum }) => {
             <div className="order-summary-parent-div lg:hidden ">
 
                 <div onClick={toggleOrderSum} className="order-summary-title 
-                        relative cursor-pointer  max-w-[97%]
+                        relative cursor-pointer  max-w-[98%]
                         bg-[#ffffff1f]  py-2.5
                          
                         rounded-[5px] items-center justify-between flex">
-                    <h1 className='text-[5vw]   sm:text-[3.7vw] mt-2  ml-2 tracking-wide mb-2   '>
+                            <div className="only-title flex gap-1 relative">
+                    <h1 className='text-[4vw]   sm:text-[3.7vw] mt-2  ml-2 tracking-wide mb-2   '>
                         Order Summary
-                    </h1>
-                    <h3 className='pr-5 text-[5.2vw]' > Rs. {totalprice}   </h3>
+                    </h1> 
+                        <img  className={`${orderSum&&"transform rotate-180"} w-4  `}  src="IMGS/icons/downarrow.svg" alt="" />
+                            </div>
+                    <h3 className='pr-5 text-[5vw]' > Rs. {totalprice}   </h3>
                     
                 </div>
 
@@ -64,10 +67,10 @@ const OrderSummarytop = ({ orderSum, setOrderSum }) => {
                         </div>
 
                         <div className="total-price   flex justify-between items-center">
-                            <h1 className=' font-inter  tracking-widest   pl-0.5 ml-5  text-white  font-[600] text-[3vw] sm:text-[2vw]  md:text-[1.2vw]'>
+                            <h1 className=' font-inter  tracking-widest    pl-0.5 ml-5  text-white  font-[600] text-[3vw] sm:text-[2vw]  md:text-[1.2vw]'>
                                 Shipping &copy;
                             </h1>
-                            <h2 className=' sm:pr-12  md:pr-16 pr-1.5 text-[3vw] sm:text-[2.4vw]   md:text-[1.35vw]' >
+                            <h2 className=' sm:pr-12  md:pr-16 pr-2 text-[3vw] sm:text-[2.4vw]   md:text-[1.35vw]' >
                                 FREE
                             </h2>
                         </div>
