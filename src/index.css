@@ -120,7 +120,17 @@
 
   font-size:clamp(0.80rem,1.3vw,3rem);
 }
+.order-sum-child{
 
+  transition: max-height 0.5s ease;
+}
+
+.order-trans{
+     opacity: 1;
+     transition:all 0.5s ease-in;
+     max-height:50vh;
+    
+}
 
 
      /* Animations below  */

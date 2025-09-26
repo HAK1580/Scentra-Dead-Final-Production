@@ -3,8 +3,11 @@ import { useDispatch, useSelector } from 'react-redux'
 import { clearCart } from '../redux/cart/cartSlice'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import OrderSummary from '../components/OrderSummary'
 
 const CheckOut = () => {
+    const[orderSum,setOrderSum]=useState(false); 
 
     const cart = useSelector((state) => state.cart.items);
     const totalprice = cart.reduce((acc, item) => acc + (item.quantity * item.price), 0)
@@ -38,6 +41,7 @@ const CheckOut = () => {
                     Shipping Details  </h1>
 
                 <form className='font-inter tracking-normal flex flex-col gap-8 justify-center  max-w-[94%] mx-auto' onSubmit={handleSubmit(onSubmit)} >
+
 
                     <div className="contact">
                         <h1 className='text-[5vw]    sm:text-[3.7vw] ml-1 tracking-wide mb-2 text-white ' >Contact</h1>
@@ -96,45 +100,14 @@ const CheckOut = () => {
 
 
                     </div>
-                    <div className="order-summary lg:hidden ">
-
-                        <div className="order-summary-title 
-                        relative 
-                        border items-center justify-between flex">
-                            <h1 className='text-[6vw]  sm:text-[3.7vw]  ml-2 tracking-wide mb-2   '>
-                                Order Summary
-                            </h1>
-                            <h3 className='pr-6' >Show</h3>
-                            <img className="absolute top-2.5 right-0" src="IMGS/icons/downarrow.svg" alt="" />
-                        </div>
-
-                        <div className="order-summary-total">
-
-                            <div className="total-price   flex justify-between items-center">
-                                <h1 className=' popins tracking-widest   pl-0.5 p-3 m-4 text-white  font-[600] text-[3.7vw] sm:text-[2.6vw]  md:text-[1.5vw]'>SUBTOTAL  </h1>
-                                <h2 className=' sm:pr-12  md:pr-16 pr-1.5 text-[4vw] sm:text-[2.5vw]   md:text-[1.45vw]' >
-                                    Rs. {totalprice}
-                                </h2>
-                            </div>
-
-                            <div className="total-price   flex justify-between items-center">
-                                <h1 className=' font-inter  tracking-widest   pl-0.5 ml-5  text-white  font-[600] text-[3vw] sm:text-[2vw]  md:text-[1.2vw]'>
-                                    Shipping &copy;
-                                </h1>
-                                <h2 className=' sm:pr-12  md:pr-16 pr-1.5 text-[3vw] sm:text-[2.4vw]   md:text-[1.35vw]' >
-                                    FREE
-                                </h2>
-                            </div>
-
-                        </div>
-
-                    </div>
+                     <OrderSummary
+                      orderSum={orderSum}
+                      setOrderSum={setOrderSum} />
 
 
 
 
-
-                    <button className='border py-2 text-[1.2rem]' >SUBMIT </button>
+                    <button className='border rounded-[4px] mb-8 btn-transform cursor-pointer    py-3 text-[1.35rem]' >Complete Order </button>
 
 
                 </form>
@@ -177,7 +150,7 @@ const CheckOut = () => {
 
 
                 </div>
-                {/* subtotal  */}
+                {/* subtotal for pc/laptop  */}
 
                 <div className="total  bg-black w-[75%] md:w-[40%] sm:w-[45%] lg:w-[30%] bottom-[3vh] z-100 fixed p-5 sm:bottom-12 ">
                     {<hr className='max-w-[99%] font-extralight  text-[rgba(232,213,169,0.25)]  mx-auto ' />}
