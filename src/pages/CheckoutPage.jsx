@@ -13,19 +13,15 @@ import OrderConfirmation from '../components/small_ui_com/OrderConfirmation'
 const CheckoutPage = () => {
     const [orderSum, setOrderSum] = useState(false);
     const [orderconfirm, setOrderconfirm] = useState(false);
-    const [billing,setBilling]=useState(false);
-    function confirmorder() {
-        setOrderconfirm(!orderconfirm);
+    const [billing, setBilling] = useState(false);
 
-
-
-    }
 
 
     const cart = useSelector((state) => state.cart.items);
     const totalprice = cart.reduce((acc, item) => acc + (item.quantity * item.price), 0)
 
     const { register, reset, handleSubmit, formState: { errors }, watch } = useForm();
+
     const onSubmit = data => {
         console.log("Order Here", data);
         setOrderconfirm(true);
@@ -126,7 +122,7 @@ const CheckoutPage = () => {
                         <div className="billing-address">
                             <h1 className='text-[5vw]  sm:text-[3.7vw] ml-2 
                          tracking-wide mb-2 lg:text-[2vw]       '> Billing address  </h1>
-                            <label onClick={()=>setBilling(false)}  className='flex w-[94%] lg:py-3.5  lg:w-[70%]  border rounded-[6px] px-2  text-black bg-[#ffffffc7] py-2.5  ml-2 mt-4 gap-2'  >
+                            <label onClick={() => setBilling(false)} className='flex w-[94%] lg:py-3.5  lg:w-[70%]  border rounded-[6px] px-2  text-black bg-[#ffffffc7] py-2.5  ml-2 mt-4 gap-2'  >
                                 <input {...register("shipping_address")}
                                     type="radio"
                                     defaultChecked
@@ -135,24 +131,23 @@ const CheckoutPage = () => {
                                 Same as Shipping Address
                             </label>
 
-                            <label onClick={()=>setBilling(true)}  className='flex w-[94%] lg:py-3.5  lg:w-[70%]   border rounded-[6px] px-2  text-black bg-[#ffffffc7] py-2.5  ml-2 mt-4 gap-2'  >
+                            <label onClick={() => setBilling(true)} className='flex w-[94%] lg:py-3.5  lg:w-[70%]   border rounded-[6px] px-2  text-black bg-[#ffffffc7] py-2.5  ml-2 mt-4 gap-2'  >
                                 <input {...register("billing_address")}
                                     type="radio" name='billing_address' value="different add" />
                                 Use  Different Billing  Address
                             </label>
-                        
-                          <div className={`different-billing-address ${billing?"block":"hidden"}  `}>
 
-                             <input {...register("billing_address", { required: "Enter an address", pattern: { value: /^[A-Za-z0-9\s,'-]{5,100}$/, message: "Enter a valid address", }, })} className={`${errors.address ? "outline-red-500 outline-2" : "outline-0 outline-black"} ml-1 mt-3  w-[94%]  lg:py-3.5  lg:w-[70%]    py-2.5 px-3 sm:py-3  rounded-[4px]  bg-white text-black`} type="text" placeholder='Address' />
-                            {errors.billing_address && <p className='text-[#ff0000cd] mt-4  ml-1'>{errors.billing_address.message}</p>}
+                            <div className={`different-billing-address ${billing ? "block" : "hidden"}  `}>
 
-                            <input {...register("billing_apartment")} className={`outline-0 outline-black ml-1 mt-3 lg:py-3.5  lg:w-[70%]  w-[94%] p-2 sm:py-3  rounded-[4px]  bg-white text-black`} type="text" placeholder='Apartment, suit ,etc (optional) ' />
+                                <input {...register("billing_address2",)} className={`${errors.billing_address2 ? "outline-red-500 outline-2" : "outline-0 outline-black"} ml-1 mt-3  w-[94%]  lg:py-3.5  lg:w-[70%]    py-2.5 px-3 sm:py-3  rounded-[4px]  bg-white text-black`} type="text" placeholder='Address' />
 
+                                <input {...register("billing_apartment2")} className={`outline-0 outline-black ml-1 mt-3 lg:py-3.5  lg:w-[70%]  w-[94%] p-2 sm:py-3  rounded-[4px]  bg-white text-black`} type="text" placeholder='Apartment, suit ,etc (optional) ' />
 
 
 
 
-                          </div>
+
+                            </div>
 
 
 
