@@ -9,7 +9,8 @@ const OrderConfirmation = ({orderconfirm,setOrderconfirm}) => {
          lg:max-w-[40%] 
          w-[99%] my-0
          mx-auto lg:my-20 text-white 
-          z-100
+          z-1000
+          
         `}>          
              <h1 className='lg:text-[2vw]
 
