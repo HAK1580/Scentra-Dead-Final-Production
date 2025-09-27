@@ -103,6 +103,9 @@
   min-height:38vh;
   object-position: center left;
   cursor:pointer;
+}
+.order-confirm{
+  transition: all 1.5s ease-in;
 
 }
 .product-btn:hover{

@@ -8,26 +8,47 @@ import Headline from '../components/Headline'
 import OrderSummary from '../components/OrderSummary'
 import OrderSummarytop from '../components/OrderSummarytop'
 import CheckOut from '../components/CheckOut'
+import OrderConfirmation from '../components/small_ui_com/OrderConfirmation'
 
 const CheckoutPage = () => {
     const [orderSum, setOrderSum] = useState(false);
+    const [orderconfirm, setOrderconfirm] = useState(false);
+    function confirmorder() {
+        setOrderconfirm(!orderconfirm);
+
+
+
+    }
+
 
     const cart = useSelector((state) => state.cart.items);
     const totalprice = cart.reduce((acc, item) => acc + (item.quantity * item.price), 0)
 
     const { register, reset, handleSubmit, formState: { errors }, watch } = useForm();
     const onSubmit = data => {
-        console.log(data);
+        console.log("Order Here", data);
+        setOrderconfirm(true);
+        setTimeout(() => {
+            setOrderconfirm(false);
+        }, 10000);
         reset();
     }
+
+
 
     return (
 
         <div className='overflow-hidden' >
+            <div className={`order-confirm ${orderconfirm ? "opacity-100" : "opacity-0"}    `}>
+                <OrderConfirmation orderconfirm={orderconfirm} setOrderconfirm={setOrderconfirm} />
+
+            </div>
+
+
             <Headline />
             <div className="center-logo relative  mt-[-2rem]   w-[100%]  mx-auto  py-5  
-        flex justify-center items-center 
-         ">
+        flex justify-center items-center z-1
+        ">
                 <img className='w-38 md:w-42 lg:w-55
             sm:left-30  lg:left-10
             lg:top-3
@@ -48,11 +69,11 @@ const CheckoutPage = () => {
             lg:grid lg:grid-cols-3 gap-1
                ">
 
-                <div className="checkout-form-div  lg:pl-25  lg:w-[92%] lg:mt-[-2rem] mx-auto border border-transparent  col-start-1 col-end-3  mt-[-1.5rem]   ">
+                <div className="checkout-form-div relative z-10 lg:pl-25  lg:w-[92%] lg:mt-[-2rem] mx-auto border border-transparent  col-start-1 col-end-3  mt-[-1.5rem]   ">
 
 
 
-                    <form className='font-inter lg:w-[96%] tracking-normal flex flex-col gap-8 lg:gap- justify-center  max-w-[94%] mx-auto' onSubmit={handleSubmit(onSubmit)} >
+                    <form className='font-inter  lg:w-[96%] tracking-normal flex flex-col gap-8 lg:gap- justify-center  max-w-[94%] mx-auto' onSubmit={handleSubmit(onSubmit)} >
 
                         <OrderSummarytop
                             orderSum={orderSum}
@@ -76,7 +97,7 @@ const CheckoutPage = () => {
                             <input {...register("address", { required: "Enter an address", pattern: { value: /^[A-Za-z0-9\s,'-]{5,100}$/, message: "Enter a valid address", }, })} className={`${errors.address ? "outline-red-500 outline-2" : "outline-0 outline-black"} ml-1 mt-3  w-[94%]  lg:py-3.5  lg:w-[70%]    py-2.5 px-3 sm:py-3  rounded-[4px]  bg-white text-black`} type="text" placeholder='Address' />
                             {errors.address && <p className='text-[#ff0000cd] mt-4  ml-1'>{errors.address.message}</p>}
 
-                            <input {...register("apartment")} className={`"outline-0 outline-black" ml-1 mt-3 lg:py-3.5  lg:w-[70%]  w-[94%] p-2 sm:py-3  rounded-[4px]  bg-white text-black`} type="text" placeholder='Apartment, suit ,etc (optional) ' />
+                            <input {...register("apartment")} className={`outline-0 outline-black ml-1 mt-3 lg:py-3.5  lg:w-[70%]  w-[94%] p-2 sm:py-3  rounded-[4px]  bg-white text-black`} type="text" placeholder='Apartment, suit ,etc (optional) ' />
 
                             <input {...register("city", { required: "Enter a city", pattern: { value: /^[A-Za-z\s'-]{2,50}$/, message: "Enter a valid city", }, })} className={`${errors.city ? "outline-red-500 outline-2" : "outline-0 outline-black"} ml-1 mt-3  w-[94%] py-2.5 px-3 sm:py-3  lg:py-3.5  lg:w-[70%]     rounded-[4px]  bg-white text-black`} type="text" placeholder='City' />
                             {errors.city && <p className='text-[#ff0000cd] mt-4  ml-1'>{errors.city.message}</p>}
@@ -105,12 +126,17 @@ const CheckoutPage = () => {
                             <h1 className='text-[5vw]  sm:text-[3.7vw] ml-2 
                          tracking-wide mb-2 lg:text-[2vw]       '> Billing address  </h1>
                             <label className='flex w-[94%] lg:py-3.5  lg:w-[70%]  border rounded-[6px] px-2  text-black bg-[#ffffffc7] py-2.5  ml-2 mt-4 gap-2'  >
-                                <input {...register("address")} type="radio" name='billing_address' value={"same as shipping add"} />
+                                <input {...register("shipping_address")}
+                                    type="radio"
+                                    defaultChecked
+                                    name='billing_address' value="same as shipping address" />
+
                                 Same as Shipping Address
                             </label>
 
                             <label className='flex w-[94%] lg:py-3.5  lg:w-[70%]   border rounded-[6px] px-2  text-black bg-[#ffffffc7] py-2.5  ml-2 mt-4 gap-2'  >
-                                <input type="radio" name='billing_address' value={" different add "} />
+                                <input {...register("billing_address")}
+                                    type="radio" name='billing_address' value="different add" />
                                 Use  Different Billing  Address
                             </label>
 
@@ -124,7 +150,9 @@ const CheckoutPage = () => {
 
 
 
-                        <button className='border rounded-[8px] mb-8  cursor-pointer 
+                        <button
+                            type='submit'
+                            className='border rounded-[8px] mb-8  cursor-pointer 
                     py-2.5 font-semibold
                     lg:w-[70%]
                     lg:ml-2
@@ -146,9 +174,6 @@ const CheckoutPage = () => {
                 lg:max-w-[95%] pr-12   col-start-3 col-end-10">
                     <CheckOut />
                 </div>
-        
-
-
 
             </div>
 
