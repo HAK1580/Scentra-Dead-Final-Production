@@ -9,7 +9,6 @@ import OrderSummary from '../components/OrderSummary'
 import OrderSummarytop from '../components/OrderSummarytop'
 import CheckOut from '../components/CheckOut'
 import OrderConfirmation from '../components/small_ui_com/OrderConfirmation'
-import CartEmpty from '../components/small_ui_com/CartEmpty'
 
 const CheckoutPage = () => {
     const [orderSum, setOrderSum] = useState(false);
@@ -17,7 +16,7 @@ const CheckoutPage = () => {
     const [billing, setBilling] = useState(false);
 
 
-
+    const dispatch=useDispatch()
     const cart = useSelector((state) => state.cart.items);
     const totalprice = cart.reduce((acc, item) => acc + (item.quantity * item.price), 0)
 
@@ -30,6 +29,7 @@ const CheckoutPage = () => {
             setOrderconfirm(false);
         }, 10000);
         reset();
+        dispatch(clearCart())
     }
 
 
@@ -39,7 +39,7 @@ const CheckoutPage = () => {
         <div className='overflow-hidden' >
             <div className={`order-confirm ${orderconfirm ? "opacity-100" : "opacity-0"}    `}>
 
-      {cart.length===0?<CartEmpty />:<OrderConfirmation orderconfirm={orderconfirm} setOrderconfirm={setOrderconfirm} />}
+      <OrderConfirmation orderconfirm={orderconfirm} setOrderconfirm={setOrderconfirm} />
 
             </div>
 
