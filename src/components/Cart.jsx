@@ -25,7 +25,7 @@ const Cart = () => {
        lg:w-[30%] md:w-[40%] sm:w-[45%] w-[75%]
         fixed h-[100vh] top-0  right-0 border-1'>
         <div className="cart-head  mx-auto max-w-[95%] flex justify-between">
-        <h1 className=' text-[6vw]  sm:text-[3.4vw] my-4 p-3 font-light ' >CART</h1>
+        <h1 className=' text-[6vw]  sm:text-[3.4vw] my-4 p-3 font-light ' >CART ( {cart.length} )  </h1>
         <img onClick={()=>dispatch((toggleCart()))}  className=' cursor-pointer  pr-3.5' src="IMGS/icons/cross.svg" alt="" />
         </div>
         {<hr className='max-w-[90%] text-[rgba(232,213,169,0.3)] mx-auto '/>}
