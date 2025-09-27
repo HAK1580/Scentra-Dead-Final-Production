@@ -14,7 +14,7 @@ const Navbar = () => {
   const cartOpen = useSelector((state) => state.ui.cartOpen);
 
   // for the cart state 
-  const items=useSelector((state)=>state.cart.items)
+  const cart=useSelector((state)=>state.cart.items)
 
   function handleClick() { 
     dispatch(toggleMenu());
@@ -89,7 +89,7 @@ const Navbar = () => {
         <img 
           onClick={handleCartclick} 
           className="cart-img z-50 absolute lg:right-[clamp(0.3rem,8%,8rem)] lg:bottom-[clamp(1rem,36%,3rem)] md:w-[30px] lg:w-[35px] max-[768px]:bottom-[25%] max-[768px]:right-[9.5%] max-[768px]:w-[25px] md:right-[6%] md:bottom-[28%] cursor-pointer max-[300px]:w-[23px]" 
-          src="/IMGS/icons/cart.svg" 
+          src={cart.length===0?"/IMGS/icons/cart.svg":"/IMGS/icons/fullcart.svg"} 
           alt="cart" 
         />
       

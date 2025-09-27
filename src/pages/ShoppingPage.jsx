@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar"
 import Headline from "../components/Headline"
 import {useSelector,useDispatch } from 'react-redux'
 import { addItem } from '../redux/cart/cartSlice'
+import { setSearchTerm } from '../redux/products/productSlice'
 import { toggleCart,setCart } from '../redux/ui_states/uiSlice'
 
 
@@ -191,6 +192,9 @@ const ShoppingPage = () => {
 const dispatch=useDispatch();
 const product_info=useSelector((state)=>state.products.product_info)
 const menuOpen=useSelector((state)=>state.ui.menuOpen);
+const  searchTerm=useSelector((state)=> state.products.searchTerm )
+const filteredProducts = product_info.filter((product) =>  product.title.toLowerCase().includes(searchTerm.toLowerCase()));
+
 const search = useSelector((state) => state.ui.searchOpen);
 //  const cart=useSelector((state)=>state.ui.cartOpen)
 
@@ -211,10 +215,12 @@ const search = useSelector((state) => state.ui.searchOpen);
         <h1 className='text-center loop  text-[5.7vw]  tracking-wide  my-8  text-[#e8d5a9] sm:text-[3.5vw] '> VIEW All COLLECTIONS   </h1>
 
            
-     <div className="shop grid grid-cols-2 md:grid-cols-3    lg:grid-cols-4 max-w-[92%]   md:max-w-[94%] mx-auto gap-[2.5vw]    sm:gap-[1.8vw] ">
-        {product_info.map((product)=>
-
-        <div key={product.id} className="product-info h-fit flex-col     rounded-[8px] border-1   max-w-full   border-gray-200">
+     <div className={`shop grid grid-cols-2 md:grid-cols-3    lg:grid-cols-4 max-w-[92%]   md:max-w-[94%] mx-auto gap-[2.5vw]    sm:gap-[1.8vw] 
+      `}>
+      {(filteredProducts.length>0)?
+        (filteredProducts.map((product)=>
+          
+          <div key={product.id} className="product-info h-fit flex-col     rounded-[8px] border-1   max-w-full   border-gray-200">
         <div className="product-image m-0   sm:m-4 object-contain relative flex justify-center  items-center cursor-pointer">
           <img className='border     border-[#ffffffaf] rounded-[8px] max-w-full object-contain  sm:h-full' src={product.image} alt="" />
           <img className='absolute w-[50px] sm:w-[68px] sm:max-w-full  rounded-[3px] top-[0.05rem] right-[0.05rem] ' width={70} src="/IMGS/icons/sale.svg " alt="" />
@@ -237,7 +243,15 @@ const search = useSelector((state) => state.ui.searchOpen);
         </div>
           
         </div>
-         )}
+        ))
+        :
+        <div className="no-prodcuts-found mx-auto">
+          <p className='  text-red-500 '>No products  found </p>
+
+        </div>
+      }
+        
+
 
      </div>
 

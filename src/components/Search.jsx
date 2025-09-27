@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
+import { setSearchTerm } from '../redux/products/productSlice.js';
 import { toggleMenu, toggleSearch, toggleHero } from "../redux/ui_states/uiSlice.js"; // create this slice
 
 
@@ -17,8 +18,9 @@ if(e.key==="Enter"){
   }
 
 
-  function handleClick(){
-    alert("add products first!");
+  function handleClick(e){
+    dispatch(setSearchTerm(e.target.value))  
+    
   }
 
   function handleCross(){
@@ -35,7 +37,7 @@ if(e.key==="Enter"){
    flex justify-between md:justify-center  gap-[2vw]  top-[clamp(2rem,5.5%,6rem)]">
 
     
- <input onKeyDown={handleKeyDown} name='search' className="search-heree  bg-white text-black
+ <input onChange={handleClick}  name='search' className="search-heree  bg-white text-black
    text-[clamp(1rem,1.6vw,3rem)]    border border-black font-[200] md:w-[60%] outline-none tracking-wider py-[clamp(0.3rem,0.3vw,0.8rem)] px-3  font-inter  w-[100%] " type="text" placeholder='Search'/>
  
  

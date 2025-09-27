@@ -330,7 +330,8 @@ weekly_deals:[
     oldprice: 4600,
     desc: "Inspired by Lotus Blossom"
   }
-]
+],
+searchTerm:""
 
 };
 
@@ -338,11 +339,13 @@ export const productSlice = createSlice({
   name: 'products',
   initialState,
   reducers: {
-    
+setSearchTerm:(state,action)=>{
+  state.searchTerm=action.payload
+}
 
 
   },
 });
 
-export const { } = productSlice.actions;
+export const {setSearchTerm} = productSlice.actions;
 export default productSlice.reducer;
