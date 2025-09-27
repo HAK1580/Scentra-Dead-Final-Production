@@ -7,7 +7,7 @@ const OrderConfirmation = ({orderconfirm,setOrderconfirm}) => {
         <div className={` border-2 border-transparent
          bg-green-700 py-2 fixed lg:top-0   
          lg:max-w-[40%] 
-         w-[98%] my-0
+         w-[99%] my-0
          mx-auto lg:my-20 text-white 
           z-100
         `}>          

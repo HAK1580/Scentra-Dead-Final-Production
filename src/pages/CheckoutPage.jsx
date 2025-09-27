@@ -9,6 +9,7 @@ import OrderSummary from '../components/OrderSummary'
 import OrderSummarytop from '../components/OrderSummarytop'
 import CheckOut from '../components/CheckOut'
 import OrderConfirmation from '../components/small_ui_com/OrderConfirmation'
+import CartEmpty from '../components/small_ui_com/CartEmpty'
 
 const CheckoutPage = () => {
     const [orderSum, setOrderSum] = useState(false);
@@ -37,7 +38,8 @@ const CheckoutPage = () => {
 
         <div className='overflow-hidden' >
             <div className={`order-confirm ${orderconfirm ? "opacity-100" : "opacity-0"}    `}>
-                <OrderConfirmation orderconfirm={orderconfirm} setOrderconfirm={setOrderconfirm} />
+
+      {cart.length===0?<CartEmpty />:<OrderConfirmation orderconfirm={orderconfirm} setOrderconfirm={setOrderconfirm} />}
 
             </div>
 
@@ -187,7 +189,7 @@ const CheckoutPage = () => {
                 </div>
 
             </div>
-
+        
 
 
 
