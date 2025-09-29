@@ -18,26 +18,27 @@ const HomePage = () => {
    const search = useSelector((state) => state.ui.searchOpen);
   
 
-  // const [menuOpen,setMenuOpen]=useState(false)
-  // const[hero,setHero]=useState(false)
-  // const [search, setSearch] = useState(false);
-
 
   
 
   return (
-    <div className='max-w-full   ' >
+    <div className='max-w-full  overflow-hidden  ' >
 
      <Headline />  
      <Navbar  />
       
-     <div className={`hero ${search?"hide":"show"}  ${menuOpen?"hide":"show"}`}>
-    
+     <div className={`hero border border-transparent  ${search?"hide":"show"}  ${menuOpen?"hide":"show"}
+     flex gap-[1rem] overflow-x-hidden
+     flex-col   
+     `}>
      <SliderHero   /> 
+     
+    
  
       <BestSeller />
       <NewArrival />
        <WeeklyDeals />
+     
      {/* <MiddleHeadline />
      <ProductCollections    /> */}
 
