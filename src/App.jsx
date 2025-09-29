@@ -18,6 +18,7 @@ function App() {
       path: "/shopping",
       element: <Shopping />
     },
+ 
     {
       path: "/checkout",
       element: <CheckOut />
