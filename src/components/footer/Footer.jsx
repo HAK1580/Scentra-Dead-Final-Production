@@ -13,7 +13,7 @@ const Footer = () => {
        <a className='cursor-pointer z-50  md:text-[1.9rem] '  href='/' > Shop Now </a> 
         </div>
         <div className="social-media">
-            <hr className='my-4 md:opacity-0  text-[#f0d9a22c] ' />
+            <hr className='my-4 opacity-0  text-[#f0d9a22c] ' />
           <h1 className='text-[6vw]  md:text-[2.15rem] text-center' >Follow Us </h1>
            <div className="social-media-icons py-6 gap-4 flex justify-center ">
             <img src="IMGS/icons/ticktok.svg" alt="" />
