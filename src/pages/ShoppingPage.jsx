@@ -136,13 +136,8 @@ const ShoppingPage = () => {
               ))
             ) : (
               <div className="no-products-found mx-auto text-center col-span-full">
-                <p className="text-red-500 mb-4 text-lg">No products found</p>
-                <button
-                  onClick={() => navigate("/shopping")}
-                  className="bg-[#e8d5a9] hover:bg-[#c0a55d] text-black font-semibold py-2 px-4 rounded"
-                >
-                  Reset Search
-                </button>
+                <p className="text-red-500 mb-4 text-lg">No products found try searching with differnt keyword </p>
+               
               </div>
             )}
           </div>
