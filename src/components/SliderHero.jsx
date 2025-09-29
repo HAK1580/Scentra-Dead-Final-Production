@@ -25,7 +25,7 @@ const SliderHero = ({ hero, setHero }) => {
     setTimeout(()=>{
       navigate("/shopping")
 
-    },2000);
+    },1500);
 
   };
 
