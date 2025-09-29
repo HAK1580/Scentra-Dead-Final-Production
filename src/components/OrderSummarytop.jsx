@@ -25,7 +25,7 @@ const OrderSummarytop = ({ orderSum, setOrderSum }) => {
                             <div className="only-title flex gap-1 relative">
                         
                     <h1 className='text-[4.25vw]   sm:text-[3.7vw] mt-2  ml-2 tracking-wide mb-2   '>
-                        Order Summary
+                        Your Order
                     </h1> 
                         <img  className={`${orderSum&&"transform rotate-180"} w-4  `}  src="IMGS/icons/downarrow.svg" alt="" />
                             </div>
