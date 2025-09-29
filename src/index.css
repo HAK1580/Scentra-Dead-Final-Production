@@ -7,6 +7,7 @@
   .loop{
     font-family:'Playfair Display', serif;
   }
+
   .view-all-btn:hover{
     color: #d4af37a7;
   }
@@ -31,8 +32,15 @@
      font-weight:400;
      transition: all 0.7s ease-in-out;
     }
+    .add-to-cart:hover{
+      background-color: #d4af37d1;
+      color: black;
+      font-weight:400;
+      transition: all 0.35s ease-in-out;
+
+    }
     .cart-btn:hover{
-      background-color: #d4af37e9;
+      background-color: #d4af37d1;
       color: black;
       font-weight:400;
       transition: all 0.35s ease-in-out;

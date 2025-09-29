@@ -7,6 +7,15 @@ import { useNavigate } from 'react-router-dom'
 const NewArrival = () => {
   const dispatch = useDispatch()
   const product_info = useSelector((state) => state.products.new_arrival);
+
+   function addtoCart(){
+    setTimeout(() => {
+      dispatch(setCart(true));
+     dispatch(addItem(product));
+      
+    },1000);
+  }
+     
   
   const navigate=useNavigate();
   function handleViewAll(e){
@@ -109,10 +118,7 @@ const NewArrival = () => {
               {/* ✅ Restored Add to Cart exactly like yours */}
               <div className="add-to-cart-btn">
                 <button 
-                  onClick={() => {
-                    dispatch(addItem(product))
-                    dispatch(setCart(true))
-                  }}
+                   onClick={addtoCart}
                   className="w-full add-to-cart rounded-[7px] sm:rounded-[2px] 
                     cursor-pointer py-1.5 sm:py-[0.4rem]  
                     hover:bg-[rgb(186,149,63)] hover:text-black    
