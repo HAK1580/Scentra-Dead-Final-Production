@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="footer-links p-8 text-[5.5vw]   my-4 text-[#] items-center gap-5 flex flex-col justify-center">
        <a className='cursor-pointer z-50  md:text-[1.9rem]  '  href='/' > About Us </a> 
        <a className='cursor-pointer z-50  md:text-[1.9rem] '  href='/' > Contact Us </a> 
-       <a className='cursor-pointer z-50  md:text-[1.9rem]    '  href='/' > Our Products </a> 
-       <a className='cursor-pointer z-50  md:text-[1.9rem] '  href='/' > Shop Now </a> 
+       <a className='cursor-pointer z-50  md:text-[1.9rem]    '  href='/shopping' > Our Products </a> 
+       <a className='cursor-pointer z-50  md:text-[1.9rem] '  href='/shopping' > Shop Now </a> 
         </div>
         <div className="social-media">
             <hr className='my-4 opacity-0  text-[#f0d9a22c] ' />
