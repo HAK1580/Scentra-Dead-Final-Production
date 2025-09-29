@@ -22,13 +22,13 @@ const HomePage = () => {
   
 
   return (
-    <div className='max-w-full  overflow-hidden  ' >
+    <div className='max-w-full  overflow-hidden   ' >
 
      <Headline />  
      <Navbar  />
       
      <div className={`hero border border-transparent  ${search?"hide":"show"}  ${menuOpen?"hide":"show"}
-     flex gap-[1rem] overflow-x-hidden
+     flex gap-[1rem] overflow-x-hidden lg:overflow-visible
      flex-col   
      `}>
      <SliderHero   /> 
