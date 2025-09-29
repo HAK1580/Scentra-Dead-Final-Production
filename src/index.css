@@ -4,10 +4,13 @@
 
 
 @layer utilities{
-   
-   .loop{
+  .loop{
     font-family:'Playfair Display', serif;
-   }
+  }
+  .view-all-btn:hover{
+    color: #d4af37a7;
+  }
+
    .font-nav{
     font-family: 'Times New Roman', Times, serif;
    }

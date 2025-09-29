@@ -2,10 +2,22 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { addItem } from '../redux/cart/cartSlice'
 import { setCart } from '../redux/ui_states/uiSlice'
+import { useNavigate } from 'react-router-dom'
+
 
 const WeeklyDeals = () => {
   const dispatch = useDispatch()
-  const product_info = useSelector((state) => state.products.weekly_deals)
+  const product_info = useSelector((state) => state.products.weekly_deals);
+  
+  const navigate=useNavigate();
+  function handleViewAll(e){
+  e.preventDefault();
+  setTimeout(() => {
+    navigate("/shopping")
+    
+  },500);
+
+  }
 
   return (
     <div className="w-full max-w-full relative  
@@ -17,16 +29,16 @@ const WeeklyDeals = () => {
         <div className="best-seller-title flex justify-between items-center 
           nav-inter mx-auto w-full
           lg:max-w-[94%] max-w-[89%]">
-          <h1 className="text-[7.5vw] 
+          <h1 className="text-[7vw] 
           sm:text-[6vw] md:text-[4vw] lg:text-[3.3vw]
           tracking-[0.5px] text-[#e8d5a9e7]">
             WEEKLY DEALS
           </h1>
-          <a 
+          <a onClick={handleViewAll}
             href="/shopping" 
-            className="tracking-widest text-[#ffffffd7] uppercase 
+            className="tracking-widest text-[#ffffffd7] uppercase  view-all-btn
               sm:text-[2vw] md:text-[1.5vw] lg:text-[1.1vw] hover:text-[#e8d5a9e7]
-              text-[2.8vw] pr-2">
+              text-[2.4vw] pr-2"> 
             View All
           </a>
         </div>
@@ -34,7 +46,7 @@ const WeeklyDeals = () => {
         {/* Scrollable products */}
         <div className="best-seller-products w-full max-w-[90%] mx-auto 
           flex gap-5 my-5 flex-nowrap overflow-x-auto overflow-y-hidden 
-          lg:overflow-x-clip
+          lg:overflow-x-clip 
            lg:max-w-[95%]
           
           scrollbar-thin scrollbar-thumb-[#e8d5a9e7] scrollbar-track-transparent">
