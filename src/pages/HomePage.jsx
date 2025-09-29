@@ -11,6 +11,7 @@ import { useSelector } from 'react-redux';
 import BestSeller from '../components/BestSeller';
 import NewArrival from '../components/NewArrival';
 import WeeklyDeals from '../components/WeeklyDeals';
+import Footer from '../components/footer/Footer';
 
 
 const HomePage = () => {
@@ -38,9 +39,9 @@ const HomePage = () => {
       <BestSeller />
       <NewArrival />
        <WeeklyDeals />
-     
-     {/* <MiddleHeadline />
-     <ProductCollections    /> */}
+      <MiddleHeadline />
+     <ProductCollections    /> 
+       <Footer />
 
      
       

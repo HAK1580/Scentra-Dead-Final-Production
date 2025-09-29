@@ -64,6 +64,10 @@
    .hide{
       display: none;
    }
+   .footer-links a:hover{
+    color:#f0d9a2cd;
+    
+   }
    
    .hero-img{
     transition: opacity 1s ease-in-out;

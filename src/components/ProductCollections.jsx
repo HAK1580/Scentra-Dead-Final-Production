@@ -7,7 +7,7 @@ const ProductCollections = ({ hero }) => {
 
   return (
     <div
-      className={`hero overflow-x-hidden my-[-56vh] lg:my-[-115vh] md:my-[-90vh] w-full max-w-[100vw] ${
+      className={`hero overflow-x-hidden my-[0vh] lg:my-[-115vh] md:my-[-90vh] w-full max-w-[100vw] ${
         hero ? "hidden" : ""
       }`}
     >
