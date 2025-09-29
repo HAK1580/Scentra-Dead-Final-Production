@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import MiddleHeadline from './MiddleHeadline'
+import { href } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const SliderHero = ({ hero, setHero }) => {
 
@@ -11,11 +13,23 @@ const SliderHero = ({ hero, setHero }) => {
   ]
 
   const [current, setCurrent] = useState(0);
+  
+  const navigate=useNavigate();
 
   function nextImg() {
     setCurrent((prev) => prev === imgs.length - 1 ? 0 : prev + 1)
-
+  
   }
+  function handleBuy(e){
+    e.preventDefault();
+    setTimeout(()=>{
+      navigate("/shopping")
+
+    },2000);
+
+  };
+
+
   useEffect(() => {
     const timer = setTimeout(nextImg, 4000)
 
@@ -52,19 +66,26 @@ const SliderHero = ({ hero, setHero }) => {
             
               ">
 
-
-            <a href="/shopping"
-              className='bg-[#000000d0] lg:tracking-wide  px-[clamp(1.4rem,3.5vw,3.1rem)]  text-[clamp(1.15rem,2.5vw,3rem)] py-[clamp(0.62rem,0.9vw,1.5rem)] border-1 border-[#d4af3767] rounded-[8px] text-white cursor-pointer font-[500] z-100 tracking-widest 
-              lg:rounded-[13px]
-              font-inter
-              lg:font-light hover:sm:font-light hover:font-[500]
-              btn-transform
-              hover:bg-[#d4af37a7] hover:text-[rgb(33,33,33)]' >
+      
+            
+            
+             <a 
+               onClick={handleBuy}
+              href="/shopping"
+            
+              
+             className='bg-[#000000d0] lg:tracking-wide  px-[clamp(1.4rem,3.5vw,3.1rem)]  text-[clamp(1.15rem,2.5vw,3rem)] py-[clamp(0.62rem,0.9vw,1.5rem)] border-1 border-[#d4af3767] rounded-[8px] text-white cursor-pointer font-[500] z-100 tracking-widest 
+             lg:rounded-[13px]
+             font-inter
+             lg:font-light hover:sm:font-light hover:font-[500]
+             btn-transform
+             hover:bg-[#d4af37a7] hover:text-[rgb(33,33,33)]' >
 
               Buy Now
 
             </a>
 
+        
           </div>
 
         </div>

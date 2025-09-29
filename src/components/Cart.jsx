@@ -3,18 +3,36 @@ import { useSelector,useDispatch } from 'react-redux'
 import {addItem,clearCart,removeItem} from '../redux/cart/cartSlice'
 import { toggleCart } from '../redux/ui_states/uiSlice'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 const Cart = () => {
     const dispatch=useDispatch();
     const cart=useSelector((state)=>state.cart.items)
     const totalprice=cart.reduce((acc,item)=>acc+(item.quantity*item.price),0)
+
+   const navigate=useNavigate();
+
 
      useEffect(()=>{
       console.log(cart)
 
     },[cart])
 
-     function handleCheckoutClick(){
+     function handleCheckoutClick(e){
+          e.preventDefault();
+         setTimeout(() => {
+          navigate("/checkout")
+          
+         },1000);
          
+        }
+
+     function handleClearCart(){
+      setTimeout(() => {
+      
+       dispatch(clearCart());
+      
+      },300);
+
      }
 
 
@@ -69,9 +87,9 @@ const Cart = () => {
              </h2>   
            </div>
             <div className="subtototal-btns  flex flex-col gap-2 ">
-              <Link to='/checkout'  className='border-1 text-[4vw]   text-center   bg-black   w-[95%] cart-btn  mx-auto sm:text-[1.5vw] cursor-pointer font-bold   py-2  lg:hover:bg-[#d4af37] hover:text-[rgb(33,33,33)]" sm:hover:text-black         
-              '>Check Out</Link>
-              <button onClick={()=>dispatch(clearCart())}   className='border-1  bg-black   w-[95%] mx-auto  text-[4vw]   sm:text-[1.5vw] cart-btn  font-bold  cursor-pointer  py-2 lg:hover:bg-[#d4af37a7] hover:text-[rgb(33,33,33)]" sm:hover:text-black         
+              <button onClick={handleCheckoutClick}  className='border-1 text-[4.8vw]   text-center   bg-black   w-[100%] cart-btn  mx-auto sm:text-[1.5vw] cursor-pointer font-bold   py-2  lg:hover:bg-[#d4af37] hover:text-[rgb(33,33,33)]" sm:hover:text-black         
+              '>Check Out</button>
+              <button onClick={handleClearCart}   className='border-1  bg-black   w-[100%] mx-auto  text-[4.8vw]   sm:text-[1.5vw] cart-btn  font-bold  cursor-pointer  py-2 lg:hover:bg-[#d4af37a7] hover:text-[rgb(33,33,33)]" sm:hover:text-black         
               '> Clear Cart</button>
             </div>
             
