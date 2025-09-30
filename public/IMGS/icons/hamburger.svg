@@ -1,7 +1,15 @@
-<!-- Hamburger icon (24x24) -->
-<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-  <title>Menu</title>
-  <line x1="3" y1="6" x2="21" y2="6"></line>
-  <line x1="3" y1="12" x2="21" y2="12"></line>
-  <line x1="3" y1="18" x2="21" y2="18"></line>
+<svg 
+  aria-hidden="true" 
+  focusable="false" 
+  role="presentation" 
+  class="icon icon-hamburger" 
+  viewBox="0 0 64 64" 
+  xmlns="http://www.w3.org/2000/svg" 
+  stroke="white" 
+  stroke-width="4" 
+  stroke-linecap="round" 
+  fill="none"
+>
+  <title>icon-hamburger-modern</title>
+  <path d="M8 16h48M8 32h36M8 48h48"></path>
 </svg>
