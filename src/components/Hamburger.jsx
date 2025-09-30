@@ -17,7 +17,7 @@ const Hamburger = () => {
               
         </div>
           <div className="follow-us my-12">
-             <h1 className='p-3 ml-2 text-[#e8d5a9e7] text-[5.5vw]'>LOG IN </h1>
+             <h1 className='p-3 ml-2 text-[#e8d5a9e7] text-[4.9vw]'>LOG IN </h1>
                         <div className="social-media-icons py-6 gap-7 flex justify-center ">
             <img className='w-6'   src="IMGS/icons/ticktok.svg" alt="" />
             <img className='w-6'   src="IMGS/icons/fb.svg" alt="" />
