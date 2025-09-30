@@ -173,9 +173,9 @@ const CheckoutPage = () => {
                             className='border rounded-[8px] mb-8  cursor-pointer 
                     py-2.5 font-semibold
                     lg:w-[70%]
-                    lg:ml-2
+                    lg:ml-2 submit
                     lg:py-2
-                    lg:hover:bg-[#d4af37cc]
+                    lg:hover:bg-[#d4af37b1]
                     text-[5.5vw] sm:text-[4vw] md:text-[1.9rem] lg:text-[1.7rem]
                     bg-[#d4af37ea] text-[black] w-[90%] mx-auto
                     
