@@ -6,6 +6,7 @@ import { addItem } from '../redux/cart/cartSlice';
 import { setCart } from '../redux/ui_states/uiSlice';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { setSearchTerm } from '../redux/products/productSlice';
+import Footer from '../components/footer/Footer';
 
 const ShoppingPage = () => {
   const dispatch = useDispatch();
@@ -52,7 +53,7 @@ const ShoppingPage = () => {
       <Headline />
       <Navbar />
 
-      <div className={`shopping-parent-div ${search ? "hide" : "show"} ${menuOpen ? 'hide' : 'show'}`}>
+      <div className={`shopping-parent-div mb-55  ${search ? "hide" : "show"} ${menuOpen ? 'hide' : 'show'}`}>
 
         {/* Banner */}
         <div className="border-1 border-black shop-banner">
@@ -143,6 +144,8 @@ const ShoppingPage = () => {
           </div>
         )}
       </div>
+      <Footer />
+    
     </div>
   );
 };
