@@ -7,6 +7,27 @@
   .loop{
     font-family:'Playfair Display', serif;
   }
+  /* Start hidden */
+.fade-in-right,
+.fade-in-left,
+.fade-in-up,
+.zoom-in {
+  opacity: 0;
+  transform: translateY(20px); /* default for fade-in-up */
+  transition: all 1.9s ease-out;
+}
+
+/* Variants */
+.fade-in-right { transform: translateX(100px); }
+.fade-in-left { transform: translateX(-100px); }
+.zoom-in { transform: scale(0.8); }
+
+/* When visible */
+.show {
+  opacity: 1;
+  transform: none;
+}
+
 
   .view-all-btn:hover{
     color: #d4af37a7;
