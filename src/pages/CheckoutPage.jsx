@@ -34,7 +34,7 @@ const CheckoutPage = () => {
         setTimeout(() => {
          navigate("/");
             
-        }, 10000);
+        }, 8000);
 }
 
 
