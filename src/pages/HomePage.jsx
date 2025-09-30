@@ -41,8 +41,10 @@ const HomePage = () => {
        <WeeklyDeals />
       <MiddleHeadline />
      <ProductCollections    /> 
-      <div className="main-video   mb-60">
-        <video className=' h-full object-contain  w-full'  
+      <div className="main-video md:h-[195vh]  w-full    md:mt-200 md:mb-0  mb-75">
+        <video className=' h-full object-cover lg:object-cover  w-full
+         
+        '  
         src="VIDEOS/scentraHdvideo.mp4" autoPlay muted loop playsInline  ></video>
       </div>
 
