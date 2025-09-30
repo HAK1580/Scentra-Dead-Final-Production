@@ -3,10 +3,10 @@ import React from 'react'
 const Footer = () => {
   return (
     <div className='footer-div 
-    md:mt-151  lg:mt-192 
+    md:mt-151  lg:mt-192 py-35
      '  >
       <hr className='text-[#f0d9a249]' />
-        <div className="footer-links p-8 text-[5.5vw]   my-4 text-[#] items-center gap-5 flex flex-col justify-center">
+        <div className="footer-links p-8 text-[5.5vw]   my-0 text-[#] items-center gap-5 flex flex-col justify-center">
       <img className='w-40  md:w-50' src="IMGS/logo/logo-fotor-bg-remover-2025080510633.webp" alt="" />
        <a className='cursor-pointer z-50  md:text-[1.9rem]  '  href='/' > About Us </a> 
        <a className='cursor-pointer z-50  md:text-[1.9rem] '  href='/' > Contact Us </a> 
@@ -23,6 +23,7 @@ const Footer = () => {
 
            </div>
         </div>
+      
     </div>
   )
 }

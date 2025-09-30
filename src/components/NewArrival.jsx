@@ -23,7 +23,7 @@ const NewArrival = () => {
 
   return (
     <div className="w-full max-w-full relative 
-      top-[23rem] md:top-[27rem] lg:top-[50rem] overflow-hidden">
+      top-[10rem] md:top-[27rem] lg:top-[20rem] overflow-hidden">
       
       <div className="best-seller-box w-full max-w-full">
         

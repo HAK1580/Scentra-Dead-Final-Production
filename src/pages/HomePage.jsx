@@ -15,53 +15,51 @@ import Footer from '../components/footer/Footer';
 
 
 const HomePage = () => {
-  const menuOpen=useSelector((state)=>state.ui.menuOpen);
-   const search = useSelector((state) => state.ui.searchOpen);
-  
+  const menuOpen = useSelector((state) => state.ui.menuOpen);
+  const search = useSelector((state) => state.ui.searchOpen);
 
 
-  
+
+
 
   return (
     <div className='max-w-full  overflow-hidden lg:overflow-visible   ' >
 
-     <Headline />  
-     <Navbar  />
-      
-     <div className={`hero border border-transparent  ${search?"hide":"show"}  ${menuOpen?"hide":"show"}
+      <Headline />
+      <Navbar />
+
+      <div className={`hero border border-transparent  ${search ? "hide" : "show"}  ${menuOpen ? "hide" : "show"}
      flex gap-[1rem]  lg:overflow-visible
      flex-col   
      `}>
-     <SliderHero   /> 
-     
-    
- 
-      <BestSeller />
-      <NewArrival />
-       <WeeklyDeals />
-      <MiddleHeadline />
-     <ProductCollections    /> 
-      <div className="main-video md:h-[195vh]  w-full    md:mt-200 md:mb-0  mb-75">
-        <video className=' h-full object-cover lg:object-cover  w-full
-         
-        '  
-        src="VIDEOS/scentraHdvideo.mp4" autoPlay muted loop playsInline  ></video>
+        <SliderHero />
+
+
+
+        <BestSeller />
+        <div className="main-video md:h-[195vh]  w-full    md:mt-200 md:mb-0 mt-100 ">
+          <video className=' h-full object-contain lg:object-cover  w-full     '
+            src="VIDEOS/scentraHdvideo.mp4" autoPlay muted loop playsInline  ></video>
+        </div>
+        <NewArrival />
+        <WeeklyDeals />
+        <MiddleHeadline />
+        <ProductCollections />
+
+        <Footer />
+
+
+
+
+
       </div>
 
-       <Footer />
-
-     
-      
-    
-    
-     </div>
-     
 
 
 
-    
-    
-           
+
+
+
 
     </div>
   )

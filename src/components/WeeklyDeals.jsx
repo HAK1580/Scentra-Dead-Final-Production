@@ -23,7 +23,7 @@ const WeeklyDeals = () => {
 
   return (
     <div className="w-full max-w-full relative  
-      top-[12rem] md:top-[18rem] lg:top-[40rem] overflow-hidden">
+      top-[2rem] md:top-[18rem] lg:top-[15rem] overflow-hidden">
       
       <div className="best-seller-box w-full max-w-full">
         
