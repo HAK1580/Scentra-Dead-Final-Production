@@ -66,6 +66,10 @@
    }
    .footer-links a:hover{
     color:#f0d9a2cd;
+  }
+  .ham-nav a:hover{
+     color:#f0d9a2cd;
+
    }
    .submit:hover{
     background-color:#d4af37b1;
