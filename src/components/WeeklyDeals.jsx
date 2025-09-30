@@ -9,13 +9,6 @@ const WeeklyDeals = () => {
   const dispatch = useDispatch()
   const product_info = useSelector((state) => state.products.weekly_deals);
 
-   function addtoCart(){
-    setTimeout(() => {
-      dispatch(setCart(true));
-     dispatch(addItem(product));
-      
-    },1000);
-  }
      
   
   const navigate=useNavigate();
@@ -119,7 +112,8 @@ const WeeklyDeals = () => {
               {/* ✅ Restored Add to Cart exactly like yours */}
               <div className="add-to-cart-btn">
                 <button 
-                onClick={addtoCart}
+                onClick={()=>setTimeout(() => { dispatch(setCart(true)), dispatch(addItem(product))},500)}
+                
                   className="w-full add-to-cart rounded-[7px] sm:rounded-[2px] 
                     cursor-pointer py-1.5 sm:py-[0.4rem]  
                     hover:bg-[rgb(186,149,63)] hover:text-black    
