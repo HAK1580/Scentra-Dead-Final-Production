@@ -17,9 +17,10 @@ const Footer = () => {
             <hr className='my-4 opacity-0  text-[#f0d9a22c] ' />
           <h1 className='text-[6vw]  md:text-[2.15rem] text-center' >Follow Us </h1>
            <div className="social-media-icons py-6 gap-4 flex justify-center ">
-            <img src="IMGS/icons/ticktok.svg" alt="" />
-            <img src="IMGS/icons/youtube.svg" alt="" />
-            <img src="IMGS/icons/insta.svg" alt="" />
+            <img className='cursor-pointer' src="IMGS/icons/ticktok.svg" alt="" />
+            <img className='cursor-pointer'   src="IMGS/icons/youtube.svg" alt="" />
+            <img className='cursor-pointer'  src="IMGS/icons/insta.svg" alt="" />
+
            </div>
         </div>
     </div>

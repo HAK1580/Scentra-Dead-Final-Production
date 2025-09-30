@@ -25,7 +25,7 @@ const CheckoutPage = () => {
 
     const onSubmit = data => {
         console.log("Order Here", data);
-        setOrderconfirm(true);
+        {cart.length===0?navigate("/"):setOrderconfirm(true)};
         setTimeout(() => {
             setOrderconfirm(false);
         }, 10000);
@@ -35,7 +35,7 @@ const CheckoutPage = () => {
          navigate("/");
             
         }, 5000);
-    }
+}
 
 
 
@@ -177,7 +177,7 @@ const CheckoutPage = () => {
                     lg:py-2
                     lg:hover:bg-[#d4af37cc]
                     text-[5.5vw] sm:text-[4vw] md:text-[1.9rem] lg:text-[1.7rem]
-                    bg-[#d4af37a7] text-[black] w-[90%] mx-auto
+                    bg-[#d4af37ea] text-[black] w-[90%] mx-auto
                     
                     ' >Complete Order </button>
 
