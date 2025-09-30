@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ProductCollections = ({ hero }) => {
   const [menhover, setMenhover] = useState(false);
   const [womenhover, setWomenhover] = useState(false);
   const [duohover, setDuohover] = useState(false);
+  const navigate=useNavigate();
 
   return (
     <div
@@ -40,6 +42,9 @@ const ProductCollections = ({ hero }) => {
             {/* Centered overlay button (always centered on the image) */}
             <div className="absolute inset-0 flex items-center justify-center z-50 pointer-events-none">
               <button
+                onClick={()=>setTimeout(() => {
+                  navigate("/shopping");
+                },500)}
                 onMouseEnter={() => setMenhover(true)}
                 onMouseLeave={() => setMenhover(false)}
                 className="product-btn z-100 font new-arrival cursor-pointer loop tracking-wide
@@ -67,6 +72,9 @@ const ProductCollections = ({ hero }) => {
 
             <div className="absolute inset-0 flex items-center justify-center z-50 pointer-events-none">
               <button
+               onClick={()=>setTimeout(() => {
+                  navigate("/shopping")
+                },500)}
                 onMouseEnter={() => setWomenhover(true)}
                 onMouseLeave={() => setWomenhover(false)}
                 className="product-btn pointer-events-auto font cursor-pointer loop tracking-wide
@@ -93,6 +101,9 @@ const ProductCollections = ({ hero }) => {
 
             <div className="absolute inset-0 flex items-center justify-center z-50 pointer-events-none">
               <button
+               onClick={()=>setTimeout(() => {
+                  navigate("/shopping")
+                },500)}
                 onMouseEnter={() => setDuohover(true)}
                 onMouseLeave={() => setDuohover(false)}
                 className="product-btn pointer-events-auto font cursor-pointer loop tracking-wide
