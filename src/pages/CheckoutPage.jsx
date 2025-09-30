@@ -16,26 +16,30 @@ const CheckoutPage = () => {
     const [orderconfirm, setOrderconfirm] = useState(false);
     const [billing, setBilling] = useState(false);
 
-   const navigate=useNavigate();
-    const dispatch=useDispatch()
+    const navigate = useNavigate();
+    const dispatch = useDispatch()
     const cart = useSelector((state) => state.cart.items);
     const totalprice = cart.reduce((acc, item) => acc + (item.quantity * item.price), 0)
 
     const { register, reset, handleSubmit, formState: { errors }, watch } = useForm();
 
+
     const onSubmit = data => {
-        console.log("Order Here", data);
-        {cart.length===0?navigate("/"):setOrderconfirm(true)};
         setTimeout(() => {
-            setOrderconfirm(false);
-        }, 10000);
-        reset();
-        dispatch(clearCart());
-        setTimeout(() => {
-         navigate("/");
-            
-        }, 8000);
-}
+
+            console.log("Order Here", data);
+            { cart.length === 0 ? navigate("/") : setOrderconfirm(true) };
+            setTimeout(() => {
+                setOrderconfirm(false);
+            }, 10000);
+            reset();
+            dispatch(clearCart());
+            setTimeout(() => {
+                navigate("/");
+
+            }, 8000);
+        }, 300);
+    }
 
 
 
@@ -44,7 +48,7 @@ const CheckoutPage = () => {
         <div className='overflow-hidden' >
             <div className={`order-confirm ${orderconfirm ? "opacity-100" : "opacity-0"}    `}>
 
-      <OrderConfirmation orderconfirm={orderconfirm} setOrderconfirm={setOrderconfirm} />
+                <OrderConfirmation orderconfirm={orderconfirm} setOrderconfirm={setOrderconfirm} />
 
             </div>
 
@@ -170,6 +174,7 @@ const CheckoutPage = () => {
 
                         <button
                             type='submit'
+
                             className='border rounded-[8px] mb-8  cursor-pointer 
                     py-2.5 font-semibold
                     lg:w-[70%]
@@ -194,7 +199,7 @@ const CheckoutPage = () => {
                 </div>
 
             </div>
-        
+
 
 
         </div>
