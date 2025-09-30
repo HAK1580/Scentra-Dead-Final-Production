@@ -76,7 +76,7 @@ const HomePage = () => {
 
         </div>
 
-      <div className="footer fade-in-left">
+      <div className="footer zoom-in">
         <Footer />
 
       </div>

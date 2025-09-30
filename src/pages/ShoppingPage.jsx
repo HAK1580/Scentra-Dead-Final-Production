@@ -128,7 +128,7 @@ const ShoppingPage = () => {
                   <div className="add-to-cart-btn">
                     <button
                       onClick={() => handleAddToCart(product)}
-                      className="w-full add-to-cart rounded-[7px] sm:rounded-[2px] cursor-pointer py-1.5 sm:py-[0.4rem] hover:bg-[rgb(186,149,63)] hover:text-black border-1 rounded-[6px] sm:text-[2.5vw] lg:text-[1.65vw]"
+                      className="w-full add-to-cart rounded-[7px] sm:rounded-[2px] cursor-pointer py-1.5 sm:py-[0.4rem] hover:bg-[rgb(186,149,63)] hover:text-black border-1 sm:text-[2.5vw] lg:text-[1.65vw]"
                     >
                       Add to Cart
                     </button>
