@@ -15,10 +15,10 @@ const OrderSummarytop = ({ orderSum, setOrderSum }) => {
 
     return (
         <div>
-            <div className="order-summary-parent-div lg:hidden ">
+            <div className="order-summary-parent-div  lg:hidden ">
 
                 <div onClick={toggleOrderSum} className="order-summary-title 
-                        relative cursor-pointer  max-w-[98%]
+                        relative cursor-pointer  w-[100%]
                         bg-[#ffffff1f]  py-1.5
                          
                         rounded-[5px] items-center justify-between flex">

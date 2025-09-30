@@ -88,13 +88,13 @@ const CheckoutPage = () => {
                             setOrderSum={setOrderSum}
                         />
                         <div className="contact ">
-                            <h1 className='text-[5vw] lg:text-[2vw]    sm:text-[3.7vw] ml-1 tracking-wide mb-2 text-white ' >Contact</h1>
+                            <h1 className='text-[6vw] lg:text-[2vw]    sm:text-[3.7vw] ml-1 tracking-wide mb-2 text-white ' >Contact</h1>
                             <input {...register("phone", { required: "Enter phone number", pattern: { value: /^(?:\+92|0)?3[0-9]{9}$/, message: "Enter valid phone number" } })} className={`${errors.phone ? "outline-red-500 outline-2" : " outline-0  outline-transparent"} ml-1 mt-3 sm:py-3 lg:py-3  lg:w-[70%] w-[94%] px-3 py-2.5 rounded-[4px]  bg-white text-black`} type="text" placeholder='Mobile phone number' />
                             {errors.phone && <p className='text-[#ff0000cd]  mt-3  ml-1'>{errors.phone.message}</p>}
                         </div>
 
                         <div className="delivery">
-                            <h1 className='text-[5vw] lg:text-[2vw]      sm:text-[3.7vw] ml-1  tracking-wide mb-2 ] '>Delivery</h1>
+                            <h1 className='text-[6vw] lg:text-[2vw]      sm:text-[3.7vw] ml-1  tracking-wide mb-2 ] '>Delivery</h1>
 
                             <input {...register("first_name", { required: "Enter a first name", pattern: { value: /^[A-Za-z][A-Za-z\s'-]{1,29}$/, message: "Enter valid first name", } })} className={`${errors.first_name ? "outline-red-500 outline-2" : "outline-0 outline-black"} ml-1   lg:py-3.5  lg:w-[70%]     w-[94%] py-2.5 px-3 sm:py-3  rounded-[4px]  bg-white text-black`} type="text" placeholder='First name' />
                             {errors.first_name && <p className='text-[#ff0000cd] mt-3  ml-1'>{errors.first_name.message}</p>}
@@ -116,7 +116,7 @@ const CheckoutPage = () => {
 
                         </div>
                         <div className="payment">
-                            <h1 className='text-[5vw]  lg:text-[2vw]      sm:text-[3.7vw]  ml-2 tracking-wide mb-2   '>
+                            <h1 className='text-[6vw]  lg:text-[2vw]      sm:text-[3.7vw]  ml-2 tracking-wide mb-2   '>
                                 Payment </h1>
                             <label className="flex mt-4 lg:py-3.5  lg:w-[70%]  ml-2 w-[94%] rounded-[4px]   text-black bg-[#ffffffc7] py-2.5 px-2  items-center gap-2">
                                 <input
@@ -131,7 +131,7 @@ const CheckoutPage = () => {
                         </div>
 
                         <div className="billing-address">
-                            <h1 className='text-[5vw]  sm:text-[3.7vw] ml-2 
+                            <h1 className='text-[6vw]  sm:text-[3.7vw] ml-2 
                          tracking-wide mb-2 lg:text-[2vw]       '> Billing address  </h1>
                             <label onClick={() => setBilling(false)} className='flex w-[94%] lg:py-3.5  lg:w-[70%]  border rounded-[6px] px-2  text-black bg-[#ffffffc7] py-2.5  ml-2 mt-4 gap-2'  >
                                 <input {...register("shipping_address")}
