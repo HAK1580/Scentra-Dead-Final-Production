@@ -9,13 +9,14 @@ import OrderSummary from '../components/OrderSummary'
 import OrderSummarytop from '../components/OrderSummarytop'
 import CheckOut from '../components/CheckOut'
 import OrderConfirmation from '../components/small_ui_com/OrderConfirmation'
+import { useNavigate } from 'react-router-dom'
 
 const CheckoutPage = () => {
     const [orderSum, setOrderSum] = useState(false);
     const [orderconfirm, setOrderconfirm] = useState(false);
     const [billing, setBilling] = useState(false);
 
-
+   const navigate=useNavigate();
     const dispatch=useDispatch()
     const cart = useSelector((state) => state.cart.items);
     const totalprice = cart.reduce((acc, item) => acc + (item.quantity * item.price), 0)
@@ -29,7 +30,11 @@ const CheckoutPage = () => {
             setOrderconfirm(false);
         }, 10000);
         reset();
-        dispatch(clearCart())
+        dispatch(clearCart());
+        setTimeout(() => {
+         navigate("/");
+            
+        }, 5000);
     }
 
 

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import {addItem,clearCart,removeItem} from '../redux/cart/cartSlice'
-import { toggleCart } from '../redux/ui_states/uiSlice'
+import { setCart, toggleCart } from '../redux/ui_states/uiSlice'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 const Cart = () => {
@@ -18,9 +18,11 @@ const Cart = () => {
     },[cart])
 
      function handleCheckoutClick(e){
-          e.preventDefault();
-         setTimeout(() => {
-          navigate("/checkout")
+       e.preventDefault();
+       setTimeout(() => {
+        dispatch(setCart(false));
+        
+          {cart.length===0?null:navigate("/checkout")}
           
          },1000);
          
@@ -39,7 +41,7 @@ const Cart = () => {
 
   return (
       <>
-      <div className=' bg-[rgb(15,11,7)] z-100 overflow-hidden  border-[rgba(255,255,255,0.05)] 
+      <div className=' bg-[rgb(15,11,7)] z-1000 overflow-hidden  border-[rgba(255,255,255,0.05)] 
        lg:w-[30%] md:w-[40%] sm:w-[45%] w-[75%]
         fixed h-[100vh] top-0  right-0 border-1'>
         <div className="cart-head  mx-auto max-w-[95%] flex justify-between">
@@ -78,7 +80,7 @@ const Cart = () => {
         </div>
         {/* subtotal  */}
 
-        <div className="total  bg-black w-[75%] md:w-[40%] sm:w-[45%] lg:w-[30%] bottom-[3vh] z-100 fixed p-5 sm:bottom-0 ">
+        <div className="total  bg-black w-[75%] md:w-[40%] sm:w-[45%] lg:w-[30%] bottom-[3vh] z-1000 fixed p-5 sm:bottom-0 ">
         {<hr className='max-w-[99%] font-extralight  text-[rgba(232,213,169,0.25)]  mx-auto '/>}
            <div className="total-price   flex justify-between items-center">
           <h1 className=' popins tracking-widest   pl-0.5 p-3 m-4 text-white  font-[600] text-[3.7vw] sm:text-[2.6vw]  md:text-[1.5vw]'>SUBTOTAL  </h1>
@@ -94,7 +96,7 @@ const Cart = () => {
             </div>
             
         </div>
-        {cart.length===0?<h1 className='absolute z-100 text-[4vw]  sm:text-[2.5vw] lg:text-[2vw]  w-full flex justify-center items-center top-[15rem]   right-0  sm:top-[18rem]'> Your Cart is empty</h1>:""}
+        {cart.length===0?<h1 className='absolute z-1000 text-[4vw]  sm:text-[2.5vw] lg:text-[2vw]  w-full flex justify-center items-center top-[15rem]   right-0  sm:top-[18rem]'> Your Cart is empty</h1>:""}
      
     </div>
 
