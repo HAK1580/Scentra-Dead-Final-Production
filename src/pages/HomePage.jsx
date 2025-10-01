@@ -76,10 +76,10 @@ const HomePage = () => {
 
         </div>
 
-      <div className="footer zoom-in">
-        <Footer />
+    <div className="footer zoom-in">
+      <Footer />
 
-      </div>
+    </div>
 
 
 

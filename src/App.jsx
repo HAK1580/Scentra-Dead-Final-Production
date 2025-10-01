@@ -6,6 +6,7 @@ import Shopping from "./pages/ShoppingPage"
 import { createBrowserRouter } from 'react-router-dom'
 import { RouterProvider } from 'react-router-dom'
 import CheckOut from './pages/CheckoutPage'
+import ProductDetailPage from './pages/ProductDetailPage'
 
 function App() {
 
@@ -18,10 +19,13 @@ function App() {
       path: "/shopping",
       element: <Shopping />
     },
- 
     {
       path: "/checkout",
       element: <CheckOut />
+    },
+    {
+      path: "/product-detail/:id",
+      element: <ProductDetailPage />
     },
   ])
 

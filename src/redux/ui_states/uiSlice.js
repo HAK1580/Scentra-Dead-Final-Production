@@ -22,10 +22,10 @@ export const uiSlice = createSlice({
     toggleCart:(state)=>{ state.cartOpen=!state.cartOpen },
     setCart:(state,action)=>{
       state.cartOpen=action.payload
-    }
+    },
 
   },
 });
 
-export const {setCart ,toggleMenu,toggleSearch,toggleCart,toggleHero,closeAll } = uiSlice.actions;
+export const {setCart,toggleMenu,toggleSearch,toggleCart,toggleHero,closeAll } = uiSlice.actions;
 export default uiSlice.reducer;

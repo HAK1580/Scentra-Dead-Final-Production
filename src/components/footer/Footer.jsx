@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <div className='footer-div 
-    md:mt-151  lg:mt-192 py-35
+    md:mt-151  lg:mt-192 py-15
      '  >
       <hr className='text-[#f0d9a249]' />
         <div className="footer-links p-8 text-[5.5vw]   my-0 text-[#] items-center gap-5 flex flex-col justify-center">
@@ -17,9 +17,9 @@ const Footer = () => {
             <hr className='my-4 opacity-0  text-[#f0d9a22c] ' />
           <h1 className='text-[6vw]  md:text-[2.15rem] text-center' >Follow Us </h1>
            <div className="social-media-icons py-6 gap-4 flex justify-center ">
-            <img className='cursor-pointer' src="IMGS/icons/ticktok.svg" alt="" />
-            <img className='cursor-pointer'   src="IMGS/icons/youtube.svg" alt="" />
-            <img className='cursor-pointer'  src="IMGS/icons/insta.svg" alt="" />
+            <img className='cursor-pointer' src="/IMGS/icons/ticktok.svg" alt="" />
+            <img className='cursor-pointer'   src="/IMGS/icons/youtube.svg" alt="" />
+            <img className='cursor-pointer'  src="/IMGS/icons/insta.svg" alt="" />
 
            </div>
         </div>

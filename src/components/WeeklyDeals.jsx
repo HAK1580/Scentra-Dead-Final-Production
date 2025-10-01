@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { addItem } from '../redux/cart/cartSlice'
 import { setCart } from '../redux/ui_states/uiSlice'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+
 
 
 const WeeklyDeals = () => {
@@ -63,7 +65,8 @@ const WeeklyDeals = () => {
                 bg-[#00000020]">
               
               {/* Product image */}
-              <div className="product-image relative flex justify-center items-center 
+                 <a href={`/product-detail/${product.id}`}
+               className="product-image relative flex justify-center items-center 
                 cursor-pointer m-0 sm:m-4">
                 <img 
                   className="border border-[#ffffffaf] rounded-[8px] 
@@ -77,7 +80,7 @@ const WeeklyDeals = () => {
                   src="/IMGS/icons/sale.svg" 
                   alt="sale" 
                 />
-              </div>
+              </a>
 
               {/* Title */}
               <div className="product-title flex justify-start mx-auto w-[90%] 

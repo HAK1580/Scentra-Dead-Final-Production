@@ -14,7 +14,7 @@
 .zoom-in {
   opacity: 0;
   transform: translateY(20px); /* default for fade-in-up */
-  transition: all 1.9s ease-out;
+  transition: all 0.9s ease-out;
 }
 
 /* Variants */
@@ -36,6 +36,13 @@
    .font-nav{
     font-family: 'Times New Roman', Times, serif;
    }
+   .arimo{
+    font-family: 'Arimo', sans-serif;
+   }
+   .rubik{
+    font-family: 'Rubik', sans-serif;
+
+   }
    .font-inter{
          font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif;
          font-weight:500;
@@ -52,6 +59,13 @@
      color: black;
      font-weight:400;
      transition: all 0.7s ease-in-out;
+    }
+    .pt-cart:hover{
+      background-color: #d4af37b6;
+      color: black;
+      font-weight:400;
+      transition: all 0.35s ease-in-out;
+      
     }
     .add-to-cart:hover{
       background-color: #d4af37d1;
@@ -223,6 +237,9 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+    html{
+      scroll-behavior: smooth;
     }
   input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px white inset !important;

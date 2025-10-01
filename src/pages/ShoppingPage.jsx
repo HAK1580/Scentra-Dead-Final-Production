@@ -4,7 +4,7 @@ import Headline from "../components/Headline";
 import { useSelector, useDispatch } from 'react-redux';
 import { addItem } from '../redux/cart/cartSlice';
 import { setCart } from '../redux/ui_states/uiSlice';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation,Link } from 'react-router-dom';
 import { setSearchTerm } from '../redux/products/productSlice';
 import Footer from '../components/footer/Footer';
 
@@ -44,9 +44,6 @@ const ShoppingPage = () => {
     dispatch(setCart(true));
   };
 
-  const handleProductClick = (id) => {
-    navigate(`/shopping/${id}`);
-  };
 
   return (
     <div className="overflow-x-hidden">
@@ -88,9 +85,9 @@ const ShoppingPage = () => {
               filteredProducts.map(product => (
                 <div key={product.id} className="product-info h-fit flex-col rounded-[8px] border border-gray-200 max-w-full">
                   {/* Image */}
-                  <div
+                  <a href={`/product-detail/${product.id}`}
                     className="product-image m-0 sm:m-4 object-contain relative flex justify-center items-center cursor-pointer"
-                    onClick={() => handleProductClick(product.id)}
+                  
                   >
                     <img
                       className="border border-[#ffffffaf] rounded-[8px] max-w-full object-contain sm:h-full"
@@ -102,7 +99,7 @@ const ShoppingPage = () => {
                       src="/IMGS/icons/sale.svg"
                       alt="sale"
                     />
-                  </div>
+                  </a>
 
                   {/* Title */}
                   <div className="product-title mb-3.5 sm:mb-2 h-[5vh] sm:h-fit flex justify-start loop mx-auto w-[90%]">

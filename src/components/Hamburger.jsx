@@ -19,10 +19,10 @@ const Hamburger = () => {
           <div className="follow-us my-12">
              <h1 className='p-3 mb-4 ml-2 text-[#e8d5a9e7] text-[4.86vw]'>LOG IN </h1>
                       <div className="social-media-icons py-6 gap-7 flex justify-center ">
-            <img className='w-6'   src="IMGS/icons/ticktok.svg" alt="" />
-            <img className='w-6'   src="IMGS/icons/fb.svg" alt="" />
-            <img className='w-6'   src="IMGS/icons/youtube.svg" alt="" />
-            <img className='w-6'   src="IMGS/icons/insta.svg" alt="" />
+            <img className='w-6'   src="/IMGS/icons/ticktok.svg" alt="" />
+            <img className='w-6'   src="/IMGS/icons/fb.svg" alt="" />
+            <img className='w-6'   src="/IMGS/icons/youtube.svg" alt="" />
+            <img className='w-6'   src="/IMGS/icons/insta.svg" alt="" />
            </div>
           </div>
         

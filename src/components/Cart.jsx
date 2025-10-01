@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import {addItem,clearCart,removeItem} from '../redux/cart/cartSlice'
-import { setCart, toggleCart } from '../redux/ui_states/uiSlice'
+import { setCart, toggleCart} from '../redux/ui_states/uiSlice'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 const Cart = () => {
@@ -22,7 +22,7 @@ const Cart = () => {
        setTimeout(() => {
         dispatch(setCart(false));
         
-          {cart.length===0?null:navigate("/checkout")}
+          {cart.length===0?navigate("/"):navigate("/checkout")}
           
          },1000);
          
@@ -54,14 +54,14 @@ const Cart = () => {
            {cart.map((item)=>
            <div key={item.id} className="cart-list  mb-8  ">
             <div className="cart-qty-img flex border-1 border-[#ffffff74] gap-5 items-center ">
-              <img className='object-contain'  width={110} src={item.image} alt="" /> 
+              <img className='object-contain'  width={110} src={`/${item.image}`} alt="" /> 
               <div className="cart-title-qty    flex flex-col gap-1 ">
                 <h1 className=' text-[4.2vw] my-1   sm:text-[1.4vw]' >{item.title}</h1>
                 
                 <div className="cart-price-qty  gap-1.5 flex flex-col  ">
           
                   <div className="inc-dec-btn mb-1 gap-2 p-0 max-w-[70%]   items-center flex">
-                    <button onClick={()=>dispatch(addItem(item))} className='  inc-dec cursor-pointer  border-1 border-[#ffffff3b] text-[1.2rem] hover:text-black hover:bg-white m-0 px-2   '  >
+                    <button onClick={()=>dispatch(addItem(item)) } className='  inc-dec cursor-pointer  border-1 border-[#ffffff3b] text-[1.2rem] hover:text-black hover:bg-white m-0 px-2   '  >
                       +</button>
                     <h3 className='text-[1.1rem]'>{item.quantity}</h3>
                     <button onClick={()=>dispatch(removeItem(item.id))} className=' inc-dec  cursor-pointer border-1 border-[#ffffff3b]  text-[1.2rem] hover:text-black hover:bg-white m-0  px-[0.6rem]   '  >

@@ -5,8 +5,7 @@ import { setCart } from '../redux/ui_states/uiSlice'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
-
-const NewArrival = () => {
+const YouMakeAlsoLike = () => {
   const dispatch = useDispatch()
   const product_info = useSelector((state) => state.products.new_arrival);
 
@@ -30,21 +29,15 @@ const NewArrival = () => {
       <div className="best-seller-box w-full max-w-full">
         
         {/* Title + View all */}
-        <div className="best-seller-title flex justify-between items-center 
+        <div className="best-seller-title flex justify-center items-center 
           nav-inter mx-auto w-full
           lg:max-w-[94%] max-w-[89%]">
-          <h1 className="text-[7vw] 
+          <h1 className="text-[7vw]  uppercase
           sm:text-[6vw] md:text-[4vw] lg:text-[3.3vw]
           tracking-[0.5px] text-[#e8d5a9e7]">
-            NEW ARRIVAL
+            You May Also Like
           </h1>
-          <a onClick={handleViewAll}
-            href="/shopping" 
-            className="tracking-widest text-[#ffffffd7] uppercase view-all-btn
-              sm:text-[2vw] md:text-[1.5vw] lg:text-[1.1vw] hover:text-[#e8d5a9e7]
-              text-[2.4vw] pr-2">
-            View All
-          </a>
+        
         </div>
 
         {/* Scrollable products */}
@@ -152,4 +145,4 @@ const NewArrival = () => {
   )
 }
 
-export default NewArrival
+export default YouMakeAlsoLike
