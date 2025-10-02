@@ -66,7 +66,6 @@ const HomePage = () => {
             loop
             playsInline
             preload="auto"   // ✅ video preloads faster
-            poster="/images/video-placeholder.jpg" // ✅ fallback image
           />
         </div>
 
