@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <div className='footer-div 
-    md:mt-151  lg:mt-192 py-15
+    md:mt-151  lg:mt-192 py-10
      '  >
       <hr className='text-[#f0d9a249]' />
         <div className="footer-links p-8 text-[5.5vw]   my-0 text-[#] items-center gap-5 flex flex-col justify-center">
