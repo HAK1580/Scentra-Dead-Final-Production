@@ -40,7 +40,7 @@ const ProductDetailPage = () => {
       ">
         <img className='object-contain w-[99%] mx-auto h-auto sm:w-[90%] ' src={`/${product.image}`} alt="" />
         <div className="product-description mt-6 ">
-          <h1 className='flex justify-center italic sm:text-[3vw]  arimo text-[3.5vw]'> {product.desc} </h1>
+          <h1 className='flex justify-center italic sm:text-[3vw]  arimo text-[3.6vw]'> {product.desc} </h1>
           <h1 className='flex justify-center my-1 rubik tracking-wider  sm:text-[6vw] text-[7.2vw]'> {product.title} </h1>
         </div>
         <div className="product-price justify-start items-center   w-[60%] mx-auto gap-6  flex ">
