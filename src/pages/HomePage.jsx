@@ -59,7 +59,7 @@ const HomePage = () => {
 
         <div className="main-video relative w-full md:h-[260vh] h-[100vh] md:mt-200 mt-100">
           <video
-            className="h-full w-full object-contain"
+            className="h-full w-full object-cover"
             src="/VIDEOS/scentraHdvideo.mp4"
             autoPlay
             muted
