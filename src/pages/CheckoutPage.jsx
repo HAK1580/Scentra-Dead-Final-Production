@@ -31,13 +31,13 @@ const CheckoutPage = () => {
             { cart.length === 0 ? navigate("/") : setOrderconfirm(true) };
             setTimeout(() => {
                 setOrderconfirm(false);
-            }, 7000);
+            }, 9000);
             reset();
             dispatch(clearCart());
             setTimeout(() => {
                 navigate("/");
 
-            }, 8000);
+            }, 10000);
         }, 300);
     }
 
