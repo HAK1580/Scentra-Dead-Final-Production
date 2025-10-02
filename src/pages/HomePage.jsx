@@ -18,7 +18,7 @@ const HomePage = () => {
   const menuOpen = useSelector((state) => state.ui.menuOpen);
   const search = useSelector((state) => state.ui.searchOpen);
 
- useEffect(() => {
+  useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -53,33 +53,41 @@ const HomePage = () => {
 
 
         <div className="best-seller-comp fade-in-right">
-        <BestSeller  />
+          <BestSeller />
 
         </div>
 
-        <div className="main-video md:h-[260vh]  w-full    md:mt-200 md:mb-0 mt-100 ">
-          <video className=' h-full object-contain lg:object-cover mx-auto  w-[99%]     '
-            src="VIDEOS/scentraHdvideo.mp4" autoPlay muted loop playsInline  ></video>
+        <div className="main-video relative w-full md:h-[260vh] h-[100vh] md:mt-200 mt-100">
+          <video
+            className="h-full w-full object-contain"
+            src="/VIDEOS/scentraHdvideo.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"   // ✅ video preloads faster
+            poster="/images/video-placeholder.jpg" // ✅ fallback image
+          />
         </div>
 
         <div className="new-arrival-comp fade-in-right">
-        <NewArrival />
+          <NewArrival />
 
         </div>
         <div className="weekly-deals-comp fade-in-right">
-        <WeeklyDeals />
+          <WeeklyDeals />
 
         </div>
         <div className="weekly-deals-comp zoom-in">
-        <MiddleHeadline />
-        <ProductCollections />
+          <MiddleHeadline />
+          <ProductCollections />
 
         </div>
 
-    <div className="footer zoom-in">
-      <Footer />
+        <div className="footer zoom-in">
+          <Footer />
 
-    </div>
+        </div>
 
 
 
