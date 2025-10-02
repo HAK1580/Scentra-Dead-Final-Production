@@ -59,7 +59,7 @@ const HomePage = () => {
 
         <div className="main-video md:h-[260vh]  w-full    md:mt-200 md:mb-0 mt-100 ">
           <video className=' h-full object-contain lg:object-cover  w-full     '
-            src="VIDEOS/scentraHdvideo.mp4" autoPlay muted loop playsInline  ></video>
+            src="/VIDEOS/scentraHdvideo.mp4" autoPlay muted loop playsInline  ></video>
         </div>
 
         <div className="new-arrival-comp fade-in-right">
