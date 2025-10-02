@@ -38,14 +38,14 @@ const ProductDetailPage = () => {
       <div className="product-info-div flex flex-col
       gap-1 overflow-x-hidden
       ">
-        <img className='object-contain w-[95%] mx-auto h-auto ' src={`/${product.image}`} alt="" />
+        <img className='object-contain w-[99%] mx-auto h-auto ' src={`/${product.image}`} alt="" />
         <div className="product-description mt-6 ">
           <h1 className='flex justify-center italic sm:text-[3.7vw]  arimo text-[3.5vw]'> {product.desc} </h1>
           <h1 className='flex justify-center my-1 rubik tracking-wider  sm:text-[7vw] text-[7.2vw]'> {product.title} </h1>
         </div>
         <div className="product-price justify-start items-center   w-[60%] mx-auto gap-6  flex ">
-          <h1 className='flex justify-center sm:text-[4vw]  italic line-through decoration-red-500 decoration-2 arimo text-[5.5vw]'> Rs. {product.oldprice} </h1>
-          <h1 className='flex justify-center sm:text-[4vw]  italic  arimo text-[5vw]'>Rs.{product.price} </h1>
+          <h1 className='flex justify-center sm:text-[4vw] popins tracking-wide  line-through decoration-red-500 decoration-2 arimo text-[5.5vw]'> Rs. {product.oldprice} </h1>
+          <h1 className='flex justify-center sm:text-[4vw] popins tracking-wide   arimo text-[6vw]'>Rs.{product.price} </h1>
         </div>
 
        <div className="add-to-cartt  flex flex-col gap-3 mt-1">
