@@ -48,8 +48,8 @@ const HomePage = () => {
             muted
             loop
             playsInline
-            preload="auto"    // ✅ video preloads faster
-            poster="/IMGS/video-img.PNG" // ✅ fallback image
+            preload="auto"    
+            poster="/IMGS/video-img.PNG" 
           />
         </div>
 
