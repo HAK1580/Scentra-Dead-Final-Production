@@ -35,7 +35,7 @@ function App() {
     },
     {
       path: "/aboutus",
-      element: <AboutUs />
+      element: <AboutUs/>
     },
   ])
 

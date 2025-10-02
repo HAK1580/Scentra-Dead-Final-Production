@@ -58,8 +58,8 @@ const HomePage = () => {
         </div>
 
         <div className="main-video md:h-[260vh]  w-full    md:mt-200 md:mb-0 mt-100 ">
-          <video className=' h-full  object-contain lg:object-cover mx-auto  w-[99.5%]     '
-            src="/VIDEOS/scentraHdvideo.mp4" autoPlay muted loop playsInline  ></video>
+          <video className=' h-full object-contain lg:object-cover mx-auto  w-[99%]     '
+            src="VIDEOS/scentraHdvideo.mp4" autoPlay muted loop playsInline  ></video>
         </div>
 
         <div className="new-arrival-comp fade-in-right">
@@ -69,6 +69,7 @@ const HomePage = () => {
         <div className="weekly-deals-comp fade-in-right">
         <WeeklyDeals />
 
+        </div>
         <div className="weekly-deals-comp zoom-in">
         <MiddleHeadline />
         <ProductCollections />
@@ -80,7 +81,6 @@ const HomePage = () => {
 
     </div>
 
-        </div>
 
 
 
