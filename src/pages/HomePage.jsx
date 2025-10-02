@@ -69,7 +69,6 @@ const HomePage = () => {
         <div className="weekly-deals-comp fade-in-right">
         <WeeklyDeals />
 
-        </div>
         <div className="weekly-deals-comp zoom-in">
         <MiddleHeadline />
         <ProductCollections />
@@ -81,6 +80,7 @@ const HomePage = () => {
 
     </div>
 
+        </div>
 
 
 

@@ -2,12 +2,16 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Headline from "../components/Headline";
 import Footer from "../components/footer/Footer";
-
+import { useSelector } from "react-redux";
 const ContactUs = () => {
+  const menuOpen = useSelector((state) => state.ui.menuOpen);
+  const search = useSelector((state) => state.ui.searchOpen);
   return (
-    <div className="overflow-hidden flex flex-col" >
+    <div className={`overflow-hidden flex flex-col `} >
     <Headline />
     <Navbar />
+    <div className={`father ${search ? "hide" : "show"}  ${menuOpen ? "hide" : "show"}`}>
+
     <div className="bg-black text-white min-h-screen flex flex-col overflow-x-clip items-center py-12 px-4">
       {/* Heading */}
       <h1 className="text-4xl md:text-5xl font-bold text-[#FFD700] mb-6 text-center">
@@ -61,8 +65,13 @@ const ContactUs = () => {
         <p className="text-gray-400">📧 support@scentra.com</p>
         <p className="text-gray-400">📞 +92 123 4567890</p>
       </div>
-    </div>
+    
+    <div className={`footer `}>
       <Footer />
+
+    </div>
+    </div>
+    </div>
     </div>
   );
 };

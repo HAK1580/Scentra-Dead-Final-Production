@@ -2,12 +2,17 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Headline from "../components/Headline";
 import Footer from "../components/footer/Footer";
+import { useSelector } from "react-redux";
 
 const AboutUs = () => {
+const menuOpen = useSelector((state) => state.ui.menuOpen);
+  const search = useSelector((state) => state.ui.searchOpen);
   return (
-    <div className="overflow-hidden flex flex-col" >
+    <div className={`overflow-hidden flex flex-col `} >
     <Headline />
     <Navbar />
+    <div className={`${search ? "hide" : "show"}  ${menuOpen ? "hide" : "show"} `}>
+
       <div className="bg-black text-white min-h-screen  flex flex-col items-center py-12 px-4">
       {/* Heading */}
       <h1 className="text-4xl md:text-5xl font-bold text-[#FFD700] mb-6 text-center">
@@ -50,10 +55,14 @@ const AboutUs = () => {
           ✔ Affordable luxury for every personality
         </p>
       </div>
+   <div className={`footer   `}>
+      <Footer />
+
     </div>
-    <Footer />
     </div>   
 
+    </div>
+    </div>
   );
 };
 
