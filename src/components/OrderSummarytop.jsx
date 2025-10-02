@@ -75,6 +75,7 @@ const OrderSummarytop = ({ orderSum, setOrderSum }) => {
                                 FREE
                             </h2>
                         </div>
+                        
                     </div>
 
                 </div>
