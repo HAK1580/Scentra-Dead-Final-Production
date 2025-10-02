@@ -8,8 +8,8 @@ const Footer = () => {
       <hr className='text-[#f0d9a249]' />
         <div className="footer-links p-8 text-[5.5vw]   my-0 text-[#] items-center gap-5 flex flex-col justify-center">
       <img className='w-40  md:w-50' src="IMGS/logo/logo-fotor-bg-remover-2025080510633.webp" alt="" />
-       <a className='cursor-pointer z-50  md:text-[1.9rem]  '  href='/' > About Us </a> 
-       <a className='cursor-pointer z-50  md:text-[1.9rem] '  href='/' > Contact Us </a> 
+       <a className='cursor-pointer z-50  md:text-[1.9rem]  '  href='/aboutus' > About Us </a> 
+       <a className='cursor-pointer z-50  md:text-[1.9rem] '  href='/contactus' > Contact Us </a> 
        <a className='cursor-pointer z-50  md:text-[1.9rem]    '  href='/shopping' > Our Products </a> 
        <a className='cursor-pointer z-50  md:text-[1.9rem] '  href='/shopping' > Shop Now </a> 
         </div>

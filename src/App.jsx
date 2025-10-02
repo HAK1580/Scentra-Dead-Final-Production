@@ -7,8 +7,8 @@ import { createBrowserRouter } from 'react-router-dom'
 import { RouterProvider } from 'react-router-dom'
 import CheckOut from './pages/CheckoutPage'
 import ProductDetailPage from './pages/ProductDetailPage'
-import ContactUs from './pages/ContactUs'
-import AboutUs from './pages/AboutUs'
+import ContactUs from './pages/ContactUsPage'
+import AboutUs from './pages/AboutUsPage'
 
 function App() {
 

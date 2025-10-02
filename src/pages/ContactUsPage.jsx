@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Headline from "../components/Headline";
+import Footer from "../components/footer/Footer";
 
 const ContactUs = () => {
   return (
@@ -61,6 +62,7 @@ const ContactUs = () => {
         <p className="text-gray-400">📞 +92 123 4567890</p>
       </div>
     </div>
+      <Footer />
     </div>
   );
 };
