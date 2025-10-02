@@ -36,7 +36,7 @@ const ProductDetailPage = () => {
       <Headline />
       <Navbar />
       <div className="product-info-div flex flex-col
-      gap-2 overflow-x-hidden
+      gap-1 overflow-x-hidden
       ">
         <img className='object-contain w-[95%] mx-auto h-auto ' src={`/${product.image}`} alt="" />
         <div className="product-description mt-6 ">
@@ -49,9 +49,9 @@ const ProductDetailPage = () => {
         </div>
 
        <div className="add-to-cartt  flex flex-col gap-3 mt-1">
-       <button onClick={addtoCart}  className='border-1 pt-cart  text-[5.5vw] font-inter   text-center text-black bg-[#d4af37]  lg:bg-black   w-[97%]   mx-auto sm:text-[4.5vw] cursor-pointer font-extrabold   py-3  lg:hover:bg-[#d4af37ad] hover:text-[rgb(33,33,33)]" sm:hover:text-black         
+       <button onClick={addtoCart}  className='border-1 pt-cart  text-[5.2vw] font-inter   text-center text-black bg-[#d4af37]  lg:bg-black   w-[95%]   mx-auto sm:text-[4.5vw] cursor-pointer font-extrabold   py-2.5  lg:hover:bg-[#d4af37ad] hover:text-[rgb(33,33,33)]" sm:hover:text-black         
         '> Add to Cart</button>
-        <button onClick={gotocheckout}  className='border-1 pt-cart text-[5.5vw] font-inter   flex justify-center items-center     w-[97%]   mx-auto sm:text-[4.5vw] cursor-pointer font-extrabold   py-3  lg:hover:bg-[#d4af37ad]        
+        <button onClick={gotocheckout}  className='border-1 pt-cart text-[5.2vw] font-inter   flex justify-center items-center     w-[95%]   mx-auto sm:text-[4.5vw] cursor-pointer font-extrabold   py-2.5  lg:hover:bg-[#d4af37ad]        
          '> Check Out</button>
     
        </div>
