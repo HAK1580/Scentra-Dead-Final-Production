@@ -14,7 +14,7 @@
 .zoom-in {
   opacity: 0;
   transform: translateY(20px); /* default for fade-in-up */
-  transition: all 0.9s ease-out;
+  transition: all 0.8s ease-out;
 }
 
 /* Variants */

@@ -7,6 +7,8 @@ import { createBrowserRouter } from 'react-router-dom'
 import { RouterProvider } from 'react-router-dom'
 import CheckOut from './pages/CheckoutPage'
 import ProductDetailPage from './pages/ProductDetailPage'
+import ContactUs from './pages/ContactUs'
+import AboutUs from './pages/AboutUs'
 
 function App() {
 
@@ -26,6 +28,14 @@ function App() {
     {
       path: "/product-detail/:id",
       element: <ProductDetailPage />
+    },
+    {
+      path: "/contactus",
+      element: <ContactUs />
+    },
+    {
+      path: "/aboutus",
+      element: <AboutUs />
     },
   ])
 
