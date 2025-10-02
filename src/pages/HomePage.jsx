@@ -58,7 +58,7 @@ const HomePage = () => {
         </div>
 
         <div className="main-video md:h-[260vh]  w-full    md:mt-200 md:mb-0 mt-100 ">
-          <video className=' h-full object-contain lg:object-cover  w-full     '
+          <video className=' h-full  object-contain lg:object-cover mx-auto  w-[99.5%]     '
             src="/VIDEOS/scentraHdvideo.mp4" autoPlay muted loop playsInline  ></video>
         </div>
 
