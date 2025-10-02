@@ -27,7 +27,8 @@ const CheckoutPage = () => {
     const onSubmit = data => {
         setTimeout(() => {
 
-            console.log("Order Here", data);
+            console.log("Order Person Detail", data);
+            console.log("Ordered Items",cart)
             { cart.length === 0 ? navigate("/") : setOrderconfirm(true) };
             setTimeout(() => {
                 setOrderconfirm(false);
@@ -38,6 +39,8 @@ const CheckoutPage = () => {
                 navigate("/");
 
             }, 9000);
+         
+
         }, 300);
     }
 
