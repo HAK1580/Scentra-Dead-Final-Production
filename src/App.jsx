@@ -45,7 +45,7 @@ function App() {
 
     <>
       <RouterProvider router={router} />
-      {/* <Shopping /> */}
+  
 
     </>
   )

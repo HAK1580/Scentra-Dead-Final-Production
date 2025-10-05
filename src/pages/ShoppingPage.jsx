@@ -140,8 +140,8 @@ const ShoppingPage = () => {
             )}
           </div>
         )}
-      </div>
       <Footer />
+      </div>
     
     </div>
   );

@@ -29,12 +29,15 @@ const ProductDetailPage = () => {
     }, 100);
 
   }
-
+  const menuOpen = useSelector((state) => state.ui.menuOpen);
+  const search = useSelector((state) => state.ui.searchOpen);
   const product = useSelector((state) => state.products.product_info.find((p) => p.id === id));
   return (
     <div className='overflow-hidden '  >
       <Headline />
       <Navbar />
+      <div className={`${search ? "hide" : "show"}  ${menuOpen ? "hide" : "show"}`}>
+
       <div className="product-info-div  md:hidden flex flex-col
       gap-1 overflow-x-hidden
       ">
@@ -87,7 +90,8 @@ const ProductDetailPage = () => {
     </div>
        
      <Footer />  
-
+      </div>
+       
     </div>
   )
 }
